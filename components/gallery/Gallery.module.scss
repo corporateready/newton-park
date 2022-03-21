@@ -1,0 +1,88 @@
+@import '../../styles/mixins.scss';
+
+.gallery__section {
+    @apply relative top-[15%] left-0 border-l-0 border-r-0 w-full h-full py-[8%] translate-x-0 translate-y-[15%];
+}
+
+.gallery__bg {
+    @apply absolute bg-[#31414B] h-[63%] w-full left-0 top-[50%] translate-x-[0] translate-y-[-50%];
+
+    @media screen and(max-width: 1440px) {
+        // height: calc(300px + (630 - 300)*(100vw - 320px)/(1440 - 320));
+    }
+
+}
+.gallery__container {
+    @apply relative top-0 left-0 h-full w-[1210px] mx-auto z-10;
+
+    @media screen and(max-width: 1440px) {
+        width: calc(300px + (1210 - 300)*(100vw - 320px)/(1440 - 320));
+    }
+}
+.gallery__wrapper {
+    @apply flex flex-row justify-between relative top-0 left-0;
+}
+
+.gallery__description {
+    @apply flex flex-col items-baseline justify-center w-[35%];
+}
+
+.gallery__content {
+    @apply w-[80%] pb-[5%];
+}
+
+.gallery__inner {
+    @apply bg-white w-[65%] flex flex-col items-center py-[5%];
+    @include shadow_std();
+}
+
+.gallery__body {
+    @apply px-[14%] py-[4%] flex flex-col items-center;
+}
+
+.gallery__description_up {
+    @apply flex flex-col border-b-2 pb-[13%];
+}
+
+.gallery__description_up_text {
+    @include text(20px, 130%, 600, $white_color);
+    @apply pt-[5%] text-center;
+    @media screen and(max-width: 1440px) {
+        font-size: calc(12px + (20 - 12)*(100vw - 576px)/(1440 - 576));
+    }
+}
+
+.gallery__description_down {
+    @apply flex flex-col pt-[13%];
+}
+
+.gallery__description_image {
+    @apply relative top-[0%] right-0 mx-auto;
+    flex: 0 0 10%;
+
+    @media screen and(max-width: 1440px) {
+        width: calc(54px + (110 - 54)*(100vw - 576px)/(1440 - 576));
+    }
+}
+
+.gallery__description_up_number {
+    @include text(40px, 130%, 600, $white_color);
+    @apply pt-[5%] text-center;
+    @media screen and(max-width: 1440px) {
+        font-size: calc(16px + (40 - 16)*(100vw - 576px)/(1440 - 576));
+    }
+}
+
+.gallery__slide {
+    @apply items-center;
+}
+
+.gallery__inner_btn {
+    @include text(24px, 130%, 600, $white_color);
+    @apply w-[50%] bg-[#31414B] uppercase rounded-sm py-[2%];
+}
+
+// ===== gallery pagging buttons =====>
+.next__btn {
+    @apply absolute top-[50%] right-[2%];
+}

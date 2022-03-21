@@ -1,0 +1,37 @@
+@import '../../styles/mixins.scss';
+
+.info {
+    @apply mt-[8%] mb-[60%];
+}
+
+.container {
+    @apply h-full w-[800px] mx-auto z-10;
+
+    @media screen and(max-width: 1440px) {
+        width: calc(300px + (800 - 300)*(100vw - 320px)/(1440 - 320));
+    }
+}
+.title {
+    @include text(62px, 135%, 700, #000);
+    @apply text-center;
+
+    @media screen and(max-width: 1440px) {
+        font-size: calc(32px + (62 - 32)*(100vw - 480px)/(1440 - 480));
+    }
+}
+.logo__image {
+    @apply mt-[5%] mx-auto px-[3%];
+}
+.info__description {
+    @include text(36px, 135%, 700, #000);
+    @apply mt-[5%] text-justify mx-auto;
+    @media screen and(max-width: 1440px) {
+        font-size: calc(16px + (36 - 18)*(100vw - 480px)/(1440 - 480));
+    }
+}
+.info__description_decor {
+    @include text(41px, 135%, 700, $sapfir_color);
+    @media screen and(max-width: 1440px) {
+        font-size: calc(18px + (41 - 20)*(100vw - 480px)/(1440 - 480));
+    }
+}

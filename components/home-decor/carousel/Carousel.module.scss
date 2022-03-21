@@ -1,0 +1,49 @@
+@import '../../../styles//mixins.scss';
+
+.carousel__section {
+    @apply bg-[#31414B] h-full w-full overflow-hidden;
+
+    @media screen and(max-width: 768px) {
+        @apply mt-[20%];
+    }
+}
+.carousel__wrapper {
+    @apply my-[6%];
+}
+.carousel__inner {
+    @apply flex flex-row overflow-hidden gap-x-[5%];
+}
+.carousel__image {}
+
+// ===== form =====>
+.carousel__form {
+    @apply flex flex-col w-full;
+}
+.form__title {
+    @include text(36px, 135%, 600, $white_color);
+    @apply text-center;
+    @media screen and(max-width: 1440px) {
+        font-size: calc(16px + (36 - 18)*(100vw - 480px)/(1440 - 480));
+    }
+}
+.form__body {
+    @apply flex flex-col mt-[3%] mb-[7%] w-[30%] mx-auto;
+    @media screen and(max-width: 768px) {
+        @apply w-[60%];
+    }
+    @media screen and(max-width: 576px) {
+        @apply w-[80%];
+    }
+
+    input {
+        @apply bg-[#ECECEC] mt-[5%] py-[2%] px-[5%] rounded-lg;
+
+        &::placeholder {
+            @include text(18px, 135%, 400, #31414B);
+        }
+    }
+}
+.form__button {
+    @include text(18px, 135%, 400, $white_color);
+    @apply bg-[#2BB018] mt-[7%] py-[4%] px-[5%] rounded-lg;
+}

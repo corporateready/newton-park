@@ -1,0 +1,109 @@
+@import '../../../styles/mixins.scss';
+
+.about {
+    @apply relative bottom-0 bg-[#31414B] z-10;
+}
+
+.container {
+    @apply relative top-0 left-0 h-full w-[1210px] mx-auto z-10;
+
+    @media screen and(max-width: 1440px) {
+        width: calc(300px + (1210 - 300)*(100vw - 320px)/(1440 - 320));
+    }
+}
+
+.title {
+    @include text(62px, 130%, 700, $white_color);
+    @apply text-left mt-[8.3%] mb-[16%];
+
+    @media screen and(max-width: 1440px) {
+        font-size: calc(24px + (62 - 24)*(100vw - 576px)/(1440 - 576));
+    }
+
+    @media screen and(max-width: 576px) {
+        @apply mb-[20%];
+    }
+}
+
+.info {
+    @apply absolute top-[200%] left-0 bg-white w-[80%] py-[2%];
+    box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
+    max-width: 100%;
+
+    @media screen and(max-width: 768px) {
+        @apply w-[75%];
+    }
+
+    @media screen and(max-width: 576px) {
+        @apply w-[70%];
+    }
+
+    @media screen and(max-width: 480px) {
+        @apply w-[70%];
+    }
+
+    @media screen and(max-width: 425px) {
+        @apply w-[65%];
+    }
+}
+
+.info__container {
+    @apply relative top-0 left-0 h-full mx-auto z-10 px-[3%];
+}
+
+.info__title {
+    @include text(30px, 130%, 700, $medium_black);
+
+    @media screen and(max-width: 1440px) {
+        font-size: calc(15px + (30 - 15)*(100vw - 480px)/(1440 - 480));
+    }
+
+    span {
+        @include text(40px, 130%, 700, $sapfir_color);
+        @apply uppercase;
+
+        @media screen and(max-width: 1440px) {
+            font-size: calc(15px + (30 - 15)*(100vw - 480px)/(1440 - 480));
+        }
+    }
+}
+
+.info__item {
+    @apply flex items-center mt-[1%];
+}
+
+.info__item_num {
+    @include text(36px, 130%, 700, $sapfir_color);
+    @apply w-[10%];
+
+    @media screen and(max-width: 1440px) {
+        font-size: calc(14px + (36 - 14)*(100vw - 576px)/(1440 - 576));
+    }
+}
+
+.info__item_img {
+    @apply flex relative top-0 left-0;
+    flex: 0 0 10%;
+
+    @media screen and(max-width: 1440px) {
+        height: calc(24px + (56 - 24)*(100vw - 576px)/(1440 - 576));
+    }
+}
+
+.info__item_text {
+    @include text(25px, 130%, 700, $medium_black);
+    @apply uppercase ml-[5%];
+
+    @media screen and(max-width: 1440px) {
+        font-size: calc(15px + (25 - 15)*(100vw - 480px)/(1440 - 480));
+    }
+}
+
+.about__build {
+    @apply flex absolute top-[100%] right-0;
+    flex: 0 0 10%;
+
+    @media screen and(max-width: 1440px) {
+        height: calc(74px + (140 - 74)*(100vw - 576px)/(1440 - 576));
+    }
+}

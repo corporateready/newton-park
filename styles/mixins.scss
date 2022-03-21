@@ -1,0 +1,22 @@
+$medium_black: #31414B;
+$white_color: #fff;
+$sapfir_color: #2BB018;
+
+
+@mixin text($fs,$lh, $fw,$color) {
+    font-size: $fs;
+    line-height: $lh;
+    font-weight: $fw;
+    color: $color;
+}
+
+@mixin np_text($fs,$lh, $fw) {
+    font-size: $fs;
+    line-height: $lh;
+    font-weight: $fw;
+    color: $sapfir_color;
+}
+
+@mixin shadow_std() {
+    box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
+}
