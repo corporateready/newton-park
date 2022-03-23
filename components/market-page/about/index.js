@@ -17,7 +17,7 @@ export default function index() {
             <div className={styles.info}>
               <div className={styles.info__container}>
                 <h4 className={styles.info__title}>
-                  Cel mai modern complex rezidețial{" "}
+                  Cel mai modern complex rezidețial
                   <span className={styles.info__title_decor}>
                     de la Botanica
                   </span>

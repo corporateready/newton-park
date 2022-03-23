@@ -1,0 +1,12 @@
+@import '../../../styles/mixins.scss';
+
+.messengers__section {
+    @apply fixed top-[50%] left-0 z-30 mx-[0.7%]  space-y-2 translate-x-0 translate-y-[-50%] flex flex-col;
+
+    @media screen and(max-width: 576px) {
+        @apply hidden;
+    }
+}
+.messenger__item {
+    // @apply space-y-5;
+}

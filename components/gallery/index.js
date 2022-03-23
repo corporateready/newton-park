@@ -4,6 +4,7 @@ import styles from "./Gallery.module.scss";
 
 import next__btn from ".././../public/static/gallery/next-button.svg";
 import image_descr_1 from "../../public/static/gallery/metri-patrati.svg";
+import image_descr_2 from "../../public/static/gallery/inaltimea-tavanelor.svg";
 import image_1 from "../../public/static/about/about-image-1.svg";
 
 export default function index() {
@@ -22,12 +23,12 @@ export default function index() {
                   Suprafața totală:
                 </p>
                 <p className={styles.gallery__description_up_number}>
-                  2213.30 M
+                  2213.30 M<sup>2</sup>
                 </p>
               </div>
               <div className={styles.gallery__description_down}>
                 <div className={styles.gallery__description_image}>
-                  <Image src={image_descr_1} width={110} height={110} />
+                  <Image src={image_descr_2} width={110} height={110} />
                 </div>
                 <p className={styles.gallery__description_up_text}>
                   Înălțimea tavanelor:
@@ -39,7 +40,7 @@ export default function index() {
           <div className={styles.gallery__inner}>
             <div className={styles.gallery__body}>
               <div className={styles.gallery__slide}>
-                <Image src={image_1} width={580} height={610} />
+                <Image src={image_1} width={582} height={614} />
               </div>
             </div>
             <button className={styles.next__btn}>

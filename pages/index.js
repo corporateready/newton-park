@@ -3,6 +3,7 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "../styles/Home.module.scss";
+import { motion } from "framer-motion";
 import gsap from "gsap";
 
 import logo from "../public/static/home/logo.svg";
@@ -43,7 +44,13 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <section className={styles.home}>
+      <motion.section
+        className={styles.home}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 0.3 }}
+      >
         <div className={styles.home__bg}>
           <div className={styles.home__shadow}></div>
 
@@ -102,7 +109,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </motion.section>
     </>
   );
 }

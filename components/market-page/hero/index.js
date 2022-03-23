@@ -7,6 +7,7 @@ import styles from "./Hero.module.scss";
 import Header from "../../header";
 
 export default function index() {
+
   return (
     <>
       <Head>

@@ -2,16 +2,18 @@
 
 .gallery__section {
     @apply relative top-[15%] left-0 border-l-0 border-r-0 w-full h-full py-[8%] translate-x-0 translate-y-[15%];
+
 }
 
 .gallery__bg {
     @apply absolute bg-[#31414B] h-[63%] w-full left-0 top-[50%] translate-x-[0] translate-y-[-50%];
 
-    @media screen and(max-width: 1440px) {
-        // height: calc(300px + (630 - 300)*(100vw - 320px)/(1440 - 320));
+    @media screen and(max-width: 576px) {
+        @apply top-[79%] h-[34%];
     }
 
 }
+
 .gallery__container {
     @apply relative top-0 left-0 h-full w-[1210px] mx-auto z-10;
 
@@ -19,70 +21,136 @@
         width: calc(300px + (1210 - 300)*(100vw - 320px)/(1440 - 320));
     }
 }
+
 .gallery__wrapper {
     @apply flex flex-row justify-between relative top-0 left-0;
+
+    @media screen and(max-width: 576px) {
+        @apply flex flex-col-reverse;
+    }
 }
 
 .gallery__description {
     @apply flex flex-col items-baseline justify-center w-[35%];
+
+    @media screen and(max-width: 576px) {
+        @apply w-full;
+    }
 }
 
 .gallery__content {
     @apply w-[80%] pb-[5%];
+
+    @media screen and(max-width: 576px) {
+        @apply flex flex-row w-full justify-center mt-[5%] pb-0;
+    }
 }
 
 .gallery__inner {
-    @apply bg-white w-[65%] flex flex-col items-center py-[5%];
+    @apply bg-white w-[65%] flex flex-col items-center py-[3%];
     @include shadow_std();
+
+    @media screen and(max-width: 576px) {
+        @apply flex flex-col-reverse w-full bg-transparent;
+
+        box-shadow: none;
+    }
 }
 
 .gallery__body {
     @apply px-[14%] py-[4%] flex flex-col items-center;
+
+    @media screen and(max-width: 576px) {
+        @apply bg-white mt-[7%];
+        @include shadow_std();
+    }
 }
 
 .gallery__description_up {
     @apply flex flex-col border-b-2 pb-[13%];
+
+    @media screen and(max-width: 576px) {
+        @apply border-r-2 border-b-0 w-full pb-0;
+    }
 }
 
 .gallery__description_up_text {
     @include text(20px, 130%, 600, $white_color);
-    @apply pt-[5%] text-center;
+    @apply pt-[5%] text-center uppercase;
+
     @media screen and(max-width: 1440px) {
         font-size: calc(12px + (20 - 12)*(100vw - 576px)/(1440 - 576));
     }
+
+    @media screen and(max-width: 576px) {
+        font-size: calc(10px + (20 - 10)*(100vw - 320px)/(576 - 320));
+    }
+
 }
 
 .gallery__description_down {
     @apply flex flex-col pt-[13%];
+
+    @media screen and(max-width: 576px) {
+        @apply pt-0 w-full;
+    }
 }
 
 .gallery__description_image {
     @apply relative top-[0%] right-0 mx-auto;
-    flex: 0 0 10%;
 
     @media screen and(max-width: 1440px) {
         width: calc(54px + (110 - 54)*(100vw - 576px)/(1440 - 576));
+    }
+
+    @media screen and(max-width: 576px) {
+        width: calc(20px + (70 - 20)*(100vw - 320px)/(576 - 320));
     }
 }
 
 .gallery__description_up_number {
     @include text(40px, 130%, 600, $white_color);
-    @apply pt-[5%] text-center;
+    @apply mt-[5%] text-center;
+
     @media screen and(max-width: 1440px) {
         font-size: calc(16px + (40 - 16)*(100vw - 576px)/(1440 - 576));
+    }
+
+    @media screen and(max-width: 576px) {
+        font-size: calc(18px + (36 - 18)*(100vw - 320px)/(576 - 320));
+        @apply mt-[2%];
     }
 }
 
 .gallery__slide {
     @apply items-center;
+
+    @media screen and(max-width: 576px) {}
 }
 
 .gallery__inner_btn {
     @include text(24px, 130%, 600, $white_color);
-    @apply w-[50%] bg-[#31414B] uppercase rounded-sm py-[2%];
+    @apply w-[50%] bg-[#31414B] uppercase rounded-md py-[2%];
+
+    @media screen and(max-width: 1440px) {
+        font-size: calc(12px + (24 - 12)*(100vw - 576px)/(1440 - 576));
+    }
+
+    @media screen and(max-width: 576px) {
+        @apply w-full;
+        font-size: calc(12px + (24 - 12)*(100vw - 320px)/(576 - 320));
+    }
 }
 
 // ===== gallery pagging buttons =====>
 .next__btn {
-    @apply absolute top-[50%] right-[2%];
+    @apply absolute top-[50%] right-[2%] w-[48px] translate-y-[-50%];
+
+    @media screen and(max-width: 1440px) {
+        width: calc(26px + (48 - 26)*(100vw - 320px)/(1440 - 320));
+    }
+
+    @media screen and(max-width: 576px) {
+        @apply top-[43%];
+    }
 }

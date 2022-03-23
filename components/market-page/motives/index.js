@@ -47,20 +47,24 @@ export default function index() {
     <div className={styles.motives__section}>
       <div className={styles.container}>
         <h2 className={styles.title}>
-        <span className={styles.title__decor}>6 MOTIVE </span>DE CE UN SUPERMARKET 
-        <br/> ESTE CONVENABIL ȘI NECESAR
+          {/* <span className={styles.title__decor}>6 MOTIVE </span>DE CE UN
+          SUPERMARKET
+          <br /> ESTE CONVENABIL ȘI NECESAR*/}
+
+          De ce unicul spațiu pretabil pentru supermarket 
+          <br/> la <span className={styles.title__decor}>Newton Park</span> se potrivește afacerii tale
         </h2>
         <div className={styles.inner}>
           {motives.map((item) => {
             return (
               <div className={styles.motive} key={item.id}>
                 <div className={styles.motive__wrapper}>
-                <div className={styles.motive__image}>
-                  <Image src={item.image} width={321} height={168} />
-                </div>
-                <div className={styles.motive__title_wrapper}>
-                <h3 className={styles.motive__title}>{item.title}</h3>
-                </div>
+                  <div className={styles.motive__image}>
+                    <Image src={item.image} width={321} height={168} />
+                  </div>
+                  <div className={styles.motive__title_wrapper}>
+                    <h3 className={styles.motive__title}>{item.title}</h3>
+                  </div>
                 </div>
               </div>
             );

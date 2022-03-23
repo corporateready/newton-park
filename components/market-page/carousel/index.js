@@ -28,6 +28,14 @@ export default function index() {
             );
           })}
         </div>
+        <ul className={styles.carousel__toggler}>
+          <li className={styles.carousel__toggle}></li>
+          <li className={styles.carousel__toggle}></li>
+          <li className={styles.carousel__toggle}></li>
+          <li className={styles.carousel__toggle}></li>
+          <li className={styles.carousel__toggle}></li>
+          <li className={styles.carousel__toggle}></li>
+        </ul>
       </div>
       <div className={styles.form__wrapper}>
           <h4 className={styles.form__title}>

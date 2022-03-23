@@ -8,12 +8,23 @@
     }
 }
 .carousel__wrapper {
-    @apply my-[6%];
+    @apply my-[4%];
 }
 .carousel__inner {
     @apply flex flex-row overflow-hidden gap-x-[5%];
 }
-.carousel__image {}
+// .carousel__image {}
+
+.carousel__toggler {
+    @apply flex mt-[2.5%] gap-x-[1%] justify-center;
+}
+.carousel__toggle {
+    @apply inline-block h-[30px] w-[30px] bg-white rounded-full;
+    // flex: 0 0 1.7%;
+    @media screen and(max-width: 1240px) {
+        @apply h-[20px] w-[20px]
+    }
+}
 
 // ===== form =====>
 .carousel__form {
@@ -27,7 +38,7 @@
     }
 }
 .form__body {
-    @apply flex flex-col mt-[3%] mb-[7%] w-[30%] mx-auto;
+    @apply flex flex-col mt-[1%] mb-[7%] w-[30%] mx-auto;
     @media screen and(max-width: 768px) {
         @apply w-[60%];
     }
@@ -44,6 +55,10 @@
     }
 }
 .form__button {
-    @include text(18px, 135%, 400, $white_color);
-    @apply bg-[#2BB018] mt-[7%] py-[4%] px-[5%] rounded-lg;
+    @include text(24px, 135%, 400, $white_color);
+    @apply bg-[#2BB018] mt-[7%] py-[3.5%] px-[5%] rounded-lg;
+
+    @media screen and(max-width: 1440px) {
+        // font-size: calc(22px + (24 - 18)*(100vw - 320px)/(1440 - 320));
+    }
 }
