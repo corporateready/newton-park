@@ -201,11 +201,6 @@
         @apply border-0 bg-white py-[18%];
         box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
     }
-
-
-    @media screen and(max-height: 670px) {
-        // @apply py-[18%];
-    }
 }
 .item__image {
     @apply w-[100px];

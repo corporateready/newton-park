@@ -1,28 +1,39 @@
 @import '../../../styles//mixins.scss';
 
 .carousel__section {
-    @apply bg-[#31414B] h-full w-full overflow-hidden;
+    @apply bg-[#31414B] h-full w-full;
 
     @media screen and(max-width: 768px) {
         @apply mt-[20%];
     }
 }
 .carousel__wrapper {
-    @apply my-[4%];
+    @apply my-[4%] overflow-hidden cursor-grab;
 }
 .carousel__inner {
-    @apply flex flex-row overflow-hidden gap-x-[5%];
+    @apply flex flex-row;
 }
-// .carousel__image {}
+.carousel__image {
+@apply min-w-[580px] px-[2%];
+
+@media screen and(max-width: 576px) {
+    @apply min-w-[380px] px-[2%];
+}
+
+img {
+    @apply w-full h-full;
+}
+    // @apply cursor-none;
+}
 
 .carousel__toggler {
     @apply flex mt-[2.5%] gap-x-[1%] justify-center;
 }
 .carousel__toggle {
     @apply inline-block h-[30px] w-[30px] bg-white rounded-full;
-    // flex: 0 0 1.7%;
-    @media screen and(max-width: 1240px) {
-        @apply h-[20px] w-[20px]
+
+    @media screen and(max-width: 576px) {
+        @apply h-[10px] w-[10px];
     }
 }
 
@@ -57,8 +68,8 @@
 .form__button {
     @include text(24px, 135%, 400, $white_color);
     @apply bg-[#2BB018] mt-[7%] py-[3.5%] px-[5%] rounded-lg;
-
-    @media screen and(max-width: 1440px) {
-        // font-size: calc(22px + (24 - 18)*(100vw - 320px)/(1440 - 320));
-    }
+}
+// ==================>
+.carousel__image_active {
+    @apply scale-150;
 }
