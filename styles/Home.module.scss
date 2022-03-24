@@ -13,10 +13,11 @@
         @apply bg-left-top h-screen;
     }
 
-    @media screen and(max-height: 740px) {
-        // @apply h-full;
-        
-    }
+//     @media screen and(max-height: 740px) {
+//         // @apply h-full;
+//         height: calc(600px + (740 - 600)*(100vw - 320px)/(576 - 320));
+
+//     }
 }
 
 .home__shadow {
@@ -70,6 +71,10 @@
         @include text(30px, 130%, 700, #ECECEC);
         @apply mt-0;
     }
+
+    @media screen and(max-height: 740px) {
+        @include text(27px, 130%, 700, #ECECEC);
+    }
 }
 
 .content {
@@ -78,6 +83,7 @@
     @media screen and(max-width: 576px) {
         @apply w-full text-center;
     }
+    
 }
 
 .NP__decor_title {
@@ -91,6 +97,10 @@
     @media screen and(max-width: 576px) {
         @include np_text(40px, 130%, 700);
     }
+
+    @media screen and(max-height: 740px) {
+        @include np_text(35px, 130%, 700);
+    }
 }
 
 .subtitle {
@@ -103,6 +113,10 @@
 
     @media screen and(max-width: 576px) {
         @include text(20px, 130%, 400, #ECECEC);
+    }
+
+    @media screen and(max-height: 740px) {
+        @include text(16px, 130%, 400, #ECECEC);
     }
 }
 
@@ -187,10 +201,11 @@
 
     @media screen and(max-width: 576px) {
         @apply grid-cols-2 bg-inherit gap-y-4 gap-x-4;
+        box-shadow: none;
     }
 
     @media screen and(max-height: 740px) {
-        @apply gap-x-10 my-0;
+        @apply my-0 px-5;
     }
 }
 
@@ -201,6 +216,10 @@
         border-radius: 7%;
         @apply border-0 bg-white py-[18%];
         box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    @media screen and(max-height: 740px) {
+        @apply py-[15%];
     }
 }
 .item__image {
@@ -214,7 +233,7 @@
     }
 
     @media screen and(max-height: 740px) {
-        width: calc(34px + (137 - 34)*(100vw - 320px)/(576 - 320));
+        width: calc(54px + (137 - 54)*(100vw - 320px)/(576 - 320));
     }
 }
 

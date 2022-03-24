@@ -96,7 +96,6 @@ export default function Home() {
                           src={item.image}
                           height={84}
                           width={100}
-                          // objectFit="contain"
                           priority
                           alt={item.title}
                         />
