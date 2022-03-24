@@ -2,6 +2,8 @@ import React from "react";
 import Image from "next/image";
 import styles from "./Motives.module.scss";
 
+import { motion, AnimatePresence } from "framer-motion";
+
 import motive_1 from "../../../public/static/motives/motive_1.svg";
 import motive_2 from "../../../public/static/motives/motive_2.svg";
 import motive_3 from "../../../public/static/motives/motive_3.svg";
@@ -44,13 +46,14 @@ const motives = [
 
 export default function index() {
   return (
-    <div className={styles.motives__section}>
+    <AnimatePresence>
+    <motion.div className={styles.motives__section}
+    initial={{ opacity: 0 }}
+        animate={{ opacity: 1, transition: { duration: 1 } }}
+        exit={{ opacity: 0 }}
+    >
       <div className={styles.container}>
         <h2 className={styles.title}>
-          {/* <span className={styles.title__decor}>6 MOTIVE </span>DE CE UN
-          SUPERMARKET
-          <br /> ESTE CONVENABIL ȘI NECESAR*/}
-
           De ce unicul spațiu pretabil pentru supermarket 
           <br/> la <span className={styles.title__decor}>Newton Park</span> se potrivește afacerii tale
         </h2>
@@ -71,6 +74,7 @@ export default function index() {
           })}
         </div>
       </div>
-    </div>
+    </motion.div>
+    </AnimatePresence>
   );
 }

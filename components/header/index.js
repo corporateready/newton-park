@@ -71,10 +71,36 @@ const burger__menu_items = [
 export default function index() {
   const [toggle, setToggle] = React.useState(false);
 
+  // const [lastYPos, setLastYPos] = React.useState(0);
+  // const [shouldShowActions, setShouldShowActions] = React.useState(false);
+
+  // React.useEffect(() => {
+  //   function handleScroll() {
+  //     const yPos = window.scrollY;
+
+  //     console.log(yPos);
+  //     const isScrollingUp = yPos > 1;
+
+  //     setShouldShowActions(isScrollingUp);
+  //     setLastYPos(yPos);
+  //   }
+
+  //   window.addEventListener("scroll", handleScroll, false);
+
+  //   return () => {
+  //     window.removeEventListener("scroll", handleScroll, false);
+  //   };
+  // }, [lastYPos]);
+
   const togglerBurger = () => setToggle(!toggle);
 
   return (
-    <header className={styles.header}>
+    <header
+     className={styles.header}
+    //  initial={{ opacity: 0 }}
+    //   animate={{ opacity: shouldShowActions ? 1 : 0 }}
+    //   transition={{ opacity: { duration: 0.3 } }}
+     >
       <div className={styles.container}>
         <div className={styles.header__wrapper}>
           <div className={styles.burger__button} onClick={togglerBurger}>
@@ -86,52 +112,51 @@ export default function index() {
             </a>
           </Link>
         </div>
-        
       </div>
       <motion.div
-          className={toggle ? styles.burger__menu : styles.burger__menu_hide}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-        >
-          <nav className={styles.burger__inner}>
-            <ul className={styles.burger__items}>
-              {burger__menu_items.map((item) => {
-                return (
-                  <AnimatePresence>
-                    {toggle && (
-                      <Link href={item.url}>
-                        <a>
-                          <motion.li
-                            className={styles.burger__item}
-                            key={item.id}
-                            while={{ opacity: 1 }}
-                            whileHover={{ x: -15 }}
-                            initial={{ x: -30, opacity: 0 }}
-                            animate={{ x: 0, opacity: 1 }}
-                            transition={{ duration: 0.3 }}
-                          >
-                            <div className={styles.burger__item_image}>
-                              <Image
-                                src={item.icon}
-                                width={37}
-                                height={25}
-                                alt={item.descripion}
-                              />
-                            </div>
-                            <div className={styles.burger__item_title}>
-                              {item.title}
-                            </div>
-                          </motion.li>
-                        </a>
-                      </Link>
-                    )}
-                  </AnimatePresence>
-                );
-              })}
-            </ul>
-          </nav>
-        </motion.div>
+        className={toggle ? styles.burger__menu : styles.burger__menu_hide}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+      >
+        <nav className={styles.burger__inner}>
+          <ul className={styles.burger__items}>
+            {burger__menu_items.map((item) => {
+              return (
+                <AnimatePresence>
+                  {toggle && (
+                    <Link href={item.url}>
+                      <a>
+                        <motion.li
+                          className={styles.burger__item}
+                          key={item.id}
+                          while={{ opacity: 1 }}
+                          whileHover={{ x: -15 }}
+                          initial={{ x: -30, opacity: 0 }}
+                          animate={{ x: 0, opacity: 1 }}
+                          transition={{ duration: 0.3 }}
+                        >
+                          <div className={styles.burger__item_image}>
+                            <Image
+                              src={item.icon}
+                              width={37}
+                              height={25}
+                              alt={item.descripion}
+                            />
+                          </div>
+                          <div className={styles.burger__item_title}>
+                            {item.title}
+                          </div>
+                        </motion.li>
+                      </a>
+                    </Link>
+                  )}
+                </AnimatePresence>
+              );
+            })}
+          </ul>
+        </nav>
+      </motion.div>
     </header>
   );
 }

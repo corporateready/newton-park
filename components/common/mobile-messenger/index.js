@@ -51,7 +51,7 @@ export default function index() {
       className={styles.messengers__section}
       initial={{ opacity: 0 }}
       animate={{ opacity: shouldShowActions ? 1 : 0 }}
-      transition={{ opacity: { duration: 0.2 } }}
+      transition={{ opacity: { duration: 0.3 } }}
     >
       
       {messenger__items.map((item) => {

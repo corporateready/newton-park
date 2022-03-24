@@ -1,0 +1,21 @@
+@import '../../../styles/mixins.scss';
+
+.header__mobile {
+    @apply hidden;
+
+    @media screen and(max-width: 576px) {
+        @apply block fixed top-[5%] left-0 z-20 bg-white py-[2%] px-[2%] rounded-r-3xl;
+        @include shadow_std();
+    }
+}
+
+.mobile__burger_inner {
+    @apply flex flex-col items-center mt-[10%];
+}
+
+.mobile__burger_hide {
+    @apply hidden;
+}
+.mobile__burger_item {
+    @apply py-1;
+}
