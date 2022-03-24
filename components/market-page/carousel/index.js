@@ -4,14 +4,16 @@ import styles from "./Carousel.module.scss";
 import { motion } from "framer-motion";
 
 import image__carousel_1 from "../../../public/static/about/burebista-residence.jpg";
+import image__carousel_2 from "../../../public/static/about/gradina-botanica-2.jpg";
+import image__carousel_3 from "../../../public/static/about/gradina-botanica.jpg";
 
 const carousel__images = [
   { image: image__carousel_1, id: 1 },
-  { image: image__carousel_1, id: 2 },
-  { image: image__carousel_1, id: 3 },
+  { image: image__carousel_2, id: 2 },
+  { image: image__carousel_3, id: 3 },
   { image: image__carousel_1, id: 4 },
-  { image: image__carousel_1, id: 5 },
-  { image: image__carousel_1, id: 6 },
+  { image: image__carousel_2, id: 5 },
+  { image: image__carousel_3, id: 6 },
 ];
 
 export default function index() {
@@ -36,15 +38,19 @@ export default function index() {
 
 const Carousel = () => {
   const [width, setWidth] = React.useState(0);
-  const carousel = React.useRef()
-  const active__item = React.useRef()
+  const carousel = React.useRef();
+  const active__item = React.useRef();
 
   React.useEffect(() => {
-    setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth)
-  }, [])
+    setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth);
+  }, []);
 
   return (
-    <motion.div ref={carousel} whileTap={"grabbing"} className={styles.carousel__wrapper}>
+    <motion.div
+      ref={carousel}
+      whileTap={"grabbing"}
+      className={styles.carousel__wrapper}
+    >
       <motion.div
         className={styles.carousel__inner}
         drag="x"

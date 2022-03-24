@@ -47,7 +47,7 @@
 }
 
 .gallery__inner {
-    @apply bg-white w-[65%] flex flex-col items-center py-[3%];
+    @apply bg-white w-[65%] flex flex-col items-center py-[3%] relative;
     @include shadow_std();
 
     @media screen and(max-width: 576px) {
@@ -125,7 +125,6 @@
 .gallery__slide {
     @apply items-center;
 
-    @media screen and(max-width: 576px) {}
 }
 
 .gallery__inner_btn {
@@ -144,13 +143,25 @@
 
 // ===== gallery pagging buttons =====>
 .next__btn {
-    @apply absolute top-[50%] right-[2%] w-[48px] translate-y-[-50%];
+    @apply absolute top-[50%] right-[2%] w-[48px];
 
     @media screen and(max-width: 1440px) {
         width: calc(26px + (48 - 26)*(100vw - 320px)/(1440 - 320));
     }
 
     @media screen and(max-width: 576px) {
-        @apply top-[43%];
+        @apply top-[58%];
+    }
+}
+
+.back__btn {
+    @apply absolute top-[50%] left-[2%] w-[48px];
+
+    @media screen and(max-width: 1440px) {
+        width: calc(26px + (48 - 26)*(100vw - 320px)/(1440 - 320));
+    }
+
+    @media screen and(max-width: 576px) {
+        @apply top-[58%];
     }
 }
