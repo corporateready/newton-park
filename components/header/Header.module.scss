@@ -30,7 +30,7 @@
 }
 
 .burger__menu {
-    @apply py-[2%] px-[2.5%] flex flex-col bg-white w-[28%] relative top-[3%] left-[8%];
+    @apply py-[2%] px-[2.5%] flex flex-col bg-white w-[28%] relative top-[3%] left-[8%] z-50;
 
     @media screen and(max-width: 576px) {
         @apply top-0 left-0 w-full px-[6%] pt-[4%] pb-[6%];
