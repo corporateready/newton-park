@@ -4,5 +4,6 @@ import { default as Motives } from "./motives";
 import { default as Carousel } from "./carousel";
 import { default as Info } from "../info";
 import { default as Messenger } from "../../components/common/messengers";
+import { default as MobileMessenger } from "../../components/common/mobile-messenger";
 
-export { Hero, About, Motives, Carousel, Info, Messenger };
+export { Hero, About, Motives, Carousel, Info, Messenger, MobileMessenger };

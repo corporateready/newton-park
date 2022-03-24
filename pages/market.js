@@ -7,6 +7,7 @@ import {
   Carousel,
   Info,
   Messenger,
+  MobileMessenger
 } from "../components/market-page";
 import { motion } from "framer-motion";
 
@@ -26,6 +27,7 @@ export default function market() {
       <Carousel />
       <Info />
       <Messenger />
+      <MobileMessenger/>
     </motion.div>
   );
 }
