@@ -11,14 +11,18 @@ export default function index() {
   return (
     <>
       <div className={styles.about}>
-        <div className={styles.about__up}>
           <div className={styles.container}>
             <h2 className={styles.title}>DESPRE PROIECT</h2>
-            <div className={styles.info}>
+            
+            
+          </div>
+          <div className={styles.about__info_container}>
+          <div className={styles.info}>
               <div className={styles.info__container}>
                 <h4 className={styles.info__title}>
                   Cel mai modern complex rezidețial
                   <span className={styles.info__title_decor}>
+                    <span className={styles.text__sepatator}><br/></span>
                     de la Botanica
                   </span>
                 </h4>
@@ -47,8 +51,8 @@ export default function index() {
                 </div>
               </div>
               <div></div>
-            </div>
-            <div className={styles.about__build}>
+        </div>
+        <div className={styles.about__build}>
               <Image
                 src={build}
                 height={140}
@@ -57,8 +61,8 @@ export default function index() {
               />
             </div>
           </div>
-        </div>
       </div>
+      
       <Gallery />
     </>
   );

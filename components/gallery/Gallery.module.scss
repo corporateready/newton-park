@@ -1,8 +1,23 @@
 @import '../../styles/mixins.scss';
 
 .gallery__section {
-    @apply relative top-[15%] left-0 border-l-0 border-r-0 w-full h-full py-[8%] translate-x-0 translate-y-[15%];
+    @apply relative top-[10%] left-0 border-l-0 border-r-0 w-full h-full py-[8%] translate-x-0 translate-y-[10%];
 
+    @media screen and(max-width: 768px) {
+        @apply top-[15%] translate-y-[15%];
+    }
+
+    @media screen and(max-width: 660px) {
+        @apply top-[20%] translate-y-[20%];
+    }
+
+    @media screen and(max-width: 660px) {
+        @apply mb-[3%];
+    }
+
+    @media screen and(max-width: 576px) {
+        @apply pt-0 mb-[8%];
+    }
 }
 
 .gallery__bg {

@@ -1,11 +1,19 @@
 @import '../../../styles/mixins.scss';
 
 .about {
-    @apply relative bottom-0 bg-[#31414B] z-10 w-full;
+    @apply relative top-0 left-0  bg-[#31414B] z-10 w-full;
 }
 
 .container {
     @apply relative top-0 left-0 h-full w-[1210px] mx-auto z-10;
+
+    @media screen and(max-width: 1440px) {
+        width: calc(300px + (1210 - 300)*(100vw - 320px)/(1440 - 320));
+    }
+}
+
+.about__info_container {
+    @apply absolute top-0 left-[50%] translate-x-[-50%] h-full w-[1210px] mx-auto z-10;
 
     @media screen and(max-width: 1440px) {
         width: calc(300px + (1210 - 300)*(100vw - 320px)/(1440 - 320));
@@ -20,22 +28,13 @@
         font-size: calc(42px + (62 - 42)*(100vw - 576px)/(1440 - 576));
     }
 
-    @media screen and(max-width: 768px) {
-        @apply mb-[16%];
-    }
-
     @media screen and(max-width: 576px) {
-        font-size: calc(28px + (42 - 28)*(100vw - 320px)/(576 - 320));
-        @apply mb-[20%];
-    }
-
-    @media screen and(max-width: 425px) {
-        @apply mb-[22%];
+        font-size: calc(30px + (52 - 30)*(100vw - 320px)/(576 - 320));
     }
 }
 
 .info {
-    @apply absolute top-[140%] left-0 bg-white w-[83%] py-[2%];
+    @apply absolute top-[67%] left-0 bg-white w-[84%] py-[2%];
     box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
     max-width: 100%;
 }
@@ -52,7 +51,7 @@
     }
 
     span {
-        @include text(40px, 130%, 700, $sapfir_color);
+        @include text(30px, 130%, 700, $sapfir_color);
         @apply uppercase;
 
         @media screen and(max-width: 1440px) {
@@ -66,16 +65,16 @@
 }
 
 .info__item_num {
-    @include text(36px, 130%, 700, $sapfir_color);
-    @apply w-[10%];
+    @include text(25px, 130%, 700, $sapfir_color);
+    @apply w-[9%];
 
     @media screen and(max-width: 1440px) {
-        font-size: calc(12px + (25 - 12)*(100vw - 320px)/(1440 - 320));
+        font-size: calc(10px + (25 - 10)*(100vw - 320px)/(1440 - 320));
     }
 }
 
 .info__item_img {
-    @apply flex relative top-0 left-0 w-[10%];
+    @apply flex relative top-0 left-0 w-[9%];
 
     @media screen and(max-width: 1440px) {
         height: calc(24px + (56 - 24)*(100vw - 576px)/(1440 - 576));
@@ -84,21 +83,37 @@
 
 .info__item_text {
     @include text(25px, 130%, 700, $medium_black);
-    @apply uppercase ml-[3%] w-[90%];
+    @apply uppercase ml-[1%] w-[91%];
 
     @media screen and(max-width: 1440px) {
-        font-size: calc(12px + (25 - 12)*(100vw - 320px)/(1440 - 320));
+        font-size: calc(10px + (25 - 10)*(100vw - 320px)/(1440 - 320));
+    }
+
+    @media screen and(max-width: 992px) {
+        @apply uppercase ml-[3%];
+    }
+
+    @media screen and(max-width: 576px) {
+        @apply uppercase ml-[5%];
     }
 }
 
 .about__build {
-    @apply flex absolute top-[100%] right-0 w-[132px];
+    @apply flex absolute top-[53%] right-0 w-[132px];
 
     @media screen and(max-width: 1440px) {
-        width: calc(45px + (132 - 45)*(100vw - 320px)/(1440 - 320));
+        width: calc(30px + (132 - 30)*(100vw - 320px)/(1440 - 320));
     }
 
     @media screen and(max-width: 576px) {
-        @apply top-[130%];
+        @apply top-[60%];
+    }
+
+}
+
+.text__sepatator {
+    @apply hidden;
+    @media screen and(max-width: 576px) {
+        @apply inline;
     }
 }
