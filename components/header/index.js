@@ -71,35 +71,12 @@ const burger__menu_items = [
 export default function index() {
   const [toggle, setToggle] = React.useState(false);
 
-  // const [lastYPos, setLastYPos] = React.useState(0);
-  // const [shouldShowActions, setShouldShowActions] = React.useState(false);
-
-  // React.useEffect(() => {
-  //   function handleScroll() {
-  //     const yPos = window.scrollY;
-
-  //     console.log(yPos);
-  //     const isScrollingUp = yPos > 1;
-
-  //     setShouldShowActions(isScrollingUp);
-  //     setLastYPos(yPos);
-  //   }
-
-  //   window.addEventListener("scroll", handleScroll, false);
-
-  //   return () => {
-  //     window.removeEventListener("scroll", handleScroll, false);
-  //   };
-  // }, [lastYPos]);
 
   const togglerBurger = () => setToggle(!toggle);
 
   return (
     <header
      className={styles.header}
-    //  initial={{ opacity: 0 }}
-    //   animate={{ opacity: shouldShowActions ? 1 : 0 }}
-    //   transition={{ opacity: { duration: 0.3 } }}
      >
       <div className={styles.container}>
         <div className={styles.header__wrapper}>
@@ -131,7 +108,7 @@ export default function index() {
                           className={styles.burger__item}
                           key={item.id}
                           while={{ opacity: 1 }}
-                          whileHover={{ x: -15 }}
+                          whileHover={{ x: -15}}
                           initial={{ x: -30, opacity: 0 }}
                           animate={{ x: 0, opacity: 1 }}
                           transition={{ duration: 0.3 }}

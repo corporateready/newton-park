@@ -1,7 +1,12 @@
 @import '../styles/mixins.scss';
 
 .home {
-    @apply bg-white w-screen h-full relative top-0 left-0;
+    @apply bg-white w-full h-full relative top-0 left-0;
+
+    @media screen and(max-width: 576px) {
+        // @apply h-full;
+    }
+
 }
 
 .home__bg {
@@ -12,14 +17,17 @@
     }
 
     @media screen and(max-width: 576px) {
-        @apply bg-left-top h-screen;
+        @apply bg-left-top min-h-screen;
     }
 
-    //     @media screen and(max-height: 740px) {
-    //         // @apply h-full;
-    //         height: calc(600px + (740 - 600)*(100vw - 320px)/(576 - 320));
+    @media (orientation: portrait) and (max-height: 740px) {
+            @apply h-[850px];
 
-    //     }
+        }
+        @media (orientation: portrait) and (max-height: 700px) {
+            @apply h-[750px];
+
+        }
 }
 
 .home__shadow {
@@ -78,9 +86,9 @@
         @apply mt-0;
     }
 
-    @media screen and(max-height: 740px) {
-        @include text(27px, 130%, 700, #ECECEC);
-    }
+    // @media screen and(max-height: 740px) {
+    //     @include text(27px, 130%, 700, #ECECEC);
+    // }
 }
 
 .content {
@@ -104,9 +112,9 @@
         @include np_text(40px, 130%, 700);
     }
 
-    @media screen and(max-height: 740px) {
-        @include np_text(35px, 130%, 700);
-    }
+    // @media screen and(max-height: 740px) {
+    //     @include np_text(35px, 130%, 700);
+    // }
 }
 
 .subtitle {
@@ -121,9 +129,9 @@
         @include text(20px, 130%, 400, #ECECEC);
     }
 
-    @media screen and(max-height: 740px) {
-        @include text(16px, 130%, 400, #ECECEC);
-    }
+    // @media screen and(max-height: 740px) {
+    //     @include text(16px, 130%, 400, #ECECEC);
+    // }
 }
 
 .form__inner {
@@ -162,10 +170,10 @@
         font-size: calc(14px + (36 - 14)*(100vw - 576px)/(1440 - 576));
     }
 
-    @media screen and(max-height: 740px) {
-        @include np_text(30px, 105%, 700);
-        @apply mt-[7%];
-    }
+    // @media screen and(max-height: 740px) {
+    //     @include np_text(30px, 105%, 700);
+    //     @apply mt-[7%];
+    // }
 }
 
 .NP__decor_form {
@@ -196,12 +204,12 @@
     border-radius: 10%;
 
     @media screen and(max-width: 576px) {
-        @apply flex-col mt-[10%];
+        @apply flex-col mt-[14%];
     }
 
-    @media screen and(max-height: 740px) {
-        @apply mt-[7%];
-    }
+    // @media screen and(max-height: 740px) {
+    //     @apply mt-[7%];
+    // }
 }
 
 .nav__items {
@@ -214,9 +222,9 @@
         box-shadow: none;
     }
 
-    @media screen and(max-height: 740px) {
-        @apply my-0 px-[10%];
-    }
+    // @media screen and(max-height: 740px) {
+    //     @apply my-0 px-[10%];
+    // }
 }
 
 .nav__item {
@@ -244,9 +252,9 @@
         width: calc(54px + (137 - 34)*(100vw - 320px)/(576 - 320));
     }
 
-    @media screen and(max-height: 740px) {
-        width: calc(34px + (137 - 34)*(100vw - 320px)/(576 - 320));
-    }
+    // @media screen and(max-height: 740px) {
+    //     width: calc(34px + (137 - 34)*(100vw - 320px)/(576 - 320));
+    // }
 }
 
 .item__title {

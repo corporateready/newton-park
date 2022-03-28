@@ -3,12 +3,12 @@
 
 .home {
     height: auto;
-    max-width: 100%;
+    width: 100%;
     @apply relative top-0 left-0;
 }
 
 .home__bg {
-    @apply bg-[url('../../../public/static/about/supermarket-bg.jpg')] h-[708px] w-full relative top-0 left-0 z-0 bg-no-repeat bg-center bg-cover;
+    @apply bg-[url('../../../public/static/common/video-bg-min.gif')] h-[708px] w-full relative top-0 left-0 z-[1] bg-no-repeat bg-center bg-cover;
     @media screen and(max-width: 1440px) {
         height: calc(467px + (708 - 467)*(100vw - 576px)/(1440 - 576));
     }
@@ -18,10 +18,10 @@
         height: calc(300px + (467 - 300)*(100vw - 320px)/(576 - 320));
     }
 
-    @media screen and(max-height: 740px) {
-        @apply h-full;
-        height: calc(300px + (467 - 300)*(100vw - 320px)/(576 - 320));
-    }
+    // @media screen and(max-height: 740px) {
+    //     @apply h-full;
+    //     height: calc(300px + (467 - 300)*(100vw - 320px)/(576 - 320));
+    // }
 
 }
 .home__shadow {
