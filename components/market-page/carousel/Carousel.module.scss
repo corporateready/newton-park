@@ -4,39 +4,11 @@
     @apply bg-[#31414B] h-full w-full;
 
     @media screen and(max-width: 768px) {
-        @apply mt-[20%];
+        @apply mt-[10%];
     }
-}
-
-.carousel__wrapper {
-    @apply my-[4%] overflow-hidden cursor-grab;
-}
-
-.carousel__inner {
-    @apply flex flex-row;
-}
-
-.carousel__image {
-    @apply min-w-[580px] px-[2%];
 
     @media screen and(max-width: 576px) {
-        @apply min-w-[380px] px-[2%];
-    }
-
-    img {
-        @apply w-full h-full;
-    }
-}
-
-.carousel__toggler {
-    @apply flex mt-[2.5%] gap-x-[1%] justify-center;
-}
-
-.carousel__toggle {
-    @apply inline-block h-[30px] w-[30px] bg-white rounded-full;
-
-    @media screen and(max-width: 576px) {
-        @apply h-[10px] w-[10px];
+        @apply px-[2%];
     }
 }
 
@@ -76,10 +48,54 @@
 
 .form__button {
     @include text(24px, 135%, 400, $white_color);
-    @apply bg-[#2BB018] mt-[7%] py-[3.5%] px-[5%] rounded-lg;
+    @apply bg-[#2BB018] mt-[7%] py-[2%] px-[5%] rounded-lg;
 }
 
 // ==================>
-.carousel__image_active {
-    @apply scale-150;
+// .carousel__image_active {
+//     @apply scale-150;
+// }
+// ===== carousel 2 version =====>
+
+
+.swiper {
+  width: 100%;
+  height: 100%;
+
+//   @apply cursor-grab;
+}
+
+.mySwiper {
+    @apply py-[5%] mb-[1%] cursor-grab;
+
+    @media screen and(max-width: 768px) {
+        @apply pt-0 pb-[7%];
+    }
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 30px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }

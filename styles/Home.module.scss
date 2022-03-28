@@ -20,14 +20,10 @@
         @apply bg-left-top min-h-screen;
     }
 
-    // @media (orientation: portrait) and (max-height: 740px) {
-    //         @apply h-[850px];
+    @media (orientation: portrait) and (max-width: 576px) {
+        @apply h-[850px];
 
-    //     }
-        @media (orientation: portrait) and (max-width: 576px) {
-            @apply h-[850px];
-
-        }
+    }
 }
 
 .home__shadow {

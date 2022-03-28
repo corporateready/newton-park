@@ -1,7 +1,18 @@
-import React from "react";
+// import React from "react";
+import Head from "next/head";
 import Image from "next/image";
-import styles from "./Carousel.module.scss";
+
 import { motion } from "framer-motion";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+
+import "swiper/css";
+import "swiper/css/free-mode";
+import "swiper/css/pagination";
+
+import styles from "./Carousel.module.scss";
+
+import { FreeMode, Pagination } from "swiper";
 
 import image__carousel_1 from "../../../public/static/about/burebista-residence.jpg";
 import image__carousel_2 from "../../../public/static/about/gradina-botanica-2.jpg";
@@ -36,45 +47,50 @@ export default function index() {
   );
 }
 
-const Carousel = () => {
-  const [width, setWidth] = React.useState(0);
-  const carousel = React.useRef();
-  const active__item = React.useRef();
-
-  React.useEffect(() => {
-    setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth);
-  }, []);
-
+function Carousel() {
   return (
-    <motion.div
-      ref={carousel}
-      whileTap={"grabbing"}
-      className={styles.carousel__wrapper}
-    >
-      <motion.div
-        className={styles.carousel__inner}
-        drag="x"
-        dragConstraints={{ right: 0, left: -width }}
-        ref={active__item}
+    <>
+      <div className={styles.carousel__section}
       >
-        {carousel__images.map((img) => {
-          return (
-            <motion.div key={img.id} className={styles.carousel__image}>
-              <Image src={img.image} width={961} height={658} alt={img.image} />
-            </motion.div>
-          );
-        })}
-      </motion.div>
-      <div className={styles.carousel__toggler_wrapper}>
-        <ul className={styles.carousel__toggler}>
-          <li className={styles.carousel__toggle}></li>
-          <li className={styles.carousel__toggle}></li>
-          <li className={styles.carousel__toggle}></li>
-          <li className={styles.carousel__toggle}></li>
-          <li className={styles.carousel__toggle}></li>
-          <li className={styles.carousel__toggle}></li>
-        </ul>
+        <Swiper
+          loop={true}
+          centeredSlides={true}
+          pagination={{
+            clickable: true,
+          }}
+          draggable={true}
+          breakpoints={{
+            320:{
+              slidesPerView:1,
+              spaceBetween:30
+            },
+            576:{
+              slidesPerView:2,
+              spaceBetween:50
+            }
+          }}
+          modules={[FreeMode, Pagination]}
+          className={styles.mySwiper}
+        >
+          {carousel__images.map((item) => {
+            return (
+              <SwiperSlide key={item.id}>
+                <motion.div
+                  initial={{ scale: 1 }}
+                  whileHover={{ scale: 1.1, type: "spring", bounce: 1 , transition:{duration:0.5, ease: "easeInOut"}}}
+                >
+                  <Image
+                    src={item.image}
+                    width={961}
+                    height={658}
+                    alt={item.image}
+                  />
+                </motion.div>
+              </SwiperSlide>
+            );
+          })}
+        </Swiper>
       </div>
-    </motion.div>
+    </>
   );
-};
+}
