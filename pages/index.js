@@ -4,7 +4,6 @@ import Image from "next/image";
 import Link from "next/link";
 import styles from "../styles/Home.module.scss";
 import { motion } from "framer-motion";
-import gsap from "gsap";
 
 import logo from "../public/static/home/logo.svg";
 import market from "../public/static/home/supermarket.svg";
@@ -24,15 +23,6 @@ const nav__items = [
 ];
 
 export default function Home() {
-  // const home__ref = React.useRef(null);
-
-  // React.useEffect(() => {
-  //   gsap.from(home__ref.current, {
-  //     // opacity: 1,
-  //     duration: 3,
-  //     delay: 3,
-  //   });
-  // }, [home__ref]);
 
   React;
   return (

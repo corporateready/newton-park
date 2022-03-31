@@ -60,8 +60,9 @@ export default function index() {
             <a className={styles.messenger__item}>
               <Image
                 src={item.image}
-                width={51}
-                height={51}
+                width={68}
+                height={68}
+                // layout="responsive"
                 alt={item.description}
               />
             </a>

@@ -1,10 +1,13 @@
 @import '../../../styles/mixins.scss';
 
 .motives__section {
-    @apply bottom-0 h-full z-10 pt-[10%] mb-[10%];
+    @apply h-full z-10 mt-[7%];
+
+    @media screen and(max-width: 786px) {}
+    @apply mb-[17%];
 
     @media screen and(max-width: 576px) {
-        @apply h-full z-10 pt-[25%] mb-[10%];
+        @apply h-full z-10 mt-[57%] mb-[19%];
     }
 }
 
@@ -52,7 +55,7 @@
 }
 
 .motive__image {
-    @apply mx-auto;
+    @apply mx-auto h-auto;
 }
 
 .motive__title_wrapper {

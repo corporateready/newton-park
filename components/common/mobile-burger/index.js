@@ -94,7 +94,7 @@ export default function index() {
     <>
       <motion.div
         className={styles.header__mobile}
-        initial={{ x: -50, opacity: 0 }}
+        initial={{ x: -70, opacity: 0 }}
         animate={{
           x: shouldShowActions ? 0 : -70,
           opacity: 1,

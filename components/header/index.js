@@ -81,7 +81,12 @@ export default function index() {
       <div className={styles.container}>
         <div className={styles.header__wrapper}>
           <div className={styles.burger__button} onClick={togglerBurger}>
-            <Hamburger color="#fff" size={60} duration={0.8} distance="sm" />
+            <Hamburger 
+              color="#fff" 
+              // size={60}
+              duration={0.8}
+              distance="sm" 
+            />
           </div>
           <Link href="/">
             <a className={styles.logo}>

@@ -12,7 +12,7 @@
     }
 }
 .title {
-    @include text(62px, 135%, 700, #000);
+    @include text(62px, 135%, 700, $medium_black);
     @apply text-center;
 
     @media screen and(max-width: 1440px) {
@@ -23,7 +23,7 @@
     @apply mt-[5%] mx-auto px-[3%];
 }
 .info__description {
-    @include text(36px, 135%, 700, #000);
+    @include text(36px, 135%, 700, $medium_black);
     @apply mt-[5%] text-justify mx-auto;
     @media screen and(max-width: 1440px) {
         font-size: calc(16px + (36 - 18)*(100vw - 480px)/(1440 - 480));

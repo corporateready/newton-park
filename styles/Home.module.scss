@@ -10,8 +10,10 @@
 }
 
 .home__bg {
-    @apply bg-[url('../public/static/home/cover-home.jpeg')] absolute top-0 left-0 h-[708px] w-screen bg-cover bg-center bg-no-repeat;
+    @apply absolute top-0 left-0 h-[708px] w-screen bg-cover bg-center bg-no-repeat;
 
+    background-image: image-set(url("../public/static/home/cover-home.jpeg") 1x,
+    url("../public/static/home/cover-home.webp") 1x);
     @media screen and(max-width: 1440px) {
         height: calc(310px + (708 - 310)*(100vw - 576px)/(1440 - 576));
     }
@@ -82,9 +84,6 @@
         @apply mt-0;
     }
 
-    // @media screen and(max-height: 740px) {
-    //     @include text(27px, 130%, 700, #ECECEC);
-    // }
 }
 
 .content {
@@ -108,9 +107,6 @@
         @include np_text(40px, 130%, 700);
     }
 
-    // @media screen and(max-height: 740px) {
-    //     @include np_text(35px, 130%, 700);
-    // }
 }
 
 .subtitle {
@@ -125,9 +121,6 @@
         @include text(20px, 130%, 400, #ECECEC);
     }
 
-    // @media screen and(max-height: 740px) {
-    //     @include text(16px, 130%, 400, #ECECEC);
-    // }
 }
 
 .form__inner {
@@ -166,10 +159,6 @@
         font-size: calc(14px + (36 - 14)*(100vw - 576px)/(1440 - 576));
     }
 
-    // @media screen and(max-height: 740px) {
-    //     @include np_text(30px, 105%, 700);
-    //     @apply mt-[7%];
-    // }
 }
 
 .NP__decor_form {
@@ -203,9 +192,6 @@
         @apply flex-col mt-[14%];
     }
 
-    // @media screen and(max-height: 740px) {
-    //     @apply mt-[7%];
-    // }
 }
 
 .nav__items {
@@ -217,10 +203,6 @@
         @apply grid-cols-2 bg-inherit gap-y-4 gap-x-4;
         box-shadow: none;
     }
-
-    // @media screen and(max-height: 740px) {
-    //     @apply my-0 px-[10%];
-    // }
 }
 
 .nav__item {
@@ -232,9 +214,6 @@
         box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
     }
 
-    @media screen and(max-height: 740px) {
-        // @apply py-[15%];
-    }
 }
 
 .item__image {
@@ -248,9 +227,6 @@
         width: calc(54px + (137 - 34)*(100vw - 320px)/(576 - 320));
     }
 
-    // @media screen and(max-height: 740px) {
-    //     width: calc(34px + (137 - 34)*(100vw - 320px)/(576 - 320));
-    // }
 }
 
 .item__title {
