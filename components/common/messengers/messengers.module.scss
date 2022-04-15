@@ -1,12 +1,22 @@
 @import '../../../styles/mixins.scss';
 
 .messengers__section {
-    @apply fixed top-[50%] left-0 z-30 mx-[0.7%]  space-y-2 translate-x-0 translate-y-[-50%] flex flex-col;
+    @apply fixed top-[50%] left-0 z-30 mx-[0.7%] space-y-4 translate-x-0 translate-y-[-50%] flex flex-col justify-center items-center;
 
     @media screen and(max-width: 576px) {
         @apply hidden;
     }
 }
+
 .messenger__item {
-    // @apply space-y-5;
+    @apply rounded-2xl px-[%] inline-flex;
+    @include shadow_std();
+
+    img {
+        @apply inline-flex items-center mt-[5%];
+    }
+}
+
+.messenger__item_img {
+    @apply inline-flex items-center pt-[5%];
 }

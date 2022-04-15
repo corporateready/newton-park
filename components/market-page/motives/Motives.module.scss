@@ -37,7 +37,14 @@
 }
 
 .motive {
-    @apply border-r-[3px] border-[#31414B] flex flex-col items-center;
+    @apply border-r-[3px] border-[#31414B] flex justify-center;
+    &:nth-child(3) {
+        @apply border-0;
+    }
+
+    &:nth-child(6) {
+        @apply border-0;
+    }
 
     @media screen and(max-width: 768px) {
         &:nth-last-child(even) {
@@ -45,29 +52,42 @@
         }
 
         &:nth-last-child(odd) {
-            @apply border-r-0;
+            @apply border-r-0 border-white;
         }
     }
+
 }
 
 .motive__wrapper {
-    @apply w-[85%];
-}
+    @apply w-[80%] self-stretch;
 
-.motive__image {
-    @apply mx-auto h-auto;
+    @media screen and(max-width: 576px) {
+        @apply w-[90%];
+    }
 }
 
 .motive__title_wrapper {
-    @apply bg-[#31414B] rounded-sm px-[5%] py-[5%] mx-auto;
+    @apply bg-[#31414B] rounded-sm h-[20%];
+
+    @media screen and(max-width: 576px) {
+        @apply h-[20%];
+    }
+    
 }
 
 .motive__title {
     @include text(14px, 135%, 400, $white_color);
-    @apply text-center;
+    @apply flex justify-center items-center text-center px-[3%] h-full;
+    
+    &:nth-child(1) {
+        @apply py-[3%];
+        @media screen and(max-width: 576px) {
+            @apply py-[1.5%];
+        }
+    }
 
     @media screen and(max-width: 1440px) {
-        font-size: calc(9px + (14 - 9)*(100vw - 576px)/(1440 - 576));
+        font-size: calc(8px + (15 - 8)*(100vw - 576px)/(1440 - 576));
     }
 
     @media screen and(max-width: 576px) {

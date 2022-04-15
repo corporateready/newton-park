@@ -2,14 +2,15 @@
 import Head from "next/head";
 import Image from "next/image";
 
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
-import "swiper/css";
-import "swiper/css/free-mode";
-import "swiper/css/pagination";
+// import "swiper/css";
+// import "swiper/css/free-mode";
+// import "swiper/css/pagination";
 
+// import './Carousel.css';
 import styles from "./Carousel.module.scss";
 
 import { FreeMode, Pagination } from "swiper";
@@ -50,24 +51,30 @@ export default function index() {
 function Carousel() {
   return (
     <>
-      <div className={styles.carousel__section}
-      >
+      <div className={styles.carousel__section}>
         <Swiper
           loop={true}
           centeredSlides={true}
+          autoplay={{
+            delay: 1000,
+          }}
+          spaceBetween={30}
           pagination={{
-            clickable: true,
+            clickable:true,
+            renderBullet: function (index, className) {
+              return '<span class="' + className + '">' + '</span>';
+            }
           }}
           draggable={true}
           breakpoints={{
-            320:{
-              slidesPerView:1,
-              spaceBetween:30
+            320: {
+              slidesPerView: 1,
+              spaceBetween: 30,
             },
-            576:{
-              slidesPerView:2,
-              spaceBetween:50
-            }
+            576: {
+              slidesPerView: 2,
+              spaceBetween: 50,
+            },
           }}
           modules={[FreeMode, Pagination]}
           className={styles.mySwiper}
@@ -77,7 +84,12 @@ function Carousel() {
               <SwiperSlide key={item.id}>
                 <motion.div
                   initial={{ scale: 1 }}
-                  whileHover={{ scale: 1.1, type: "spring", bounce: 1 , transition:{duration:0.5, ease: "easeInOut"}}}
+                  whileHover={{
+                    scale: 1.1,
+                    // type: "spring",
+                    bounce: 1,
+                    transition: { duration: 0.5, ease: "easeInOut" },
+                  }}
                 >
                   <Image
                     src={item.image}

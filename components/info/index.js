@@ -2,9 +2,11 @@ import React from "react";
 import Image from "next/image";
 import logo from "../../public/static/common/logo-big.svg";
 import styles from "./info.module.scss";
+import Footer from '../../components/footer'
 
 export default function index() {
   return (
+    <>
     <div className={styles.info}>
       <div className={styles.container}>
         <div className={styles.inner}>
@@ -25,5 +27,7 @@ export default function index() {
         </div>
       </div>
     </div>
+    <Footer/>
+    </>
   );
 }

@@ -91,7 +91,7 @@
 
 .gallery__description_up_text {
     @include text(20px, 130%, 600, $white_color);
-    @apply pt-[5%] text-center uppercase;
+    @apply pt-[5%] text-center font-semibold uppercase;
 
     @media screen and(max-width: 1440px) {
         font-size: calc(12px + (20 - 12)*(100vw - 576px)/(1440 - 576));

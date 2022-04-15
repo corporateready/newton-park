@@ -2,7 +2,6 @@ import React from "react";
 import styles from "../styles/Market.module.scss";
 import {
   MobileBurger,
-  Header,
   Hero,
   About,
   Motives,

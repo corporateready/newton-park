@@ -24,7 +24,6 @@ const nav__items = [
 
 export default function Home() {
 
-  React;
   return (
     <>
       <Head>

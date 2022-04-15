@@ -15,7 +15,7 @@ export default function index() {
 
       <section className={styles.home}>
         <div className={styles.home__bg}>
-          {/* <div className={styles.home__shadow}></div> */}
+          <div className={styles.home__shadow}></div>
           <div className={styles.home__shadow_up}></div>
           <Header />
           <div className={styles.container}>

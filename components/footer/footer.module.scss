@@ -1,0 +1,25 @@
+@import '../../styles/mixins.scss';
+
+.footer {
+    @apply border-t-[1px] border-t-[#2BB018] w-full;
+}
+.inner {
+    @apply flex justify-between items-center my-[1.75%];
+}
+.container {
+    @apply h-full w-[1200px] mx-auto z-10;
+
+    @media screen and(max-width: 1440px) {
+        width: calc(300px + (1200 - 300)*(100vw - 320px)/(1440 - 320));
+    }
+}
+.description {
+    @include text(16px, 130%, 400, #31414B);
+    @media screen and(max-width: 576px) {
+        @include text(10px, 130%, 400, #31414B);
+    }
+}
+
+.logo__wrapper {
+    @apply w-[15%];
+}

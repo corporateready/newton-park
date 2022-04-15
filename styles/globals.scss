@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+@import "swiper/css";
+@import "swiper/css/free-mode";
+@import "swiper/css/pagination";
+
 
 @font-face {
   font-family: 'Open Sans';
@@ -55,4 +59,34 @@ html {
     padding: 0;
     margin: 0;
   }
+}
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 0.5%);
+    
+}
+
+.swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal {
+  
+  @media screen and(max-width: 576px) {
+   bottom: 0;   
+  }
+}
+
+.swiper-pagination-bullet {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  color: #fff;
+  opacity: 1;
+  background: #fff;
+
+  @media screen and(max-width: 576px) {
+    width: 10px;
+  height: 10px;
+  }
+}
+
+.swiper-pagination-bullet-active {
+  background: #2BB018;
 }
