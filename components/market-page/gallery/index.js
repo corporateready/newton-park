@@ -2,8 +2,6 @@ import React from "react";
 import Image from "next/image";
 import styles from "./Gallery.module.scss";
 
-import { motion } from "framer-motion";
-
 import next__btn from "../../../public/static/gallery/next-button.svg";
 import back__btn from "../../../public/static/gallery/back-btn.svg";
 import image_descr_1 from "../../../public/static/gallery/metri-patrati.svg";
@@ -25,12 +23,10 @@ const images = [
 export default function index() {
   const navigationPrevRef = React.useRef(null);
   const navigationNextRef = React.useRef(null);
+
   return (
     <div
       className={styles.gallery__section}
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1, transition: { duration: 1 } }}
-      exit={{ opacity: 0 }}
     >
       <div className={styles.gallery__bg}></div>
       <div className={styles.gallery__container}>
@@ -61,9 +57,9 @@ export default function index() {
           </div>
 
           <div className={styles.gallery__inner}>
-            <motion.button className={styles.back__btn} ref={navigationPrevRef}>
+            <button className={styles.back__btn} ref={navigationPrevRef}>
               <Image src={back__btn} width={48} height={54} alt="next button" />
-            </motion.button>
+            </button>
             <Swiper
               effect={"flip"}
               grabCursor={true}
@@ -72,7 +68,7 @@ export default function index() {
                 dynamicBullets: true,
               }}
               navigation={{
-                el: ".swiper-pagination",
+                // el: ".swiper-pagination",
                 prevEl: navigationPrevRef.current,
                 nextEl: navigationNextRef.current,
               }}
@@ -92,9 +88,9 @@ export default function index() {
                 );
               })}
             </Swiper>
-            <motion.button className={styles.next__btn} ref={navigationNextRef}>
+            <button className={styles.next__btn} ref={navigationNextRef}>
               <Image src={next__btn} width={48} height={54} alt="next button" />
-            </motion.button>
+            </button>
             <button className={styles.gallery__inner_btn}>parter</button>
           </div>
         </div>

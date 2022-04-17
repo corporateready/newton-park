@@ -189,7 +189,6 @@
     padding: 10%;
     @media screen and(max-width: 576px) {
         @apply mb-0;
-        // @include shadow_std();
     }
 }
 .swiper {
@@ -208,10 +207,6 @@
   .swiper-slide img {
     display: block;
     width: 100%;
-  }
-
-  .swiper-pagination {
-      @apply bottom-[2%];
   }
 
   .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
