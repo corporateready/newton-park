@@ -20,7 +20,7 @@ export default function market() {
     function handleScroll() {
       const yPos = window.scrollY;
       console.log(yPos);
-      const isScrollingUp = yPos < lastYPos;
+      const isScrollingUp = yPos <= lastYPos;
 
       setShouldShowActions(isScrollingUp);
       setLastYPos(yPos);
@@ -38,7 +38,6 @@ export default function market() {
       className={styles.market}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
       transition={{ duration: 0.3 }}
     >
       <Hero />
