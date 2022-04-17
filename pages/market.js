@@ -1,7 +1,6 @@
 import React from "react";
 import styles from "../styles/Market.module.scss";
 import {
-  MobileBurger,
   Hero,
   About,
   Motives,
@@ -10,7 +9,6 @@ import {
   Messenger,
   MobileMessenger
 } from "../components/market-page";
-import { Sling as Hamburger } from "hamburger-react";
 import { motion } from "framer-motion";
 
 export default function market() {
@@ -21,6 +19,7 @@ export default function market() {
   React.useEffect(() => {
     function handleScroll() {
       const yPos = window.scrollY;
+      console.log(yPos);
       const isScrollingUp = yPos < lastYPos;
 
       setShouldShowActions(isScrollingUp);
@@ -42,7 +41,6 @@ export default function market() {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.3 }}
     >
-      <MobileBurger/>
       <Hero />
       <About />
       <Motives />

@@ -6,11 +6,6 @@ import { motion, AnimatePresence } from "framer-motion";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
-// import "swiper/css";
-// import "swiper/css/free-mode";
-// import "swiper/css/pagination";
-
-// import './Carousel.css';
 import styles from "./Carousel.module.scss";
 
 import { FreeMode, Pagination } from "swiper";
@@ -36,7 +31,7 @@ export default function index() {
         <h4 className={styles.form__title}>
           Completați formularul
           <br />
-          și vă vom oferi informații suplimentare.
+          și vă vom oferi informații suplimentare
         </h4>
         <form className={styles.form__body}>
           <input type="email" placeholder="Adresa de email" />
@@ -86,7 +81,6 @@ function Carousel() {
                   initial={{ scale: 1 }}
                   whileHover={{
                     scale: 1.1,
-                    // type: "spring",
                     bounce: 1,
                     transition: { duration: 0.5, ease: "easeInOut" },
                   }}

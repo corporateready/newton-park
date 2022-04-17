@@ -25,7 +25,7 @@ export default function index() {
             De ce unicul spațiu pretabil pentru supermarket
             <br /> la <span className={styles.title__decor}>
               Newton Park
-            </span>{" "}
+            </span>
             se potrivește afacerii tale
           </h2>
           <div className={styles.inner}>
@@ -46,7 +46,7 @@ export default function index() {
             <div className={styles.motive}>
               <div className={styles.motive__wrapper}>
                 <div className={styles.motive__image}>
-                  <Image src={motive_2} width={321} height={238} priority />
+                  <Image src={motive_2} width={321} height={235} priority />
                 </div>
                 <div className={styles.motive__title_wrapper}>
                   <h3 className={styles.motive__title}>
@@ -76,7 +76,7 @@ export default function index() {
             <div className={styles.motive}>
               <div className={styles.motive__wrapper}>
                 <div className={styles.motive__image}>
-                  <Image src={motive_4} width={321} height={238} priority />
+                  <Image src={motive_4} width={321} height={232} priority />
                 </div>
                 <div className={styles.motive__title_wrapper}>
                   <h3 className={styles.motive__title}>
@@ -106,7 +106,7 @@ export default function index() {
             <div className={styles.motive}>
               <div className={styles.motive__wrapper}>
                 <div className={styles.motive__image}>
-                  <Image src={motive_6} width={321} height={238} priority />
+                  <Image src={motive_6} width={321} height={234} priority />
                 </div>
                 <div className={styles.motive__title_wrapper}>
                   <h3 className={styles.motive__title}>

@@ -1,7 +1,7 @@
 @import '../../../styles/mixins.scss';
 
 .gallery__section {
-    @apply relative top-[15%] left-0 border-l-0 border-r-0 w-full h-full py-[8%] translate-x-0 translate-y-[15%];
+    @apply relative top-[15%] left-0 border-l-0 border-r-0 w-full h-full py-[12%] translate-x-0 translate-y-[15%];
 
     @media screen and(max-width: 768px) {
         @apply top-[15%] translate-y-[15%];
@@ -57,17 +57,18 @@
     @apply w-[80%] pb-[5%];
 
     @media screen and(max-width: 576px) {
-        @apply flex flex-row w-full justify-center mt-[5%];
+        @apply flex flex-row w-full justify-center mt-[10%];
     }
 }
 
 .gallery__inner {
-    @apply bg-white w-[65%] flex flex-col items-center py-[3%] relative;
+    @apply bg-white w-[65%] flex flex-col items-center py-[3%] p-[5%] relative;
     @include shadow_std();
 
     @media screen and(max-width: 576px) {
-        @apply flex flex-col-reverse w-full bg-transparent;
-
+        @apply flex flex-col-reverse w-full;
+        background: white;
+        // padding: 5%;
         box-shadow: none;
     }
 }
@@ -165,7 +166,7 @@
     }
 
     @media screen and(max-width: 576px) {
-        @apply top-[58%];
+        @apply top-[50%];
     }
 }
 
@@ -177,14 +178,42 @@
     }
 
     @media screen and(max-width: 576px) {
-        @apply top-[58%];
+        @apply top-[50%];
     }
 }
 
-.next__btn:disabled * {
-    @apply scale-0;
+// ===== swiper =====>
+.mySwiper {
+    max-width: 100%;
+    margin-bottom: 8%;
+    padding: 10%;
+    @media screen and(max-width: 576px) {
+        @apply mb-0;
+        // @include shadow_std();
+    }
 }
+.swiper {
+    width: 300px;
+    height: 300px;
+    padding: 20px;
+  }
+  
+  .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+  }
+  
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+  }
 
-.back__btn:disabled * {
-    @apply scale-0;
-}
+  .swiper-pagination {
+      @apply bottom-[2%];
+  }
+
+  .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+      bottom: 5%;
+  }

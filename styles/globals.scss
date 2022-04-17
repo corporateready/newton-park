@@ -5,6 +5,7 @@
 @import "swiper/css";
 @import "swiper/css/free-mode";
 @import "swiper/css/pagination";
+@import "swiper/css/effect-flip";
 
 
 @font-face {
@@ -74,6 +75,7 @@ html {
 
 .swiper-pagination-bullet {
   display: inline-block;
+  border: 1px solid gray;
   width: 20px;
   height: 20px;
   text-align: center;
@@ -89,4 +91,10 @@ html {
 
 .swiper-pagination-bullet-active {
   background: #2BB018;
+}
+
+// ===== gallery section =====>
+
+.swiper-button-next {
+  right: -10%;
 }

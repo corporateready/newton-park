@@ -35,8 +35,8 @@ export default function index() {
               <Image
                 src={item.image}
                 className={styles.messenger__item_img}
-                width={51}
-                height={51}
+                width={41}
+                height={41}
                 alt={item.description}
               />
             </a>

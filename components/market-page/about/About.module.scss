@@ -56,7 +56,7 @@
     }
 
     @media screen and(max-width: 576px) {
-        font-size: calc(12px + (34 - 12)*(100vw - 320px)/(1440 - 320));
+        font-size: calc(11px + (19 - 11)*(100vw - 320px)/(576 - 320));
     }
 
     span {

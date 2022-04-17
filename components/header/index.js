@@ -83,7 +83,6 @@ export default function index() {
           <div className={styles.burger__button} onClick={togglerBurger}>
             <Hamburger 
               color="#fff" 
-              // size={60}
               duration={0.8}
               distance="sm" 
             />
