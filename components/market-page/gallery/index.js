@@ -63,7 +63,10 @@ export default function index() {
             <Swiper
               effect={"flip"}
               grabCursor={true}
-              centeredSlides={true}
+              flipEffect={{
+                slideShadows:false
+              }}
+              // centeredSlides={true}
               pagination={{
                 dynamicBullets: true,
               }}
