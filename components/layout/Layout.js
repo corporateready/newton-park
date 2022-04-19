@@ -1,10 +1,12 @@
-import React from 'react'
-import Header from '../../components/header'
+import React from "react";
+import Header from "../header";
 
-export default function index() {
+export default function index({ children }) {
   return (
     <>
-    <Header/>
+      <Header />
+      {children}
+      <Footer />
     </>
-  )
+  );
 }

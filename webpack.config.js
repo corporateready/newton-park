@@ -1,8 +1,11 @@
-// module.exports = {
-//     module: {
-//       rules: [
-//         { test: /\.css$/, use: 'css-loader' },
-//         { test: /\.ts$/, use: 'ts-loader' },
-//       ],
-//     },
-//   };
+module.exports = {
+    module: {
+      rules: [
+        {
+          test: /\.svg$/i,
+          issuer: /\.[jt]sx?$/,
+          use: ['@svgr/webpack'],
+        },
+      ],
+    },
+  }

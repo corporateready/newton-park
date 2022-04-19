@@ -1,11 +1,22 @@
 import React from "react";
-import Image from "next/image";
+// import Image from "next/image";
 import styles from "./About.module.scss";
 
 import Gallery from "../gallery";
+import Garden from "../../svg/garden";
+import Build from "../../svg/build";
 
-import park from "../../../public/static/about/park.svg";
-import build from "../../../public/static/about/build.svg";
+const BuildIcon = () => (
+  <div className={styles.build__wrapper}>
+    <Build width={107} height={113}/>
+  </div>
+)
+
+const GardenIcon = () => (
+  <div className={styles.garden__wrapper}>
+    <Garden width={43} height={39}/>
+  </div>
+)
 
 export default function index() {
   return (
@@ -38,7 +49,7 @@ export default function index() {
               </div>
               <div className={styles.info__item}>
                 <div className={styles.info__item_img}>
-                  <Image src={park} height={52} width={57} alt="newton park" />
+                  <GardenIcon/>
                 </div>
                 <span className={styles.info__item_text}>
                   Flux de oameni continuu din parcul Grădina Botanică
@@ -48,12 +59,7 @@ export default function index() {
             <div></div>
           </div>
           <div className={styles.about__build}>
-            <Image
-              src={build}
-              height={140}
-              width={132}
-              alt="newton park build"
-            />
+            <BuildIcon/>
           </div>
         </div>
       </div>

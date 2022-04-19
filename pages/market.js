@@ -19,10 +19,11 @@ export default function market() {
   React.useEffect(() => {
     function handleScroll() {
       const yPos = window.scrollY;
-      console.log(yPos);
-      const isScrollingUp = yPos <= lastYPos;
+      const isScrollingUp = yPos < lastYPos;
+      const isScrollingHidden = yPos > 2100;
 
       setShouldShowActions(isScrollingUp);
+      setShouldShowActions(isScrollingHidden);
       setLastYPos(yPos);
     }
 
@@ -38,6 +39,7 @@ export default function market() {
       className={styles.market}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
       transition={{ duration: 0.3 }}
     >
       <Hero />
@@ -46,7 +48,7 @@ export default function market() {
       <Carousel />
       <Info />
       <Messenger />
-      <MobileMessenger/>
+      {/* <MobileMessenger/> */}
     </motion.div>
   );
 }

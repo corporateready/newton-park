@@ -35,24 +35,24 @@
 }
 
 .info {
-    @apply absolute top-[60.52%] left-0 bg-white w-[84%] py-[4.3%];
+    @apply absolute top-[60.52%] left-0 bg-white w-[83.7%] pt-[3.2%] pb-[3.6%];
     box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
     max-width: 100%;
 
     @media screen and(max-width: 576px) {
-        @apply pt-[4.5%] pb-[6%] px-[2%] top-[53.52%];
+        @apply pt-[4.5%] pb-[6%] top-[53.52%];
     }
 }
 
 .info__container {
-    @apply relative top-0 left-0 h-full mx-auto z-10 px-[3.95%];
+    @apply relative top-0 left-0 h-full mx-auto z-10 px-[5.5%];
 }
 
 .info__title {
-    @include text(30px, 130%, 700, $medium_black);
+    @include text(32px, 130%, 700, $medium_black);
     @apply uppercase mb-[2%];
     @media screen and(max-width: 1440px) {
-        font-size: calc(12px + (30 - 12)*(100vw - 576px)/(1440 - 576));
+        font-size: calc(13px + (32 - 13)*(100vw - 576px)/(1440 - 576));
     }
 
     @media screen and(max-width: 576px) {
@@ -60,11 +60,11 @@
     }
 
     span {
-        @include text(40px, 130%, 700, $sapfir_color);
+        @include text(32px, 130%, 700, $sapfir_color);
         @apply uppercase;
 
         @media screen and(max-width: 1440px) {
-            font-size: calc(14px + (40 - 14)*(100vw - 480px)/(1440 - 480));
+            font-size: calc(12px + (32 - 12)*(100vw - 480px)/(1440 - 480));
         }
 
         @media screen and(max-width: 576px) {
@@ -74,19 +74,19 @@
 }
 
 .info__item {
-    @apply flex items-center mt-[2%];
+    @apply flex items-center mt-[1%];
 
     @media screen and(max-width: 576px) {
-        @apply mt-[4%];
+        @apply mt-[6%];
     }
 }
 
 .info__item_num {
-    @include text(36px, 135%, 700, $sapfir_color);
-    @apply w-[12%];
+    @include text(32px, 135%, 700, $sapfir_color);
+    @apply w-[12%] text-right;
 
     @media screen and(max-width: 1440px) {
-        font-size: calc(10px + (36 - 10)*(100vw - 320px)/(1440 - 320));
+        font-size: calc(10px + (32 - 10)*(100vw - 576px)/(1440 - 576));
     }
 
     @media screen and(max-width: 576px) {
@@ -96,7 +96,7 @@
 }
 
 .info__item_img {
-    @apply flex relative top-0 left-0 w-[12%];
+    @apply flex justify-end relative top-0 left-0 w-[12%];
 
     @media screen and(max-width: 1440px) {
         height: calc(24px + (56 - 24)*(100vw - 576px)/(1440 - 576));
@@ -109,11 +109,11 @@
 }
 
 .info__item_text {
-    @include text(25px, 130%, 700, $medium_black);
-    @apply uppercase ml-[1%] w-[88%];
+    @include text(20px, 130%, 700, $medium_black);
+    @apply uppercase ml-[4%] w-[88%];
 
     @media screen and(max-width: 1440px) {
-        font-size: calc(10px + (25 - 10)*(100vw - 320px)/(1440 - 320));
+        font-size: calc(10px + (20 - 10)*(100vw - 576px)/(1440 - 576));
     }
 
     @media screen and(max-width: 992px) {
@@ -121,21 +121,43 @@
     }
 
     @media screen and(max-width: 576px) {
-        @apply uppercase ml-[5%] w-[54%];
+        @apply uppercase ml-[5%] w-[57%];
         font-size: calc(10px + (17 - 10)*(100vw - 320px)/(576 - 320));
     }
 }
 
-.about__build {
-    @apply flex absolute top-[53%] right-0 w-[132px];
+.garden__wrapper {
+    svg {
+        @apply max-w-fit;
 
-    @media screen and(max-width: 1440px) {
-        width: calc(70px + (132 - 70)*(100vw - 576px)/(1440 - 576));
+        @media screen and(max-width: 1440px) {
+            height: calc(20px + (39 - 20)*(100vw - 576px)/(1440 - 576));
+        }
+        @media screen and(max-width: 576px) {
+            height: calc(30px + (65 - 30)*(100vw - 320px)/(576 - 320));
+        }
     }
+}
+
+.build__wrapper {
+    svg {
+        @apply max-w-fit;
+
+        @media screen and(max-width: 1440px) {
+            height: calc(50px + (113 - 50)*(100vw - 320px)/(1440 - 320));
+        }
+
+        @media screen and(max-width: 576px) {
+        //     height: calc(55px + (65 - 55)*(100vw - 320px)/(576 - 320));
+        }
+    }
+}
+
+.about__build {
+    @apply flex justify-end absolute top-[63%] right-0;
 
     @media screen and(max-width: 576px) {
-        @apply top-[60%];
-        width: calc(35px + (70 - 35)*(100vw - 320px)/(576 - 320));
+        @apply top-[58%];
     }
 
 }

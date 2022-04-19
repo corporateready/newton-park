@@ -1,7 +1,7 @@
 @import '../../../styles/mixins.scss';
 
 .gallery__section {
-    @apply relative top-[15%] left-0 border-l-0 border-r-0 w-full h-full py-[12%] translate-x-0 translate-y-[15%];
+    @apply relative top-[15%] left-0 border-l-0 border-r-0 w-full h-full pt-[6%] pb-[12%] translate-x-0 translate-y-[15%];
 
     @media screen and(max-width: 768px) {
         @apply top-[15%] translate-y-[15%];
@@ -21,10 +21,10 @@
 }
 
 .gallery__bg {
-    @apply absolute bg-[#31414B] h-[63%] w-full left-0 top-[50%] translate-x-[0] translate-y-[-50%];
+    @apply absolute bg-[#31414B] h-[64%] w-full left-0 top-[46%] translate-x-[0] translate-y-[-50%];
 
     @media screen and(max-width: 576px) {
-        @apply top-[79%] h-[36%];
+        @apply top-[74%] h-[43%];
     }
 
 }
@@ -68,7 +68,6 @@
     @media screen and(max-width: 576px) {
         @apply flex flex-col-reverse w-full;
         background: white;
-        // padding: 5%;
         box-shadow: none;
     }
 }
@@ -92,7 +91,7 @@
 
 .gallery__description_up_text {
     @include text(20px, 130%, 600, $white_color);
-    @apply pt-[5%] text-center uppercase;
+    @apply pt-[10%] text-center uppercase;
 
     @media screen and(max-width: 1440px) {
         font-size: calc(12px + (20 - 12)*(100vw - 576px)/(1440 - 576));
@@ -108,7 +107,7 @@
     @apply flex flex-col pt-[13%];
 
     @media screen and(max-width: 576px) {
-        @apply pt-0 w-full;
+        @apply pt-0 ml-[5%] w-full;
     }
 }
 
@@ -117,6 +116,10 @@
 
     @media screen and(max-width: 1440px) {
         width: calc(54px + (110 - 54)*(100vw - 576px)/(1440 - 576));
+    }
+
+    @media screen and(max-width: 1440px) {
+        height: calc(54px + (110 - 54)*(100vw - 576px)/(1440 - 576));
     }
 
     @media screen and(max-width: 576px) {
@@ -159,7 +162,7 @@
 
 // ===== gallery pagging buttons =====>
 .next__btn {
-    @apply absolute top-[50%] right-[2%] w-[48px] disabled:opacity-30;
+    @apply absolute top-[50%] right-[2%] w-[48px] disabled:opacity-30 z-50;
 
     @media screen and(max-width: 1440px) {
         width: calc(26px + (48 - 26)*(100vw - 320px)/(1440 - 320));
@@ -171,7 +174,7 @@
 }
 
 .back__btn {
-    @apply absolute top-[50%] left-[2%] w-[48px] disabled:opacity-30;
+    @apply absolute top-[50%] left-[2%] w-[48px] disabled:opacity-30 z-50;
 
     @media screen and(max-width: 1440px) {
         width: calc(26px + (48 - 26)*(100vw - 320px)/(1440 - 320));
@@ -187,6 +190,7 @@
     max-width: 100%;
     margin-bottom: 8%;
     padding: 10%;
+
     @media screen and(max-width: 576px) {
         @apply mb-0;
     }
@@ -196,7 +200,7 @@
     height: 300px;
     padding: 20px;
   }
-  
+
   .swiper-slide {
     background-position: center;
     background-size: cover;
@@ -206,7 +210,6 @@
   
   .swiper-slide img {
     display: block;
-    
     width: 100%;
   }
 

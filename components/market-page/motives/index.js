@@ -4,10 +4,10 @@ import styles from "./Motives.module.scss";
 
 import { motion, AnimatePresence } from "framer-motion";
 
-import motive_1 from "../../../public/static/motives/motive_1.svg";
+import motive_1 from "../../../public/static/motives/motive_1.png";
 import motive_2 from "../../../public/static/motives/livrare-01.png";
 import motive_3 from "../../../public/static/motives/open-space-01.png";
-import motive_4 from "../../../public/static/motives/motive_4.svg";
+import motive_4 from "../../../public/static/motives/motive_4.png";
 import motive_5 from "../../../public/static/motives/sisteme-ingineresti-01.png";
 import motive_6 from "../../../public/static/motives/varianta-sura.png";
 
@@ -25,15 +25,14 @@ export default function index() {
             De ce unicul spațiu pretabil pentru supermarket
             <br /> la <span className={styles.title__decor}>
               Newton Park
-            </span>
-            se potrivește afacerii tale
+            </span> se potrivește afacerii tale
           </h2>
           <div className={styles.inner}>
 
             <div className={styles.motive}>
               <div className={styles.motive__wrapper}>
                 <div className={styles.motive__image}>
-                  <Image src={motive_1} width={321} height={238} priority />
+                  <Image src={motive_1} width={321} height={168} priority />
                 </div>
                 <div className={styles.motive__title_wrapper}>
                   <h3 className={styles.motive__title}>
@@ -61,13 +60,13 @@ export default function index() {
             <div className={styles.motive}>
               <div className={styles.motive__wrapper}>
                 <div className={styles.motive__image}>
-                  <Image src={motive_3} width={321} height={234} priority />
+                  <Image src={motive_3} width={321} height={224} priority />
                 </div>
                 <div className={styles.motive__title_wrapper}>
                   <h3 className={styles.motive__title}>
                     Open space
                     <br />
-                    Flexibilitate deplină în compartimente
+                    Flexibilitate în compartimente
                   </h3>
                 </div>
               </div>
@@ -76,7 +75,7 @@ export default function index() {
             <div className={styles.motive}>
               <div className={styles.motive__wrapper}>
                 <div className={styles.motive__image}>
-                  <Image src={motive_4} width={321} height={232} priority />
+                  <Image src={motive_4} width={321} height={168} priority />
                 </div>
                 <div className={styles.motive__title_wrapper}>
                   <h3 className={styles.motive__title}>
@@ -91,7 +90,7 @@ export default function index() {
             <div className={styles.motive}>
               <div className={styles.motive__wrapper}>
                 <div className={styles.motive__image}>
-                  <Image src={motive_5} width={321} height={238} priority />
+                  <Image src={motive_5} width={321} height={233} priority />
                 </div>
                 <div className={styles.motive__title_wrapper}>
                   <h3 className={styles.motive__title}>
@@ -106,7 +105,7 @@ export default function index() {
             <div className={styles.motive}>
               <div className={styles.motive__wrapper}>
                 <div className={styles.motive__image}>
-                  <Image src={motive_6} width={321} height={234} priority />
+                  <Image src={motive_6} width={321} height={144} priority />
                 </div>
                 <div className={styles.motive__title_wrapper}>
                   <h3 className={styles.motive__title}>
@@ -117,6 +116,7 @@ export default function index() {
                 </div>
               </div>
             </div>
+            
           </div>
         </div>
       </motion.div>

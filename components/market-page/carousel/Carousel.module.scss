@@ -8,7 +8,7 @@
     }
 
     @media screen and(max-width: 576px) {
-        @apply px-[2%] pb-[3%];
+        @apply px-[2%] pb-[5%];
     }
 }
 
@@ -22,11 +22,28 @@
 }
 
 .form__title {
-    @include text(36px, 135%, 600, $white_color);
-    @apply text-center;
+    @include text(50px, 135%, 700, $white_color);
+    @apply text-center uppercase;
 
     @media screen and(max-width: 1440px) {
-        font-size: calc(16px + (36 - 18)*(100vw - 480px)/(1440 - 480));
+        font-size: calc(26px + (50 - 26)*(100vw - 576px)/(1440 - 576));
+    }
+
+    @media screen and(max-width: 576px) {
+        font-size: calc(20px + (39 - 20)*(100vw - 320px)/(576 - 320));
+    }
+
+    .text__decor {
+        @include text(50px, 135%, 700, $sapfir_color);
+    @apply text-center uppercase;
+
+    @media screen and(max-width: 1440px) {
+        font-size: calc(26px + (50 - 26)*(100vw - 576px)/(1440 - 576));
+    }
+
+    @media screen and(max-width: 576px) {
+        font-size: calc(20px + (39 - 20)*(100vw - 320px)/(576 - 320));
+    }
     }
 }
 
@@ -42,17 +59,29 @@
     }
 
     input {
-        @apply bg-[#ECECEC] mt-[5%] py-[2%] px-[5%] rounded-lg;
+        @include text(16px, 135%, 400, #31414B);
+        @apply bg-white border-[1px] border-[#fff] mt-[5%] py-[3%] px-[5%] rounded-lg focus:outline-none focus:placeholder:text-transparent;
 
         &::placeholder {
-            @include text(18px, 135%, 400, #31414B);
+            @include text(16px, 135%, 400, #31414B);
+            @apply focus:text-transparent;
+        }
+
+        @media screen and(max-width: 576px) {
+            @include text(16px, 135%, 400, #fff);
+            @apply bg-transparent;
+
+            &::placeholder {
+                @include text(16px, 135%, 400, #fff);
+                @apply opacity-50;
+            }
         }
     }
 }
 
 .form__button {
     @include text(24px, 135%, 400, $white_color);
-    @apply bg-[#2BB018] mt-[7%] py-[2%] px-[5%] rounded-lg;
+    @apply bg-[#2BB018] mt-[8%] py-[2%] px-[5%] rounded-lg;
 }
 
 .swiper {

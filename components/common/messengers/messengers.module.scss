@@ -9,14 +9,15 @@
 }
 
 .messenger__item {
-    @apply rounded-2xl px-[%] inline-flex;
+    @apply rounded-2xl bg-white relative top-0 left-0 w-[51px] h-[51px];
     @include shadow_std();
 
-    img {
-        @apply inline-flex items-center mt-[5%];
+    svg {
+        @apply absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%];
+
     }
 }
 
-.messenger__item_img {
-    @apply inline-flex items-center pt-[5%];
+.messenger__item:hover * {
+        fill: #2BB018;
 }

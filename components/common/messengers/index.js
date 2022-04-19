@@ -1,25 +1,31 @@
 import React from "react";
-import Image from "next/image";
+// import Image from "next/image";
 import Link from "next/link";
 import styles from "./messengers.module.scss";
 
-import messenger__icon from "../../../public/static/common/MESSENGER.svg";
-import viber__icon from "../../../public/static/common/VIBER.svg";
-import phone__icon from "../../../public/static/common/PHONE.svg";
-import telegram__icon from "../../../public/static/common/TELEGRAM.svg";
+import MessengerButton from "../../../public/static/common/MESSENGER.svg";
+import ViberButton from "../../../public/static/common/VIBER.svg";
+import PhoneButton from "../../../public/static/common/PHONE.svg";
+import TelegramButton from "../../../public/static/common/TELEGRAM.svg";
+// import { Messenger } from "../../market-page";
+
+const MessengerIcon = () => <MessengerButton width={28} height={28}/>
+const ViberIcon = () => <ViberButton width={27} height={29}/>
+const PhoneIcon = () => <PhoneButton width={24} height={24}/>
+const TelegramIcon = () => <TelegramButton width={29} height={24}/>
 
 const messenger__items = [
   {
     id: 1,
-    image: messenger__icon,
+    image: <MessengerIcon/>,
     url: "",
     description: "messenger newton park",
   },
-  { id: 2, image: viber__icon, url: "", description: "viber newton park" },
-  { id: 3, image: phone__icon, url: "", description: "phone newton park" },
+  { id: 2, image:<ViberIcon/>, url: "", description: "viber newton park" },
+  { id: 3, image:<PhoneIcon/>, url: "", description: "phone newton park" },
   {
     id: 4,
-    image: telegram__icon,
+    image: <TelegramIcon/>,
     url: "",
     description: "telegram newton park",
   },
@@ -32,13 +38,7 @@ export default function index() {
         return (
           <Link key={item.id} href="/">
             <a className={styles.messenger__item}>
-              <Image
-                src={item.image}
-                className={styles.messenger__item_img}
-                width={41}
-                height={41}
-                alt={item.description}
-              />
+            {item.image}
             </a>
           </Link>
         );

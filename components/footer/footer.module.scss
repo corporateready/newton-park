@@ -21,5 +21,33 @@
 }
 
 .logo__wrapper {
-    @apply w-[15%];
+    @apply hover:cursor-pointer z-10 self-center;
+
+    svg {
+        @apply max-w-[100%] object-cover ;
+    }
+
+    @media screen and(max-width: 576px) {
+        @apply hidden;
+        svg {
+            @apply max-w-[50%];
+        }
+    }
 }
+
+.logo__wrapper_m {
+    @apply hidden;
+
+    @media screen and(max-width: 576px) {
+        @apply inline-flex;
+        svg {
+            @apply max-w-full object-cover;
+        }
+    }
+}
+
+// .logo__wrapper * {
+//     @media screen and(max-width: 576px) {
+//             @apply object-cover;
+//     }
+// }

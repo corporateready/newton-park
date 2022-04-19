@@ -1,8 +1,14 @@
 import React from "react";
 import Image from "next/image";
-import logo from "../../public/static/common/logo-big.svg";
+import logo from "../../public/static/common/logo-info.png";
 import styles from "./info.module.scss";
 import Footer from '../../components/footer'
+
+// const LogoInfo = () => ( 
+// <div>
+//     <BigLogo width={296} height={147}/>
+//   </div>
+// )
 
 export default function index() {
   return (

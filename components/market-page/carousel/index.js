@@ -29,9 +29,8 @@ export default function index() {
       <Carousel />
       <div className={styles.form__wrapper}>
         <h4 className={styles.form__title}>
-          Completați formularul
-          <br />
-          și vă vom oferi informații suplimentare
+        Obține informații 
+        <br/>despre <span className={styles.text__decor}>NEWTON PARK</span>
         </h4>
         <form className={styles.form__body}>
           <input type="email" placeholder="Adresa de email" />

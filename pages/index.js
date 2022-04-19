@@ -1,29 +1,81 @@
 import React from "react";
 import Head from "next/head";
-import Image from "next/image";
 import Link from "next/link";
+import Image from "next/image";
 import styles from "../styles/Home.module.scss";
+import Market from "../components/svg/home/market";
+import Restaurant from "../components/svg/home/restaurant";
+import FastFood from "../components/svg/home/fast-food";
+import HomeLogo from "../components/svg/home/logo";
+import BigRetail from "../components/svg/home/big-retail";
+import HomeDecor from "../components/svg/home/home-decor";
+import MediumRetail from "../components/svg/home/medium-retail";
+import arriw__down from '../public/static/home/close-button.png' 
 import { motion } from "framer-motion";
 
-import logo from "../public/static/home/logo.svg";
-import market from "../public/static/home/supermarket.svg";
-import restaurant from "../public/static/home/restaurant-icon.svg";
-import food from "../public/static/home/fast-food.svg";
-import b__retail from "../public/static/home/big-retail.svg";
-import home__decor from "../public/static/home/home-decor.svg";
-import m__retail from "../public/static/home/medium-retail.svg";
+const HomeLogoIcon = () => (
+  <div>
+    <HomeLogo width={109} height={57} />
+  </div>
+);
+
+const MarketIcon = () => (
+  <div>
+    <Market width={94} height={80} />
+  </div>
+);
+
+const RestaurantIcon = () => (
+  <div>
+    <Restaurant width={94} height={80} />
+  </div>
+);
+
+const FastFoodIcon = () => (
+  <div>
+    <FastFood width={94} height={80} />
+  </div>
+);
+
+const BigRetailIcon = () => (
+  <div>
+    <BigRetail width={94} height={80} />
+  </div>
+);
+
+const HomeDecorIcon = () => (
+  <div>
+    <HomeDecor width={94} height={80} />
+  </div>
+);
+
+const MediumRetailIcon = () => (
+  <div>
+    <MediumRetail width={94} height={80} />
+  </div>
+);
 
 const nav__items = [
-  { id: 1, title: "supermarket", image: market, path: "market" },
-  { id: 2, title: "restaurant", image: restaurant, path: "restaurant" },
-  { id: 3, title: "fast-food", image: food, path: "fast-food" },
-  { id: 4, title: "big retail", image: b__retail, path: "big-retail" },
-  { id: 5, title: "home decor", image: home__decor, path: "home-decor" },
-  { id: 6, title: "medium retail", image: m__retail, path: "medium-retail" },
+  { path: "/market", icon: <MarketIcon />, title: "supermarket" },
+  { path: "/restaurant", icon: <RestaurantIcon />, title: "restaurant" },
+  { path: "/fast-food", icon: <FastFoodIcon />, title: "fast-food" },
+  { path: "/big-retail", icon: <BigRetailIcon />, title: "big retail" },
+  { path: "/home decor", icon: <HomeDecorIcon />, title: "home decor" },
+  {
+    path: "/medium retail",
+    icon: <MediumRetailIcon />,
+    title: "medium retail",
+  },
 ];
 
 export default function Home() {
+  const [isVisible, setIsVisible] = React.useState(false);
 
+  React.useEffect(() => {
+    setTimeout(() => {
+      setIsVisible(true);
+    }, 5000);
+  }, []);
   return (
     <>
       <Head>
@@ -46,7 +98,8 @@ export default function Home() {
           <header className={styles.header}>
             <div className={styles.header__wrapper}>
               <div className={styles.logo}>
-                <Image src={logo} height={57} width={109} />
+                <HomeLogoIcon />
+                {/* <Image src={logo} height={57} width={109} priority /> */}
               </div>
             </div>
           </header>
@@ -74,30 +127,114 @@ export default function Home() {
               </form>
             </div>
           </div>
+
           <div className={styles.nav__inner}>
             <div className={styles.nav__items}>
               {nav__items.map((item) => {
                 return (
-                  <Link href={`/${item.path}/`} key={item.title}>
-                    <a className={styles.nav__item} key={item.id}>
-                      <p className={styles.item__image}>
-                        <Image
-                          src={item.image}
-                          height={84}
-                          width={100}
-                          priority
-                          alt={item.title}
-                        />
-                      </p>
+                  <Link href={`${item.path}`} key={item.id}>
+                    <a className={styles.nav__item}>
+                      <p className={styles.item__image}>{item.icon}</p>
                       <h3 className={styles.item__title}>{item.title}</h3>
                     </a>
                   </Link>
                 );
               })}
+
+              {/* <Link href="/market">
+                <a className={styles.nav__item}>
+                  <p className={styles.item__image}>
+                    {item.icon}
+                  </p>
+                  <h3 className={styles.item__title}>supermarket</h3>
+                </a>
+              </Link> */}
+
+              {/* <Link href="/restaurant">
+                <a className={styles.nav__item}>
+                  <p className={styles.item__image}>
+                    <RestaurantIcon />
+                  </p>
+                  <h3 className={styles.item__title}>restaurant</h3>
+                </a>
+              </Link>
+
+              <Link href="/fast-food">
+                <a className={styles.nav__item}>
+                  <p className={styles.item__image}>
+                    <FastFoodIcon />
+                  </p>
+                  <h3 className={styles.item__title}>fast-food</h3>
+                </a>
+              </Link>
+
+              <Link href="/big-retail">
+                <a className={styles.nav__item}>
+                  <p className={styles.item__image}>
+                    <BigRetailIcon />
+                  </p>
+                  <h3 className={styles.item__title}>big retail</h3>
+                </a>
+              </Link>
+
+              <Link href="/restaurant">
+                <a className={styles.nav__item}>
+                  <p className={styles.item__image}>
+                    <HomeDecorIcon />
+                  </p>
+                  <h3 className={styles.item__title}>home decor</h3>
+                </a>
+              </Link>
+
+              <Link href="/medium-retail">
+                <a className={styles.nav__item}>
+                  <p className={styles.item__image}>
+                    <MediumRetailIcon />
+                  </p>
+                  <h3 className={styles.item__title}>medium retail</h3>
+                </a>
+              </Link> */}
             </div>
           </div>
         </div>
       </motion.section>
+      {isVisible && (
+        <motion.div 
+        className={styles.popup}
+        initial={{y: 500}}
+        animate={{ y: 0}}
+        exit={{y:500, duration: 1 }}
+        transition={{duration: 1, ease: "easeInOut"}}
+        >
+          <div className={styles.popup__container}>
+            <div className={styles.popup__inner}>
+              <button 
+                className={styles.popup__close_button}
+                onClick={() => setIsVisible(!isVisible)}
+                >
+                  <Image
+                  src={arriw__down}
+                  width={45}
+                  height={40}
+                  />
+                </button>
+              <h3 className={styles.popup__title}>
+                Solicită prezentarea
+                <br />
+                <span className={styles.popup__title_mark}>
+                  NEWTON PARK
+                </span>{" "}
+                PDF
+              </h3>
+              <form className={styles.popup__form}>
+                <input type="email" placeholder="Adresa de email" />
+                <input type="tel" placeholder="Numărul de telefon" />
+                <button type="submit">Solicită prezentarea</button>
+              </form>
+            </div>
+          </div>
+        </motion.div>
+      )}
     </>
   );
 }
