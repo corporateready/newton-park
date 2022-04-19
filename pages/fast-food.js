@@ -12,11 +12,11 @@ export default function market() {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.3 }}
     >
-      <Hero />
+      {/* <Hero />
       <About />
       <Motives />
       <Carousel />
-      <Info />
+      <Info /> */}
     </motion.div>
   );
 }

@@ -1,5 +1,4 @@
 import React from "react";
-// import Image from "next/image";
 import styles from "./About.module.scss";
 
 import Gallery from "../gallery";
