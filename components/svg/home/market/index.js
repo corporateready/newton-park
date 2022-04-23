@@ -1,4 +1,4 @@
-export default function Index(props) {
+export default function Index() {
   return (
     <svg
       width="114"
@@ -6,7 +6,6 @@ export default function Index(props) {
       viewBox="0 0 114 98"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      {...props}
     >
       <g clipPath="url(#clip0_29_131)">
         <path

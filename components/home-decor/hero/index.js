@@ -1,23 +1,18 @@
 import React from "react";
 import Head from "next/head";
-import Image from "next/image";
-import Link from "next/link";
 import styles from "./Hero.module.scss";
-
-import Header from "../../header";
 
 export default function index() {
   return (
     <>
       <Head>
-        <title>Newton Park | Home Decor</title>
+        <title>Newton Park | Sypermarket</title>
       </Head>
 
       <section className={styles.home}>
         <div className={styles.home__bg}>
           <div className={styles.home__shadow}></div>
           <div className={styles.home__shadow_up}></div>
-          <Header />
           <div className={styles.container}>
             <div className={styles.inner}>
               <h1 className={styles.title}>Unicul Home Decor</h1>

@@ -7,7 +7,6 @@ import MessengerButton from "../../../public/static/common/MESSENGER.svg";
 import ViberButton from "../../../public/static/common/VIBER.svg";
 import PhoneButton from "../../../public/static/common/PHONE.svg";
 import TelegramButton from "../../../public/static/common/TELEGRAM.svg";
-// import { Messenger } from "../../market-page";
 
 const MessengerIcon = () => <MessengerButton width={28} height={28}/>
 const ViberIcon = () => <ViberButton width={27} height={29}/>

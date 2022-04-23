@@ -1,16 +1,15 @@
-$medium_black: #31414B;
+$medium_black: #31414b;
 $white_color: #fff;
-$sapfir_color: #2BB018;
+$sapfir_color: #2bb018;
 
-
-@mixin text($fs,$lh, $fw,$color) {
+@mixin text($fs, $lh, $fw, $color) {
     font-size: $fs;
     line-height: $lh;
     font-weight: $fw;
     color: $color;
 }
 
-@mixin np_text($fs,$lh, $fw) {
+@mixin np_text($fs, $lh, $fw) {
     font-size: $fs;
     line-height: $lh;
     font-weight: $fw;

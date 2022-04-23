@@ -1,7 +1,7 @@
 @import '../../../styles/mixins.scss';
 
 .about {
-    @apply relative bottom-0 bg-[#31414B] z-10;
+    @apply relative top-0 left-0  bg-[#31414B] z-10 w-full;
 }
 
 .container {
@@ -12,98 +12,154 @@
     }
 }
 
-.title {
-    @include text(62px, 130%, 700, $white_color);
-    @apply text-left mt-[8.3%] mb-[16%];
+.about__info_container {
+    @apply absolute top-0 left-[50%] translate-x-[-50%] h-full w-[1210px] mx-auto;
 
     @media screen and(max-width: 1440px) {
-        font-size: calc(24px + (62 - 24)*(100vw - 576px)/(1440 - 576));
+        width: calc(300px + (1210 - 300)*(100vw - 320px)/(1440 - 320));
+    }
+}
+
+.title {
+    @include text(62px, 130%, 700, $white_color);
+    @apply text-left mt-[8.35%] mb-[17.1%];
+
+    @media screen and(max-width: 1440px) {
+        font-size: calc(42px + (62 - 42)*(100vw - 576px)/(1440 - 576));
     }
 
     @media screen and(max-width: 576px) {
-        @apply mb-[20%];
+        @apply text-left mt-[5%] mb-[25.1%];
+        font-size: calc(30px + (50 - 30)*(100vw - 320px)/(576 - 320));
     }
 }
 
 .info {
-    @apply absolute top-[200%] left-0 bg-white w-[80%] py-[2%];
+    @apply absolute top-[60.52%] left-0 bg-white w-[83.7%] pt-[3.2%] pb-[3.6%];
     box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
     max-width: 100%;
 
-    @media screen and(max-width: 768px) {
-        @apply w-[75%];
-    }
-
     @media screen and(max-width: 576px) {
-        @apply w-[70%];
-    }
-
-    @media screen and(max-width: 480px) {
-        @apply w-[70%];
-    }
-
-    @media screen and(max-width: 425px) {
-        @apply w-[65%];
+        @apply w-[78.5%] pt-[4.5%] pb-[6%] top-[53%];
     }
 }
 
 .info__container {
-    @apply relative top-0 left-0 h-full mx-auto z-10 px-[3%];
+    @apply relative top-0 left-0 h-full mx-auto z-10 px-[4.5%];
 }
 
 .info__title {
-    @include text(30px, 130%, 700, $medium_black);
-
+    @include text(32px, 130%, 700, $medium_black);
+    @apply uppercase mb-[2%];
     @media screen and(max-width: 1440px) {
-        font-size: calc(15px + (30 - 15)*(100vw - 480px)/(1440 - 480));
+        font-size: calc(13px + (32 - 13)*(100vw - 576px)/(1440 - 576));
+    }
+
+    @media screen and(max-width: 576px) {
+        font-size: calc(11px + (18 - 11)*(100vw - 320px)/(576 - 320));
     }
 
     span {
-        @include text(40px, 130%, 700, $sapfir_color);
+        @include text(32px, 130%, 700, $sapfir_color);
         @apply uppercase;
 
         @media screen and(max-width: 1440px) {
-            font-size: calc(15px + (30 - 15)*(100vw - 480px)/(1440 - 480));
+            font-size: calc(12px + (32 - 12)*(100vw - 480px)/(1440 - 480));
+        }
+
+        @media screen and(max-width: 576px) {
+            font-size: calc(12px + (32 - 12)*(100vw - 320px)/(1440 - 320));
         }
     }
 }
 
 .info__item {
     @apply flex items-center mt-[1%];
+
+    @media screen and(max-width: 576px) {
+        @apply mt-[6%];
+    }
 }
 
 .info__item_num {
-    @include text(36px, 130%, 700, $sapfir_color);
-    @apply w-[10%];
+    @include text(32px, 135%, 700, $sapfir_color);
+    @apply w-[12%] text-right;
 
     @media screen and(max-width: 1440px) {
-        font-size: calc(14px + (36 - 14)*(100vw - 576px)/(1440 - 576));
+        font-size: calc(10px + (32 - 10)*(100vw - 576px)/(1440 - 576));
+    }
+
+    @media screen and(max-width: 576px) {
+        @apply w-[20%];
+        font-size: calc(14px + (30 - 14)*(100vw - 320px)/(576 - 320));
     }
 }
 
 .info__item_img {
-    @apply flex relative top-0 left-0;
-    flex: 0 0 10%;
+    @apply flex justify-end relative top-0 left-0 w-[12%];
 
     @media screen and(max-width: 1440px) {
         height: calc(24px + (56 - 24)*(100vw - 576px)/(1440 - 576));
     }
+
+    @media screen and(max-width: 576px) {
+        @apply flex relative top-0 left-0 w-[20%];
+        height: auto;
+    }
 }
 
 .info__item_text {
-    @include text(25px, 130%, 700, $medium_black);
-    @apply uppercase ml-[4%];
+    @include text(20px, 130%, 700, $medium_black);
+    @apply uppercase ml-[4%] w-[88%];
 
     @media screen and(max-width: 1440px) {
-        font-size: calc(15px + (25 - 15)*(100vw - 480px)/(1440 - 480));
+        font-size: calc(10px + (20 - 10)*(100vw - 576px)/(1440 - 576));
+    }
+
+    @media screen and(max-width: 992px) {
+        @apply uppercase ml-[3%];
+    }
+
+    @media screen and(max-width: 576px) {
+        @apply uppercase ml-[5%] w-[57%];
+        font-size: calc(10px + (17 - 10)*(100vw - 320px)/(576 - 320));
+    }
+}
+
+.garden__wrapper {
+    svg {
+        @apply max-w-fit;
+
+        @media screen and(max-width: 1440px) {
+            height: calc(20px + (39 - 20)*(100vw - 576px)/(1440 - 576));
+        }
+        @media screen and(max-width: 576px) {
+            height: calc(30px + (65 - 30)*(100vw - 320px)/(576 - 320));
+        }
     }
 }
 
 .about__build {
-    @apply flex absolute top-[100%] right-0;
-    flex: 0 0 10%;
+    @apply flex justify-end absolute top-[63%] right-0;
 
-    @media screen and(max-width: 1440px) {
-        height: calc(74px + (140 - 74)*(100vw - 576px)/(1440 - 576));
+    @media screen and(max-width: 576px) {
+        @apply top-[53%];
+    }
+
+    svg {
+        @apply max-w-fit;
+
+        @media screen and(max-width: 576px) {
+            height: calc(50px + (85 - 50)*(100vw - 320px)/(576 - 320));
+        }
+    }
+    
+
+}
+
+.text__sepatator {
+    @apply hidden;
+    @media screen and(max-width: 576px) {
+        @apply inline;
     }
 }

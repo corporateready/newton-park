@@ -140,7 +140,6 @@ export default function index() {
             })}
           </motion.ul>
         )}
-        {/* </div> */}
       </motion.div>
     </>
   );

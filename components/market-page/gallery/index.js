@@ -2,8 +2,8 @@ import React from "react";
 import styles from "./Gallery.module.scss";
 import Image from 'next/image'
 
-import NextButton from "../../../public/static/gallery/next-button.svg";
-import BackButton from "../../../public/static/gallery/back-btn.svg";
+import NextButton from "../../svg/gallery/next-btn";
+import BackButton from "../../svg/gallery/back-btn";
 import up__image from "../../../public/static/gallery/metri-patrati.png";
 import down__image from "../../../public/static/gallery/inaltimea-tavanelor.png";
 import image_2 from "../../../public/static/gallery/parter-2.png";
@@ -15,21 +15,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 import { EffectFlip, Pagination, Navigation } from "swiper";
 
-const BackButtonIcon = () => {
-  return (
-    <div>
-      <BackButton width={48} height={54} />
-    </div>
-  );
-};
+const BackButtonIcon = () =>  <BackButton width={48} height={54} />
 
-const NextButtonIcon = () => {
-  return (
-    <div>
-      <NextButton width={48} height={54} />
-    </div>
-  );
-};
+const NextButtonIcon = () => <NextButton width={48} height={54} />
 
 const images = [
   { slide__image: image_1 },
@@ -40,6 +28,8 @@ const images = [
 export default function index() {
   const navigationPrevRef = React.useRef(null);
   const navigationNextRef = React.useRef(null);
+
+  console.log(navigationPrevRef.current);
 
   return (
     <div className={styles.gallery__section}>
@@ -76,7 +66,8 @@ export default function index() {
           </div>
 
           <div className={styles.gallery__inner}>
-            <button className={styles.back__btn} ref={navigationPrevRef}>
+            <button className={styles.back__btn} ref={navigationPrevRef}
+            >
               <BackButtonIcon />
             </button>
             <Swiper
@@ -89,6 +80,7 @@ export default function index() {
                 dynamicBullets: true,
               }}
               navigation={{
+                // navigation:true,
                 prevEl: navigationPrevRef.current,
                 nextEl: navigationNextRef.current,
               }}
@@ -103,6 +95,7 @@ export default function index() {
                     width={582}
                     height={614}
                     alt={slide[`${'parter scheme'}`]}
+                    key={slide.slide__image}
                     />
                    
                   </SwiperSlide>

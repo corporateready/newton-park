@@ -3,14 +3,23 @@
 
 .home {
     height: auto;
-    max-width: 100%;
+    width: 100%;
     @apply relative top-0 left-0;
 }
 
 .home__bg {
-    @apply bg-[url('../../../public/static/home/home-decor-bg.jpg')] h-[708px] w-full relative top-0 left-0 z-0 bg-no-repeat bg-center bg-cover;
+    background-image: image-set(url("../../../public/static/home/home-decor-bg.jpg") 1x, 
+  url("../../../public/static/home/home-decor-bg.webp") 1x);
+    @apply h-[708px] w-full relative top-0 left-0 z-[1] bg-no-repeat bg-center bg-cover;
+ 
+    transform: scaleX(-1) ;
     @media screen and(max-width: 1440px) {
-        height: calc(381px + (708 - 381)*(100vw - 576px)/(1440 - 576));
+        height: calc(467px + (708 - 467)*(100vw - 576px)/(1440 - 576));
+    }
+
+    @media screen and(max-width: 576px) {
+        @apply bg-left-top;
+        height: calc(300px + (467 - 300)*(100vw - 320px)/(576 - 320));
     }
 
 }
@@ -21,6 +30,7 @@
 .home__shadow_up {
     @apply absolute w-full h-full top-0 left-0 z-auto;
     background: linear-gradient(294.64deg, #1D6172 0%, rgba(30, 93, 112, 0) 44.13%, rgba(30, 92, 111, 0) 126.48%);
+    transform: scaleX(-1);
 }
 
 .container {
@@ -33,20 +43,26 @@
 // ===== inner =====>
 .inner {
     @apply relative top-[60%] right-0 w-full;
-    @media screen and(max-width: 1440px) {
+
+    @media screen and(max-width: 576px) {
+
+        @apply top-[70%];      
     }
 }
 .title {
     @include text(72px, 130%, 400, $white_color);
     @apply text-right;
+    
+    transform: scaleX(-1);
     @media screen and(max-width: 1440px) {
-        font-size: calc(30px + (72 - 30)*(100vw - 576px)/(1440 - 576));
+        font-size: calc(36px + (72 - 36)*(100vw - 576px)/(1440 - 576));
     }
 }
 .NP__decor_title {
     @include np_text(96px, 135%, 700);
     @apply text-right;
+    transform: scaleX(-1);
     @media screen and(max-width: 1440px) {
-        font-size: calc(38px + (96 - 38)*(100vw - 576px)/(1440 - 576));
+        font-size: calc(34px + (96 - 34)*(100vw - 320px)/(1440 - 320));
     }
 }

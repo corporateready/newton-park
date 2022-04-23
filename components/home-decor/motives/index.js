@@ -2,71 +2,126 @@ import React from "react";
 import Image from "next/image";
 import styles from "./Motives.module.scss";
 
-import motive_1 from "../../../public/static/motives/motive_1.svg";
-import motive_2 from "../../../public/static/motives/motive_2.svg";
-import motive_3 from "../../../public/static/motives/motive_3.svg";
-import motive_4 from "../../../public/static/motives/motive_4.svg";
-import motive_5 from "../../../public/static/motives/motive_5.svg";
-import motive_6 from "../../../public/static/motives/motive_6.svg";
+import { motion, AnimatePresence } from "framer-motion";
 
-const motives = [
-  {
-    id: 1,
-    image: motive_1,
-    title: "Acces direct din stradă",
-  },
-  {
-    id: 2,
-    image: motive_2,
-    title: "Loc separat pentru livrare Ascensor de marfă la nivelul -1",
-  },
-  {
-    id: 3,
-    image: motive_3,
-    title: "Open space Flexibilitate deplină în compartimente",
-  },
-  {
-    id: 4,
-    image: motive_4,
-    title: "Scări rulante de la nivelul -2 până la parter și nivelul 1",
-  },
-  {
-    id: 5,
-    image: motive_5,
-    title: "Sisteme inginerești de ultimă generație",
-  },
-  {
-    id: 6,
-    image: motive_6,
-    title: "Toate spațiile se predau în variantă sură",
-  },
-];
+import motive_1 from "../../../public/static/motives/sisteme-ingineresti-01.png";
+import motive_2 from "../../../public/static/motives/supermarket.png";
+import motive_3 from "../../../public/static/motives/livrare-01.png";
+import motive_4 from "../../../public/static/motives/open-space-homedecor.png";
+import motive_5 from "../../../public/static/motives/intrare-din-pasarela.png";
+import motive_6 from "../../../public/static/motives/motive_4.png";
 
 export default function index() {
   return (
-    <div className={styles.motives__section}>
-      <div className={styles.container}>
-        <h2 className={styles.title}>
-        <span className={styles.title__decor}>6 MOTIVE </span>DE CE UN SUPERMARKET 
-        <br/> ESTE CONVENABIL ȘI NECESAR
-        </h2>
-        <div className={styles.inner}>
-          {motives.map((item) => {
-            return (
-              <div className={styles.motive} key={item.id}>
-                <div className={styles.motive__wrapper}>
+    <AnimatePresence>
+      <motion.div
+        className={styles.motives__section}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1, transition: { duration: 1 } }}
+        exit={{ opacity: 0 }}
+      >
+        <div className={styles.container}>
+          <h2 className={styles.title}>
+            De ce unicul spațiu pretabil pentru supermarket
+            <br /> la <span className={styles.title__decor}>
+              Newton Park
+            </span>{" "}
+            se potrivește afacerii tale
+          </h2>
+          <div className={styles.inner}>
+
+            <div className={styles.motive}>
+              <div className={styles.motive__wrapper}>
                 <div className={styles.motive__image}>
-                  <Image src={item.image} width={321} height={168} />
+                  <Image  className={styles.motive__image_body} src={motive_5} width={321} height={86} priority />
                 </div>
                 <div className={styles.motive__title_wrapper}>
-                <h3 className={styles.motive__title}>{item.title}</h3>
-                </div>
+                  <h3 className={styles.motive__title}>
+                  Acces direct din pasarelă și 
+                  <br/>stradă
+                  </h3>
                 </div>
               </div>
-            );
-          })}
+            </div>
+
+            <div className={styles.motive}>
+              <div className={styles.motive__wrapper}>
+                <div className={styles.motive__image}>
+                  <Image src={motive_4} width={321} height={229} priority />
+                </div>
+                <div className={styles.motive__title_wrapper}>
+                  <h3 className={styles.motive__title}>
+                  Open space
+                  <br/>Flexibilitate în compartimente
+                  </h3>
+                </div>
+              </div>
+            </div>
+
+            <div className={styles.motive}>
+              <div className={styles.motive__wrapper}>
+                <div className={styles.motive__image}>
+                  <Image src={motive_3} width={321} height={244} priority />
+                </div>
+                <div className={styles.motive__title_wrapper}>
+                  <h3 className={styles.motive__title}>
+                  Loc separat pentru livrare
+                  <br/>Ascensor de marfă de la nivelul -1
+                  </h3>
+                </div>
+              </div>
+            </div>
+
+            <div className={styles.motive}>
+              <div className={styles.motive__wrapper}>
+                <div className={styles.motive__image}>
+                  <Image src={motive_6} width={321} height={166} priority />
+                </div>
+                <div className={styles.motive__title_wrapper}>
+                  <h3 className={styles.motive__title}>
+                  Scări rulante de la nivelul -2 
+                  <br/>până la parter și nivelul 1
+                  </h3>
+                </div>
+              </div>
+            </div>
+
+            <div className={styles.motive}>
+              <div className={styles.motive__wrapper}>
+                <div className={styles.motive__image}>
+                  <Image src={motive_1} width={321} height={244} priority />
+                </div>
+                <div className={styles.motive__title_wrapper}>
+                  <h3 className={styles.motive__title}>
+                  Sisteme inginerești
+                  <br/>de ultimă generație
+                  </h3>
+                </div>
+              </div>
+            </div>
+
+            <div className={styles.motive}>
+              <div className={styles.motive__wrapper}>
+                <div className={styles.motive__image}>
+                  <Image src={motive_2} width={321} height={205} priority />
+                </div>
+                <div className={styles.motive__title_wrapper}>
+                  <h3 className={styles.motive__title}>
+                  Prezența unui Supermarket 
+                  {/* în același */}
+                  <br/>complex comercial
+                  {/* , care asigură un */}
+                  {/* <br/>flux continuu de clienți */}
+                  </h3>
+                </div>
+              </div>
+            </div>
+
+            
+
+          </div>
         </div>
-      </div>
-    </div>
+      </motion.div>
+    </AnimatePresence>
   );
 }

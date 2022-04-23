@@ -10,8 +10,11 @@
 
 .messenger__item {
     @media screen and(max-width: 576px) {
-        @apply bg-white rounded-3xl py-[0.5%] px-[1.5%] relative h-auto;
-
+        @apply bg-white rounded-3xl py-[3.5%] px-[3.5%] relative top-0 left-0;
         @include shadow_std();
+
+        svg {
+            @apply max-w-full;
+        }
     }
 }

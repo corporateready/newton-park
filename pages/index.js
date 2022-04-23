@@ -25,11 +25,7 @@ const MarketIcon = () => (
   </div>
 );
 
-const RestaurantIcon = () => (
-  <div>
-    <Restaurant width={94} height={80} />
-  </div>
-);
+const RestaurantIcon = () => <Restaurant width={94} height={80} />
 
 const FastFoodIcon = () => (
   <div>
@@ -60,9 +56,9 @@ const nav__items = [
   { path: "/restaurant", icon: <RestaurantIcon />, title: "restaurant" },
   { path: "/fast-food", icon: <FastFoodIcon />, title: "fast-food" },
   { path: "/big-retail", icon: <BigRetailIcon />, title: "big retail" },
-  { path: "/home decor", icon: <HomeDecorIcon />, title: "home decor" },
+  { path: "/home-decor", icon: <HomeDecorIcon />, title: "home decor" },
   {
-    path: "/medium retail",
+    path: "/medium-retail",
     icon: <MediumRetailIcon />,
     title: "medium retail",
   },
@@ -99,7 +95,6 @@ export default function Home() {
             <div className={styles.header__wrapper}>
               <div className={styles.logo}>
                 <HomeLogoIcon />
-                {/* <Image src={logo} height={57} width={109} priority /> */}
               </div>
             </div>
           </header>
@@ -134,66 +129,13 @@ export default function Home() {
                 return (
                   <Link href={`${item.path}`} key={item.id}>
                     <a className={styles.nav__item}>
-                      <p className={styles.item__image}>{item.icon}</p>
+                      <span className={styles.item__image}>{item.icon}</span>
                       <h3 className={styles.item__title}>{item.title}</h3>
                     </a>
                   </Link>
                 );
               })}
 
-              {/* <Link href="/market">
-                <a className={styles.nav__item}>
-                  <p className={styles.item__image}>
-                    {item.icon}
-                  </p>
-                  <h3 className={styles.item__title}>supermarket</h3>
-                </a>
-              </Link> */}
-
-              {/* <Link href="/restaurant">
-                <a className={styles.nav__item}>
-                  <p className={styles.item__image}>
-                    <RestaurantIcon />
-                  </p>
-                  <h3 className={styles.item__title}>restaurant</h3>
-                </a>
-              </Link>
-
-              <Link href="/fast-food">
-                <a className={styles.nav__item}>
-                  <p className={styles.item__image}>
-                    <FastFoodIcon />
-                  </p>
-                  <h3 className={styles.item__title}>fast-food</h3>
-                </a>
-              </Link>
-
-              <Link href="/big-retail">
-                <a className={styles.nav__item}>
-                  <p className={styles.item__image}>
-                    <BigRetailIcon />
-                  </p>
-                  <h3 className={styles.item__title}>big retail</h3>
-                </a>
-              </Link>
-
-              <Link href="/restaurant">
-                <a className={styles.nav__item}>
-                  <p className={styles.item__image}>
-                    <HomeDecorIcon />
-                  </p>
-                  <h3 className={styles.item__title}>home decor</h3>
-                </a>
-              </Link>
-
-              <Link href="/medium-retail">
-                <a className={styles.nav__item}>
-                  <p className={styles.item__image}>
-                    <MediumRetailIcon />
-                  </p>
-                  <h3 className={styles.item__title}>medium retail</h3>
-                </a>
-              </Link> */}
             </div>
           </div>
         </div>

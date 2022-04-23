@@ -30,7 +30,7 @@
 
     @media screen and(max-width: 576px) {
         @apply text-left mt-[5%] mb-[25.1%];
-        font-size: calc(30px + (52 - 30)*(100vw - 320px)/(576 - 320));
+        font-size: calc(30px + (50 - 30)*(100vw - 320px)/(576 - 320));
     }
 }
 
@@ -40,12 +40,12 @@
     max-width: 100%;
 
     @media screen and(max-width: 576px) {
-        @apply pt-[4.5%] pb-[6%] top-[53.52%];
+        @apply w-[78.5%] pt-[4.5%] pb-[6%] top-[53%];
     }
 }
 
 .info__container {
-    @apply relative top-0 left-0 h-full mx-auto z-10 px-[5.5%];
+    @apply relative top-0 left-0 h-full mx-auto z-10 px-[4.5%];
 }
 
 .info__title {
@@ -56,7 +56,7 @@
     }
 
     @media screen and(max-width: 576px) {
-        font-size: calc(11px + (19 - 11)*(100vw - 320px)/(576 - 320));
+        font-size: calc(11px + (18 - 11)*(100vw - 320px)/(576 - 320));
     }
 
     span {
@@ -68,7 +68,7 @@
         }
 
         @media screen and(max-width: 576px) {
-            font-size: calc(14px + (44 - 14)*(100vw - 320px)/(1440 - 320));
+            font-size: calc(12px + (32 - 12)*(100vw - 320px)/(1440 - 320));
         }
     }
 }
@@ -139,26 +139,21 @@
     }
 }
 
-.build__wrapper {
-    svg {
-        @apply max-w-fit;
-
-        @media screen and(max-width: 1440px) {
-            height: calc(50px + (113 - 50)*(100vw - 320px)/(1440 - 320));
-        }
-
-        @media screen and(max-width: 576px) {
-        //     height: calc(55px + (65 - 55)*(100vw - 320px)/(576 - 320));
-        }
-    }
-}
-
 .about__build {
     @apply flex justify-end absolute top-[63%] right-0;
 
     @media screen and(max-width: 576px) {
-        @apply top-[58%];
+        @apply top-[53%];
     }
+
+    svg {
+        @apply max-w-fit;
+
+        @media screen and(max-width: 576px) {
+            height: calc(50px + (85 - 50)*(100vw - 320px)/(576 - 320));
+        }
+    }
+    
 
 }
 

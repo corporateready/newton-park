@@ -6,7 +6,7 @@ import Garden from "../../svg/garden";
 import Build from "../../svg/build";
 
 const BuildIcon = () => (
-  <div className={styles.build__wrapper}>
+  <div>
     <Build width={107} height={113}/>
   </div>
 )

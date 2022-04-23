@@ -2,13 +2,7 @@ import React from "react";
 import Image from "next/image";
 import logo from "../../public/static/common/logo-info.png";
 import styles from "./info.module.scss";
-import Footer from '../../components/footer'
 
-// const LogoInfo = () => ( 
-// <div>
-//     <BigLogo width={296} height={147}/>
-//   </div>
-// )
 
 export default function index() {
   return (
@@ -33,7 +27,6 @@ export default function index() {
         </div>
       </div>
     </div>
-    <Footer/>
     </>
   );
 }

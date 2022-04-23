@@ -1,0 +1,109 @@
+@import '../../../styles/mixins.scss';
+
+.motives__section {
+    @apply h-full z-10 mt-[7%];
+
+    @media screen and(max-width: 786px) {}
+    @apply mb-[17%];
+
+    @media screen and(max-width: 576px) {
+        @apply h-full z-10 mt-[57%] mb-[28%];
+    }
+}
+
+.container {
+    @apply h-full w-[1210px] mx-auto z-10;
+
+    @media screen and(max-width: 1440px) {
+        width: calc(300px + (1210 - 300)*(100vw - 320px)/(1440 - 320));
+    }
+}
+
+.title {
+    @include text(42px, 135%, 700, $medium_black);
+    @apply text-center uppercase;
+
+    @media screen and(max-width: 1440px) {
+        font-size: calc(18px + (42 - 18)*(100vw - 576px)/(1440 - 576));
+    }
+}
+
+.title__decor {
+    @include text(42px, 135%, 700, $sapfir_color);
+
+    @media screen and(max-width: 1440px) {
+        font-size: calc(18px + (42 - 18)*(100vw - 576px)/(1440 - 576));
+    }
+}
+
+.motive {
+    @apply border-r-[3px] border-[#31414B] flex justify-center;
+    &:nth-child(3) {
+        @apply border-0;
+    }
+
+    &:nth-child(6) {
+        @apply border-0;
+    }
+
+    @media screen and(max-width: 768px) {
+        &:nth-last-child(even) {
+            @apply border-r-[3px] border-[#31414B];
+        }
+
+        &:nth-last-child(odd) {
+            @apply border-r-0 border-white;
+        }
+    }
+
+}
+
+.motive__wrapper {
+    @apply w-[80%] self-stretch;
+
+    @media screen and(max-width: 576px) {
+        @apply w-[85%];
+
+    }
+}
+
+.motive__image {
+        @apply h-[81%] flex items-end pb-[10%];
+}
+
+.motive__title_wrapper {
+    @apply bg-[#31414B] rounded-sm h-[20%];
+
+    @media screen and(max-width: 576px) {
+        @apply h-[20%];
+    }
+    
+}
+
+.motive__title {
+    @include text(14px, 135%, 400, $white_color);
+    @apply flex justify-center items-center text-center px-[3%] h-full;
+    
+    &:nth-child(1) {
+        @apply py-[3%];
+        @media screen and(max-width: 576px) {
+            @apply py-[1.5%] px-0;
+        }
+    }
+
+    @media screen and(max-width: 1440px) {
+        font-size: calc(8px + (15 - 8)*(100vw - 576px)/(1440 - 576));
+    }
+
+    @media screen and(max-width: 576px) {
+        font-size: calc(8px + (13 - 8)*(100vw - 320px)/(576 - 320));
+    }
+}
+
+.inner {
+    @apply mt-[7%] grid grid-cols-3 gap-y-[15%];
+
+    @media screen and(max-width: 768px) {
+        @apply grid grid-cols-2 gap-y-[10%];
+    }
+}

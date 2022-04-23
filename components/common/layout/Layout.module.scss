@@ -1,0 +1,127 @@
+@import '../../../styles/mixins.scss';
+
+// ===== header =====>
+.header {
+    @apply fixed top-0 left-0 z-[100] w-full h-auto border-b-2;
+}
+
+.header__inner {
+    @apply w-full h-full flex items-center justify-between ;
+}
+
+.header__container {
+    @apply w-[1210px] mx-auto relative;
+
+    @media screen and(max-width: 1440px) {
+        width: calc(300px + (1210 - 300)*(100vw - 320px)/(1440 - 320));
+    }
+
+}
+
+.header__logo_wrapper {
+    @apply my-[1%];
+
+    @media screen and(max-width: 1440px) {
+        svg {
+            height: calc(25px + (57 - 25)*(100vw - 576px)/(1440 - 576));
+        }
+        
+    }
+}
+
+.header__button_menu {
+    @apply visible;
+    @media screen and(max-width: 576px) {
+        @apply hidden;
+    }
+}
+.header__button_menu_mob {
+    @media screen and(min-width: 576px) {
+        @apply hidden;
+    }
+}
+//  =====> burger menu =====>
+.desktop__burger__menu {
+    @apply absolute left-0 bg-white h-auto w-[24.2%] z-[10] px-[2.6%] py-[1.9%];
+    font-family: 'Open Sans';
+
+    @media screen and(max-width: 1200px) {
+        @apply  w-[28%];
+    }
+
+    @media screen and(max-width: 768px) {
+        @apply  w-[30%];
+    }
+
+    @media screen and(max-width: 576px) {
+        @apply hidden;
+    }
+}
+
+.mobile__burger__menu {
+    @apply hidden;
+    
+    @media screen and(max-width: 576px) {
+        @apply block absolute left-0 bg-white h-auto w-full z-[10] px-[7%] py-[4.5%];
+    font-family: 'Open Sans';
+    }
+
+    @media screen and(max-width: 375px) {
+        @apply py-[5.2%];
+    }
+}
+
+.burger__inner {
+    @apply flex flex-col;
+}
+
+.burger__item {
+    @apply flex flex-row hover:border-[#31414B] mb-[5%];
+
+    @media screen and(max-width: 576px) {
+        @apply mb-[4.7%];
+    }
+
+    &:hover * {
+        @apply text-[#2BB018] fill-[#2BB018] border-[#2BB018];
+    }
+
+    h4 {
+        @include text(20px,135%, 700, $medium_black);
+        @apply uppercase border-b-[1px] border-[#31414B] w-full hover:text-green-700 ml-[5%];
+
+        @media screen and(max-width: 1440px) {
+            font-size: calc(10px + (20 - 10)*(100vw - 576px)/(1440 - 576));
+        }
+
+        @media screen and(max-width: 576px) {
+            font-size: calc(12px + (24 - 12)*(100vw - 320px)/(576 - 320));
+        }
+    }
+}
+
+.burger__icon {
+
+    svg {
+        height: calc(20px + (33 - 20)*(100vw - 576px)/(1440 - 576));
+    }
+
+    @media screen and(max-width: 576px) {
+        svg {
+            height: calc(18px + (28 - 18)*(100vw - 320px)/(576 - 320));
+        }
+    }
+}
+
+.burger__menu_hide {}
+// ===== footer =====>
+.footer {
+    @apply border-t-[1px]  border-[#2BB018];
+}
+
+.footer__copy {
+    @include text(16px,135%, 400, $medium_black);
+    @media screen and(max-width: 576px) {
+        @include text(10px,135%, 400, $medium_black);
+    }
+}

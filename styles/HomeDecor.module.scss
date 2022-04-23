@@ -1,0 +1,52 @@
+@import '../styles/mixins.scss';
+
+// ===== modal form =====>
+.popup {
+    @apply hidden;
+
+    @media screen and(max-width: 576px) {
+        @apply block w-full h-[73%] bg-white fixed left-0 bottom-0 z-10 rounded-t-3xl;    
+    }
+    
+}
+.popup__container {
+    @apply px-[9.6%] max-w-full;
+}
+.popup__inner {
+    @apply flex flex-col w-full items-center;
+}
+.popup__close_button {
+    @apply w-full mt-[6%] animate-bounce;
+}
+.popup__title {
+    @include text(50px, 135%, 400, #31414B);
+    @apply mt-[6%];
+
+    @media screen and(max-width: 576px) {
+        font-size: calc(14px + (50 - 14)*(100vw - 320px)/(576 - 320));
+    }
+
+    span {
+        @include text(50px, 135%, 600, $sapfir_color);
+
+        @media screen and(max-width: 576px) {
+            font-size: calc(14px + (50 - 14)*(100vw - 320px)/(576 - 320));
+        }
+    }
+}
+
+.popup__form {
+    @apply flex flex-col w-full;
+    input {
+        @include text(24px, 135%, 400, #31414B);
+        @apply text-left max-w-full border-2 border-[#31414B] rounded-xl py-[3%] px-[5%] mt-[5.5%] focus-visible:outline-none focus:placeholder:text-transparent;
+
+        &::placeholder {
+            @include text(24px, 135%, 400, #31414B);
+        }
+    }
+    button {
+        @include text(24px, 135%, 400, #fff);
+        @apply text-center max-w-full border-2 border-[#31414B] rounded-xl py-[3.5%] px-[5%] mt-[8%] bg-[#31414B];
+    }
+}

@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "../styles/Market.module.scss";
+import Image from "next/image";
 import {
   Hero,
   About,
@@ -7,34 +8,21 @@ import {
   Carousel,
   Info,
   Messenger,
-  MobileMessenger
 } from "../components/market-page";
+import arriw__down from '../public/static/home/close-button.png' 
 import { motion } from "framer-motion";
+import Layout from "../components/common/layout/Layout";
 
 export default function market() {
-
-  const [lastYPos, setLastYPos] = React.useState(0);
-  const [shouldShowActions, setShouldShowActions] = React.useState(false);
+  const [isVisible, setIsVisible] = React.useState(false);
 
   React.useEffect(() => {
-    function handleScroll() {
-      const yPos = window.scrollY;
-      const isScrollingUp = yPos < lastYPos;
-      const isScrollingHidden = yPos > 2100;
-
-      setShouldShowActions(isScrollingUp);
-      setShouldShowActions(isScrollingHidden);
-      setLastYPos(yPos);
-    }
-
-    window.addEventListener("scroll", handleScroll, false);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll, false);
-    };
-  }, [lastYPos]);
-
+    setTimeout(() => {
+      setIsVisible(true);
+    }, 5000);
+  }, []);
   return (
+    <Layout>
     <motion.div
       className={styles.market}
       initial={{ opacity: 0 }}
@@ -42,13 +30,51 @@ export default function market() {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.3 }}
     >
-      <Hero />
-      <About />
-      <Motives />
-      <Carousel />
-      <Info />
+      
+        <Hero />
+        <About />
+        <Motives />
+        <Carousel />
+        <Info />
       <Messenger />
-      {/* <MobileMessenger/> */}
     </motion.div>
+    {isVisible && (
+        <motion.div 
+        className={styles.popup}
+        initial={{y: 500}}
+        animate={{ y: 0}}
+        exit={{y:500, duration: 1 }}
+        transition={{duration: 1, ease: "easeInOut"}}
+        >
+          <div className={styles.popup__container}>
+            <div className={styles.popup__inner}>
+              <button 
+                className={styles.popup__close_button}
+                onClick={() => setIsVisible(!isVisible)}
+                >
+                  <Image
+                  src={arriw__down}
+                  width={45}
+                  height={40}
+                  />
+                </button>
+              <h3 className={styles.popup__title}>
+                Solicită prezentarea
+                <br />
+                <span className={styles.popup__title_mark}>
+                  NEWTON PARK
+                </span>{" "}
+                PDF
+              </h3>
+              <form className={styles.popup__form}>
+                <input type="email" placeholder="Adresa de email" />
+                <input type="tel" placeholder="Numărul de telefon" />
+                <button type="submit">Solicită prezentarea</button>
+              </form>
+            </div>
+          </div>
+        </motion.div>
+      )}
+    </Layout>
   );
 }
