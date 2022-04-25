@@ -3,6 +3,12 @@
 // ===== header =====>
 .header {
     @apply fixed top-0 left-0 z-[100] w-full h-auto border-b-2;
+    transition: all 0.3s;
+}
+
+.header__active {
+    @apply fixed top-0 left-0 z-[100] w-full h-auto border-b-2 bg-[#31414B];
+    transition: all 0.3s;
 }
 
 .header__inner {

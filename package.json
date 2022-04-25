@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "@popmotion/popcorn": "^0.4.4",
+    "body-scroll-lock": "^4.0.0-beta.0",
+    "disable-scroll": "^0.6.0",
     "framer-motion": "^6.2.8",
     "gsap": "^3.9.1",
     "hamburger-react": "^2.4.1",

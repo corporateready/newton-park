@@ -13,7 +13,7 @@ import BigRetail from "../../../components/svg/burger-menu/big-retail";
 import HomeDecor from "../../../components/svg/burger-menu/home-decor";
 import MediumRetail from "../../../components/svg/burger-menu/medium-retail";
 import Link from "next/link";
-import {MobileMessenger} from "../../../components/market-page";
+import { MobileMessenger } from "../../../components/market-page";
 
 const HomeLogoIcon = () => (
   <div>
@@ -81,10 +81,17 @@ const nav__items = [
 
 export default function Layout({ children }) {
   const [isOpen, setIsOpen] = React.useState(false);
+  const [scroll, setScroll] = React.useState(false);
+
+  React.useEffect(() => {
+    window.addEventListener("scroll", () => {
+      setScroll(window.scrollY > 0);
+    });
+  }, []);
 
   return (
     <div className={styles.layout}>
-      <motion.header className={styles.header}>
+      <motion.header className={scroll ? styles.header__active : styles.header}>
         <div className={styles.header__container}>
           <div className={styles.header__inner}>
             <button className={styles.header__button_menu} type="button">
@@ -143,13 +150,12 @@ export default function Layout({ children }) {
           </div>
         )}
       </motion.header>
-
       {children}
       <footer className={styles.footer}>
-      <div className={styles.header__container}>
+        <div className={styles.header__container}>
           <div className={styles.header__inner}>
             <p className={styles.footer__copy}>
-            Toate drepturile rezervate NEWTON PARK © 2021.
+              Toate drepturile rezervate NEWTON PARK © 2021.
             </p>
             <div className={styles.header__logo_wrapper}>
               <FooterLogoIcon />
@@ -157,7 +163,7 @@ export default function Layout({ children }) {
           </div>
         </div>
       </footer>
-      <MobileMessenger/>
+      <MobileMessenger />
     </div>
   );
 }

@@ -9,7 +9,9 @@ import down__image from "../../../public/static/gallery/inaltimea-tavanelor.png"
 import image_1 from "../../../public/static/gallery/Medium-retail-parter.png";
 import image_2 from "../../../public/static/gallery/Big retail-parter.png";
 import image_3 from "../../../public/static/gallery/parter-3.png";
+import { initialTabs as tabs } from "./ingredients";
 
+import { motion, AnimatePresence } from "framer-motion";
 // ==============================>
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -19,16 +21,24 @@ const BackButtonIcon = () => <BackButton width={48} height={54} />;
 
 const NextButtonIcon = () => <NextButton width={48} height={54} />;
 
-const images = [
-  { slide__image: image_1 },
-  { slide__image: image_2 },
-  { slide__image: image_3 },
-  { slide__image: image_1 },
+const parter__images = [
+  { id: 1, slide__image: image_2 },
+  { id: 2, slide__image: image_1 },
+  { id: 3, slide__image: image_3 },
+  { id: 4, slide__image: image_1 },
+];
+
+const floor__images = [
+  { id: 5, slide__image: image_1 },
+  { id: 6, slide__image: image_2 },
 ];
 
 export default function Index() {
+  const [selectedTab, setSelectedTab] = React.useState(tabs[0]);
   const navigationPrevRef = React.useRef(null);
   const navigationNextRef = React.useRef(null);
+
+  console.log(selectedTab.category);
 
   return (
     <div className={styles.gallery__section}>
@@ -43,8 +53,11 @@ export default function Index() {
                     <Image src={up__image} />
                   </div>
                   <p className={styles.gallery__description_up_text}>
-                    <span>Suprafața</span> 
-                    <span className={styles.separator}></span><span> totală:</span>
+                    Suprafața{" "}
+                    <span className={styles.separator}>
+                      <br />
+                    </span>
+                    totală:
                   </p>
                   <p className={styles.gallery__description_up_number}>
                     491.10 M<sup>2</sup>
@@ -55,8 +68,11 @@ export default function Index() {
                     <Image src={up__image} />
                   </div>
                   <p className={styles.gallery__description_up_text}>
-                  <span>Suprafața</span> 
-                    <span className={styles.separator}></span><span> totală:</span>
+                    Suprafața{" "}
+                    <span className={styles.separator}>
+                      <br />
+                    </span>
+                    totală:
                   </p>
                   <p className={styles.gallery__description_up_number}>
                     359.65 M<sup>2</sup>
@@ -75,54 +91,97 @@ export default function Index() {
               </div>
             </div>
           </div>
-
           <div className={styles.gallery__inner}>
             <button className={styles.back__btn} ref={navigationPrevRef}>
               <BackButtonIcon />
             </button>
-            <Swiper
-              effect={"flip"}
-              grabCursor={true}
-              flipEffect={{
-                slideShadows: false,
-              }}
-              pagination={{
-                dynamicBullets: true,
-              }}
-              navigation={{
-                disabledClass: "swiper-button-disabled",
-                // navigation:true,
-                prevEl: navigationPrevRef.current,
-                nextEl: navigationNextRef.current,
-              }}
-              modules={[EffectFlip, Pagination, Navigation]}
-              className={styles.mySwiper}
-            >
-              {images.map((slide) => {
-                return (
-                  <SwiperSlide>
-                    <Image
-                      src={slide.slide__image}
-                      width={582}
-                      height={614}
-                      alt={slide[`${"parter scheme"}`]}
-                      key={slide.slide__image}
-                    />
-                  </SwiperSlide>
-                );
-              })}
-            </Swiper>
+
+            <AnimatePresence exitBeforeEnter>
+              {selectedTab.category === "parter" ? (
+                <Swiper
+                  effect={"flip"}
+                  grabCursor={true}
+                  flipEffect={{
+                    slideShadows: false,
+                  }}
+                  pagination={{
+                    dynamicBullets: true,
+                  }}
+                  navigation={{
+                    prevEl: navigationPrevRef.current,
+                    nextEl: navigationNextRef.current,
+                  }}
+                  modules={[EffectFlip, Pagination, Navigation]}
+                  className={styles.mySwiper}
+                >
+                  {parter__images.map((slide) => {
+                    return (
+                      <SwiperSlide key={slide.id}>
+                        <Image
+                          src={slide.slide__image}
+                          width={582}
+                          height={614}
+                          alt={slide[`${"parter scheme"}`]}
+                          key={slide.id}
+                        />
+                      </SwiperSlide>
+                    );
+                  })}
+                </Swiper>
+              ) : (
+                <Swiper
+                effect={"flip"}
+                grabCursor={true}
+                flipEffect={{
+                  slideShadows: false,
+                }}
+                pagination={{
+                  dynamicBullets: true,
+                }}
+                navigation={{
+                  prevEl: navigationPrevRef.current,
+                  nextEl: navigationNextRef.current,
+                }}
+                modules={[EffectFlip, Pagination, Navigation]}
+                className={styles.mySwiper}
+              >
+                {floor__images.map((slide) => {
+                  return (
+                    <SwiperSlide key={slide.id}>
+                      <Image
+                        src={slide.slide__image}
+                        width={582}
+                        height={614}
+                        alt={slide[`${"parter scheme"}`]}
+                        key={slide.id}
+                      />
+                    </SwiperSlide>
+                  );
+                })}
+              </Swiper>
+              )
+              }
+            </AnimatePresence>
+
             <button className={styles.next__btn} ref={navigationNextRef}>
               <NextButtonIcon />
             </button>
 
             <div className={styles.gallery__inner_buttons}>
-              <button className={styles.gallery__inner_parter_btn}>
-                parter
-              </button>
-              <button className={styles.gallery__inner_floor_btn}>
-                Etajul 1
-              </button>
+              {tabs.map((item) => (
+                <motion.button
+                  key={item.category}
+                  transition={{ duration: 2 }}
+                  className={
+                    item === selectedTab
+                      ? styles.gallery__inner_parter_btn
+                      : styles.gallery__inner_floor_btn
+                  }
+                  onClick={() => setSelectedTab(item)}
+                >
+                  {`${item.label}`}
+                </motion.button>
+              ))}
             </div>
           </div>
         </div>
