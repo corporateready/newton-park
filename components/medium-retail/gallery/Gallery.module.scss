@@ -86,17 +86,6 @@
     }
 }
 
-// .gallery__inner_floor {
-//     @apply bg-white w-[65%] flex flex-col items-center py-[3%] p-[5%] relative;
-//     @include shadow_std();
-
-//     @media screen and(max-width: 576px) {
-//         @apply flex flex-col-reverse w-full;
-//         // background: white;
-//         box-shadow: none;
-//     }
-// }
-
 .gallery__body {
     @apply px-[14%] py-[4%] flex flex-col items-center;
 

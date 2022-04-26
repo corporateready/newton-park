@@ -147,16 +147,16 @@
 }
 
 .gallery__inner_buttons {
-    @apply flex flex-row w-[60%]; 
+    @apply flex flex-row w-[60%] rounded-md overflow-hidden; 
 
     @media screen and(max-width: 576px) {
         @apply w-full; 
     }
 }
 
-.gallery__inner_floor_btn {
-    @include text(24px, 130%, 600, #C4C4C4);
-    @apply w-[50%] border-2 border-[#C4C4C4] border-l-0 uppercase rounded-r-md py-[2%];
+.gallery__inner_parter_btn {
+    @include text(24px, 130%, 600, $white_color);
+    @apply w-[50%] bg-[#31414B] uppercase py-[2%];
 
     @media screen and(max-width: 1440px) {
         font-size: calc(12px + (24 - 12)*(100vw - 576px)/(1440 - 576));
@@ -168,9 +168,9 @@
     }
 }
 
-.gallery__inner_parter_btn {
-    @include text(24px, 130%, 600, $white_color);
-    @apply w-[50%] bg-[#31414B] uppercase rounded-l-md py-[2%];
+.gallery__inner_floor_btn {
+    @include text(24px, 130%, 600, #C4C4C4);
+    @apply w-[50%] bg-[#fff] border-2 uppercase py-[2%];
 
     @media screen and(max-width: 1440px) {
         font-size: calc(12px + (24 - 12)*(100vw - 576px)/(1440 - 576));

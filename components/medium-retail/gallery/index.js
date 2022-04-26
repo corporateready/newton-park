@@ -38,7 +38,6 @@ export default function Index() {
   const navigationPrevRef = React.useRef(null);
   const navigationNextRef = React.useRef(null);
 
-  console.log(selectedTab.category);
 
   return (
     <div className={styles.gallery__section}>

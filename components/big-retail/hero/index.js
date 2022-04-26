@@ -15,7 +15,7 @@ export default function index() {
           <div className={styles.home__shadow_up}></div>
           <div className={styles.container}>
             <div className={styles.inner}>
-              <h1 className={styles.title}>Unicul Fast Food</h1>
+              <h1 className={styles.title}>2 spații Big Retail</h1>
               <p className={styles.NP__decor_title}>NEWTON PARK</p>
             </div>
           </div>

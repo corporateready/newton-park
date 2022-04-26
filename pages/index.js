@@ -10,6 +10,7 @@ import HomeLogo from "../components/svg/home/logo";
 import BigRetail from "../components/svg/home/big-retail";
 import HomeDecor from "../components/svg/home/home-decor";
 import MediumRetail from "../components/svg/home/medium-retail";
+import PopUpMessenger from '../components/common/popup-messenger'
 import arriw__down from '../public/static/home/close-button.png' 
 import { motion } from "framer-motion";
 
@@ -127,7 +128,7 @@ export default function Home() {
             <div className={styles.nav__items}>
               {nav__items.map((item) => {
                 return (
-                  <Link href={`${item.path}`} key={item.id}>
+                  <Link href={`${item.path}`} key={item.title}>
                     <a className={styles.nav__item}>
                       <span className={styles.item__image}>{item.icon}</span>
                       <h3 className={styles.item__title}>{item.title}</h3>
@@ -138,6 +139,7 @@ export default function Home() {
 
             </div>
           </div>
+
         </div>
       </motion.section>
       {isVisible && (
@@ -173,6 +175,8 @@ export default function Home() {
                 <input type="tel" placeholder="Numărul de telefon" />
                 <button type="submit">Solicită prezentarea</button>
               </form>
+              <p className={styles.popup__text}>Sau contactează-ne:</p>
+              <PopUpMessenger/>
             </div>
           </div>
         </motion.div>

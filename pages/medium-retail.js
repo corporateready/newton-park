@@ -10,6 +10,7 @@ import {
   Info,
 } from "../components/medium-retail";
 import { Messenger } from "../components/market-page";
+import PopUpMessenger from '../components/common/popup-messenger'
 import arriw__down from "../public/static/home/close-button.png";
 import x__close_btn from "../public/static/common/x-close-button.png";
 import { motion } from "framer-motion";
@@ -90,6 +91,8 @@ export default function market() {
                 <input type="tel" placeholder="Numărul de telefon" />
                 <button type="submit">Solicită prezentarea</button>
               </form>
+              <p className={styles.popup__text}>Sau contactează-ne:</p>
+              <PopUpMessenger/>
             </div>
           </div>
         </motion.div>

@@ -2,12 +2,10 @@
 
 .market {
     @apply flex flex-col;
-
 }
 
 .market__noscroll {
     @apply flex flex-col;
-
 }
 
 // ===== modal form =====>
@@ -58,6 +56,15 @@
     button {
         @include text(24px, 135%, 400, #fff);
         @apply text-center max-w-full border-2 border-[#31414B] rounded-xl py-[3.5%] px-[5%] mt-[8%] bg-[#31414B];
+    }
+}
+
+.popup__text {
+    @include text(36px, 135%, 400, #31414B);
+    @apply mt-[10%];
+
+    @media screen and(max-width: 576px) {
+        font-size: calc(34px + (36 - 34)*(100vw - 320px)/(576 - 320));
     }
 }
 

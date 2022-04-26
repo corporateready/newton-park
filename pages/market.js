@@ -8,7 +8,9 @@ import {
   Carousel,
   Info,
   Messenger,
+  MobileMessenger,
 } from "../components/market-page";
+import PopMessenger from '../components/common/popup-messenger'
 import arriw__down from "../public/static/home/close-button.png";
 import x__close_btn from "../public/static/common/x-close-button.png";
 import { motion } from "framer-motion";
@@ -58,6 +60,7 @@ export default function market() {
         <Carousel />
         <Info />
         <Messenger />
+        <MobileMessenger/>
       </motion.div>
       {isVisible && (
         <motion.div
@@ -88,6 +91,8 @@ export default function market() {
                 <input type="tel" placeholder="Numărul de telefon" />
                 <button type="submit">Solicită prezentarea</button>
               </form>
+              <p className={styles.popup__text}>Sau contactează-ne:</p>
+              <PopMessenger/>
             </div>
           </div>
         </motion.div>

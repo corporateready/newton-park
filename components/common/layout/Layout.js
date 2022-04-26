@@ -66,16 +66,17 @@ const MediumRetailIcon = () => (
 );
 
 const nav__items = [
-  { path: "/", icon: <HomeIcon />, title: "home" },
-  { path: "/market", icon: <MarketIcon />, title: "supermarket" },
-  { path: "/restaurant", icon: <RestaurantIcon />, title: "restaurant" },
-  { path: "/fast-food", icon: <FastFoodIcon />, title: "fast-food" },
-  { path: "/big-retail", icon: <BigRetailIcon />, title: "big retail" },
-  { path: "/home-decor", icon: <HomeDecorIcon />, title: "home decor" },
+  { path: "/", icon: <HomeIcon />, title: "home", id: 1 },
+  { path: "/market", icon: <MarketIcon />, title: "supermarket", id: 2 },
+  { path: "/restaurant", icon: <RestaurantIcon />, title: "restaurant", id: 3 },
+  { path: "/fast-food", icon: <FastFoodIcon />, title: "fast-food", id: 4 },
+  { path: "/big-retail", icon: <BigRetailIcon />, title: "big retail", id: 5 },
+  { path: "/home-decor", icon: <HomeDecorIcon />, title: "home decor", id: 6 },
   {
     path: "/medium-retail",
     icon: <MediumRetailIcon />,
     title: "medium retail",
+    id: 7
   },
 ];
 
@@ -123,7 +124,7 @@ export default function Layout({ children }) {
             <div className={styles.desktop__burger__menu}>
               <div className={styles.burger__inner}>
                 {nav__items.map((item) => (
-                  <Link href={item.path} key={item.title}>
+                  <Link href={item.path} key={item.id}>
                     <a className={styles.burger__item}>
                       <div className={styles.burger__icon}>{item.icon}</div>
                       <h4 className={styles.burger__title}>{item.title}</h4>
@@ -139,7 +140,7 @@ export default function Layout({ children }) {
           <div className={styles.mobile__burger__menu}>
             <div className={styles.burger__inner}>
               {nav__items.map((item) => (
-                <Link href={item.path} key={item.title}>
+                <Link href={item.path} key={item.id}>
                   <a className={styles.burger__item}>
                     <div className={styles.burger__icon}>{item.icon}</div>
                     <h4 className={styles.burger__title}>{item.title}</h4>
