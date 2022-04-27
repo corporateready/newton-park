@@ -140,7 +140,7 @@
 }
 
 .about__build {
-    @apply absolute top-[63%] right-0 translate-x-0 translate-y-0;
+    @apply absolute top-[63%] right-0;
 
     @media screen and(max-width: 1440px) {
         height: calc(55px + (113 - 55)*(100vw - 576px)/(1440 - 576));
@@ -150,7 +150,7 @@
     }
 
     @media screen and(max-width: 576px) {
-        @apply top-[53%] right-0 translate-x-0 translate-y-0;
+        @apply absolute top-[53%] right-0;
     }
 
     svg {
