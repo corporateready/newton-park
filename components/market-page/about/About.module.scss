@@ -153,8 +153,8 @@
     }
 
     svg {
-        @apply max-w-fit;
-        max-width: -webkit-fit-content;
+        @apply w-full h-full;
+        // max-width: -webkit-fit-content;
 
         @media screen and(max-width: 1440px) {
             height: calc(55px + (113 - 55)*(100vw - 576px)/(1440 - 576));
