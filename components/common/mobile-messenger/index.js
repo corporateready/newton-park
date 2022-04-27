@@ -1,7 +1,6 @@
 import React from "react";
 import Link from "next/link";
 import styles from "./mobile-messengers.module.scss";
-import { motion } from "framer-motion";
 
 import MessengerButton from "../../../public/static/mobile-messenger/messenger";
 import ViberButton from "../../../public/static/mobile-messenger/viber";
@@ -31,31 +30,10 @@ const messenger__items = [
 ];
 
 export default function index() {
-  const [lastYPos, setLastYPos] = React.useState(0);
-  const [shouldShowActions, setShouldShowActions] = React.useState(false);
-
-  React.useEffect(() => {
-    function handleScroll() {
-      const yPos = window.scrollY;
-      const isScrollingUp = yPos > lastYPos;
-
-      setShouldShowActions(isScrollingUp);
-      setLastYPos(yPos);
-    }
-
-    window.addEventListener("scroll", handleScroll, false);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll, false);
-    };
-  }, [lastYPos]);
 
   return (
-    <motion.div
+    <div
       className={styles.messengers__section}
-      initial={{ opacity: 0 }}
-      animate={{ opacity: shouldShowActions ? 1 : 0 }}
-      transition={{ opacity: { duration: 0.3 } }}
     >
       
       {messenger__items.map((item) => {
@@ -68,6 +46,6 @@ export default function index() {
         );
       })}
       
-    </motion.div>
+    </div>
   );
 }

@@ -15,7 +15,7 @@ import MediumRetail from "../../../components/svg/burger-menu/medium-retail";
 import Link from "next/link";
 import { MobileMessenger } from "../../../components/market-page";
 
-const HomeLogoIcon = () => <HomeLogo width={109} height={57} />
+const HomeLogoIcon = () => <HomeLogo width={75} height={39} />
 
 const FooterLogoIcon = () => <FooterLogo width={109} height={57} />
 

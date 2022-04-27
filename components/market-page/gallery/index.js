@@ -21,8 +21,7 @@ const NextButtonIcon = () => <NextButton width={48} height={54} />
 
 const images = [
   { slide__image: image_1},
-  { slide__image: image_2},
-  { slide__image: image_3},
+  { slide__image: image_2}
 ];
 
 export default function Index() {
@@ -76,9 +75,7 @@ export default function Index() {
               flipEffect={{
                 slideShadows: false,
               }}
-              pagination={{
-                dynamicBullets: true,
-              }}
+              pagination={true}
               navigation={{
                 prevEl: navigationPrevRef.current,
                 nextEl: navigationNextRef.current,

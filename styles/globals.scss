@@ -76,18 +76,13 @@ html {
 
 .swiper-pagination-bullet {
   display: inline-block;
-  border: 1px solid gray;
-  width: 20px;
-  height: 20px;
+  border: 1px solid #2BB018;
+  width: 10px;
+  height: 10px;
   text-align: center;
   color: #fff;
   opacity: 1;
   background: #fff;
-
-  @media screen and(max-width: 576px) {
-    width: 13px;
-    height: 13px;
-  }
 }
 
 .swiper-pagination-bullet-active {

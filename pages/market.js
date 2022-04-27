@@ -22,7 +22,7 @@ export default function Market() {
     setTimeout(() => {
       setIsVisible(true);
       setIsDesktopVisible(true);
-    }, 5000);
+    }, 15000);
   }, []);
 
   React.useEffect(() => {

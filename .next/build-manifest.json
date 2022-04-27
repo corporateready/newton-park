@@ -15,6 +15,11 @@
     "static/development/_middlewareManifest.js"
   ],
   "pages": {
+    "/": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/index.js"
+    ],
     "/_app": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
@@ -30,10 +35,10 @@
       "static/chunks/main.js",
       "static/chunks/pages/market.js"
     ],
-    "/medium-retail": [
+    "/restaurant": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/medium-retail.js"
+      "static/chunks/pages/restaurant.js"
     ]
   },
   "ampFirstPages": []

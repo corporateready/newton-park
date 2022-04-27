@@ -13,7 +13,7 @@
     @apply hidden;
 
     @media screen and(max-width: 576px) {
-        @apply block w-full h-[57%] bg-white fixed left-0 bottom-0 z-40 rounded-t-3xl shadow-[0_3px_4px_3px_rgba(49,65,75,0.2)];   
+        @apply block w-full h-[63%] bg-white fixed left-0 bottom-0 z-40 rounded-t-3xl shadow-[0_3px_4px_3px_rgba(49,65,75,0.2)];   
  
     }
     
@@ -32,14 +32,14 @@
     @apply mt-[6%] text-center;
 
     @media screen and(max-width: 576px) {
-        font-size: calc(10px + (32 - 10)*(100vw - 320px)/(576 - 320));
+        font-size: calc(16px + (30 - 16)*(100vw - 320px)/(576 - 320));
     }
 
     span {
         @include text(32px, 135%, 600, $sapfir_color);
 
         @media screen and(max-width: 576px) {
-            font-size: calc(10px + (32 - 10)*(100vw - 320px)/(576 - 320));
+            font-size: calc(16px + (30 - 16)*(100vw - 320px)/(576 - 320));
         }
     }
 }
@@ -50,13 +50,25 @@
         @include text(24px, 135%, 400, #31414B);
         @apply text-left max-w-full border-2 border-[#31414B] rounded-xl py-[3%] px-[5%] mt-[5.5%] focus-visible:outline-none focus:placeholder:text-transparent;
 
+        @media screen and(max-width: 576px) {
+            font-size: calc(16px + (30 - 16)*(100vw - 320px)/(576 - 320));
+        }
+
         &::placeholder {
             @include text(24px, 135%, 400, #31414B);
+
+            @media screen and(max-width: 576px) {
+                font-size: calc(16px + (30 - 16)*(100vw - 320px)/(576 - 320));
+            }
         }
     }
     button {
         @include text(24px, 135%, 400, #fff);
         @apply text-center max-w-full border-2 border-[#31414B] rounded-xl py-[3.5%] px-[5%] mt-[8%] bg-[#31414B];
+
+        @media screen and(max-width: 576px) {
+            font-size: calc(16px + (30 - 16)*(100vw - 320px)/(576 - 320));
+        }
     }
 }
 
