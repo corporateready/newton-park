@@ -30,10 +30,10 @@
       "static/chunks/main.js",
       "static/chunks/pages/market.js"
     ],
-    "/restaurant": [
+    "/medium-retail": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/restaurant.js"
+      "static/chunks/pages/medium-retail.js"
     ]
   },
   "ampFirstPages": []

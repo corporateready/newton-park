@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./Gallery.module.scss";
-import Image from 'next/image'
+import Image from "next/image";
 
 import NextButton from "../../svg/gallery/next-btn";
 import BackButton from "../../svg/gallery/back-btn";
@@ -15,20 +15,15 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 import { EffectFlip, Pagination, Navigation } from "swiper";
 
-const BackButtonIcon = () =>  <BackButton width={48} height={54} />
+const BackButtonIcon = () => <BackButton width={48} height={54} />;
 
-const NextButtonIcon = () => <NextButton width={48} height={54} />
+const NextButtonIcon = () => <NextButton width={48} height={54} />;
 
-const images = [
-  { slide__image: image_1},
-  { slide__image: image_2}
-];
+const images = [{ slide__image: image_1 }, { slide__image: image_2 }];
 
 export default function Index() {
   const navigationPrevRef = React.useRef(null);
   const navigationNextRef = React.useRef(null);
-
-  console.log(navigationPrevRef.current);
 
   return (
     <div className={styles.gallery__section}>
@@ -39,9 +34,7 @@ export default function Index() {
             <div className={styles.gallery__content}>
               <div className={styles.gallery__description_up}>
                 <div className={styles.gallery__description_image}>
-                  <Image
-                  src={up__image}
-                  />
+                  <Image src={up__image} />
                 </div>
                 <p className={styles.gallery__description_up_text}>
                   Suprafața totală:
@@ -52,9 +45,7 @@ export default function Index() {
               </div>
               <div className={styles.gallery__description_down}>
                 <div className={styles.gallery__description_image}>
-                <Image
-                  src={down__image}
-                  />
+                  <Image src={down__image} />
                 </div>
                 <p className={styles.gallery__description_up_text}>
                   Înălțimea tavanelor:
@@ -65,8 +56,7 @@ export default function Index() {
           </div>
 
           <div className={styles.gallery__inner}>
-            <button className={styles.back__btn} ref={navigationPrevRef}
-            >
+            <button className={styles.back__btn} ref={navigationPrevRef}>
               <BackButtonIcon />
             </button>
             <Swiper
@@ -87,13 +77,12 @@ export default function Index() {
                 return (
                   <SwiperSlide>
                     <Image
-                    src= {slide.slide__image}
-                    width={582}
-                    height={614}
-                    alt={slide[`${'parter scheme'}`]}
-                    key={slide.slide__image}
+                      src={slide.slide__image}
+                      width={582}
+                      height={614}
+                      alt={slide[`${"parter scheme"}`]}
+                      key={slide.slide__image}
                     />
-                   
                   </SwiperSlide>
                 );
               })}
@@ -103,7 +92,6 @@ export default function Index() {
             </button>
             <button className={styles.gallery__inner_btn}>parter</button>
           </div>
-
         </div>
       </div>
     </div>

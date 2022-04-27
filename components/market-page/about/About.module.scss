@@ -140,12 +140,16 @@
 }
 
 .about__build {
-    @apply absolute top-[63%] right-0;
-
-    
+    // @apply absolute:important top-[63%] right-0;
+    position: absolute!important;
+    top: 63%!important;
+    right: 0 !important;
 
     @media screen and(max-width: 576px) {
-        @apply absolute top-[53%] right-0;
+        // @apply absolute top-[53%] right-0;
+        position: absolute!important;
+        top: 53%!important;
+        right: 0!important;
     }
 
     svg {
