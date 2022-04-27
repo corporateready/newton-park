@@ -5,17 +5,9 @@ import Gallery from "../gallery";
 import Garden from "../../svg/garden";
 import Build from "../../svg/build";
 
-const BuildIcon = () => (
-  <div>
-    <Build width={107} height={113}/>
-  </div>
-)
+const BuildIcon = () => <Build width={107} height={113}/>
 
-const GardenIcon = () => (
-  <div className={styles.garden__wrapper}>
-    <Garden width={43} height={39}/>
-  </div>
-)
+const GardenIcon = () => <Garden width={43} height={39}/>
 
 export default function index() {
   return (

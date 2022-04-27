@@ -140,15 +140,18 @@
 }
 
 .about__build {
-    @apply flex justify-end absolute top-[63%] right-0;
+    @apply flex justify-end absolute top-[63%] right-0 min-h-fit;
 
     @media screen and(max-width: 576px) {
         @apply top-[53%] right-0;
     }
 
     svg {
-        @apply max-w-fit;
+        @apply max-w-fit h-full w-full;
 
+        @media screen and(max-width: 1440px) {
+            height: calc(55px + (113 - 55)*(100vw - 576px)/(1440 - 576));
+        }
         @media screen and(max-width: 576px) {
             height: calc(50px + (85 - 50)*(100vw - 320px)/(576 - 320));
         }
