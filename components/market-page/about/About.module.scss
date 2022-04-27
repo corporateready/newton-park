@@ -154,7 +154,7 @@
     }
 
     svg {
-        @apply h-full w-full;
+        @apply h-full w-full max-w-fit;
 
        
     }

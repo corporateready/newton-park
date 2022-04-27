@@ -25,11 +25,6 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/fast-food": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/fast-food.js"
-    ],
     "/market": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
