@@ -27,7 +27,7 @@ const images = [
   { slide__image: image_1 },
 ];
 
-export default function index() {
+export default function Index() {
   const navigationPrevRef = React.useRef(null);
   const navigationNextRef = React.useRef(null);
 
@@ -82,7 +82,6 @@ export default function index() {
                 dynamicBullets: true,
               }}
               navigation={{
-                // navigation:true,
                 prevEl: navigationPrevRef.current,
                 nextEl: navigationNextRef.current,
               }}
@@ -109,6 +108,7 @@ export default function index() {
             </button>
             <button className={styles.gallery__inner_btn}>Etajul 1</button>
           </div>
+          
         </div>
       </div>
     </div>

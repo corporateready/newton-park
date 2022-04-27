@@ -7,16 +7,14 @@ import {
   Motives,
   Carousel,
   Info,
-  Messenger,
-  MobileMessenger,
+  Messenger
 } from "../components/market-page";
-import PopMessenger from '../components/common/popup-messenger'
 import arriw__down from "../public/static/home/close-button.png";
 import x__close_btn from "../public/static/common/x-close-button.png";
 import { motion } from "framer-motion";
 import Layout from "../components/common/layout/Layout";
 
-export default function market() {
+export default function Market() {
   const [isVisible, setIsVisible] = React.useState(false);
   const [isDesktopVisible, setIsDesktopVisible] = React.useState(false);
 
@@ -60,7 +58,6 @@ export default function market() {
         <Carousel />
         <Info />
         <Messenger />
-        <MobileMessenger/>
       </motion.div>
       {isVisible && (
         <motion.div
@@ -79,7 +76,7 @@ export default function market() {
                 <Image src={arriw__down} width={45} height={40} />
               </button>
               <h3 className={styles.popup__title}>
-                Solicită prezentarea
+                Solicită prezentarea Supermarket
                 <br />
                 <span className={styles.popup__title_mark}>
                   NEWTON PARK
@@ -91,8 +88,6 @@ export default function market() {
                 <input type="tel" placeholder="Numărul de telefon" />
                 <button type="submit">Solicită prezentarea</button>
               </form>
-              <p className={styles.popup__text}>Sau contactează-ne:</p>
-              <PopMessenger/>
             </div>
           </div>
         </motion.div>

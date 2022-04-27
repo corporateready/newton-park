@@ -20,12 +20,12 @@ const BackButtonIcon = () =>  <BackButton width={48} height={54} />
 const NextButtonIcon = () => <NextButton width={48} height={54} />
 
 const images = [
-  { slide__image: image_1, id: 1 },
-  { slide__image: image_2, id: 2 },
-  { slide__image: image_3, id: 3 },
+  { slide__image: image_1},
+  { slide__image: image_2},
+  { slide__image: image_3},
 ];
 
-export default function index() {
+export default function Index() {
   const navigationPrevRef = React.useRef(null);
   const navigationNextRef = React.useRef(null);
 
@@ -94,7 +94,7 @@ export default function index() {
                     width={582}
                     height={614}
                     alt={slide[`${'parter scheme'}`]}
-                    key={slide.id}
+                    key={slide.slide__image}
                     />
                    
                   </SwiperSlide>
@@ -106,6 +106,7 @@ export default function index() {
             </button>
             <button className={styles.gallery__inner_btn}>parter</button>
           </div>
+
         </div>
       </div>
     </div>

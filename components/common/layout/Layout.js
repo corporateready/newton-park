@@ -15,55 +15,23 @@ import MediumRetail from "../../../components/svg/burger-menu/medium-retail";
 import Link from "next/link";
 import { MobileMessenger } from "../../../components/market-page";
 
-const HomeLogoIcon = () => (
-  <div>
-    <HomeLogo width={109} height={57} />
-  </div>
-);
+const HomeLogoIcon = () => <HomeLogo width={109} height={57} />
 
-const FooterLogoIcon = () => (
-  <div>
-    <FooterLogo width={109} height={57} />
-  </div>
-);
+const FooterLogoIcon = () => <FooterLogo width={109} height={57} />
 
-const HomeIcon = () => (
-  <div>
-    <Home width={33} height={33} />
-  </div>
-);
+const HomeIcon = () =>  <Home width={33} height={33} />
 
-const MarketIcon = () => (
-  <div>
-    <Market width={30} height={30} />
-  </div>
-);
+const MarketIcon = () => <Market width={30} height={30} />
 
 const RestaurantIcon = () => <Restaurant width={30} height={30} />;
 
-const FastFoodIcon = () => (
-  <div>
-    <FastFood width={30} height={30} />
-  </div>
-);
+const FastFoodIcon = () => <FastFood width={30} height={30} />
 
-const BigRetailIcon = () => (
-  <div>
-    <BigRetail width={30} height={30} />
-  </div>
-);
+const BigRetailIcon = () => <BigRetail width={30} height={30} />
 
-const HomeDecorIcon = () => (
-  <div>
-    <HomeDecor width={30} height={30} />
-  </div>
-);
+const HomeDecorIcon = () =>  <HomeDecor width={30} height={30} />
 
-const MediumRetailIcon = () => (
-  <div>
-    <MediumRetail width={30} height={30} />
-  </div>
-);
+const MediumRetailIcon = () => <MediumRetail width={30} height={30} />
 
 const nav__items = [
   { path: "/", icon: <HomeIcon />, title: "home", id: 1 },

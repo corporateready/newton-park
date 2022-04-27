@@ -4,7 +4,6 @@ import Image from "next/image";
 import Layout from "../components/common/layout/Layout";
 import { Hero, About, Motives, Carousel, Info } from "../components/fast-food";
 import { Messenger } from "../components/market-page";
-import PopUpMessenger from '../components/common/popup-messenger'
 import arriw__down from "../public/static/home/close-button.png";
 import x__close_btn from "../public/static/common/x-close-button.png"; 
 import { motion } from "framer-motion";
@@ -84,8 +83,6 @@ export default function market() {
                 <input type="tel" placeholder="Numărul de telefon" />
                 <button type="submit">Solicită prezentarea</button>
               </form>
-              <p className={styles.popup__text}>Sau contactează-ne:</p>
-              <PopUpMessenger/>
             </div>
           </div>
         </motion.div>
@@ -107,7 +104,7 @@ export default function market() {
                 <Image src={x__close_btn} width={21} height={21} />
               </button>
               <h3 className={styles.popup__desktop_title}>
-                Solicită prezentarea Supermaket
+                Solicită prezentarea Fast-Food
                 <br />
                 <span className={styles.popup__title_mark}>
                   NEWTON PARK

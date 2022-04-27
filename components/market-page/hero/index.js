@@ -1,14 +1,12 @@
 import React from "react";
 import Head from "next/head";
-// import Image from "next/image";
-import Link from "next/link";
 import styles from "./Hero.module.scss";
 
 export default function index() {
   return (
     <>
       <Head>
-        <title>Newton Park | Sypermarket</title>
+        <title>Newton Park | Supermarket</title>
       </Head>
 
       <section className={styles.home}>

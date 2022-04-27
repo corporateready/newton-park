@@ -54,7 +54,7 @@ function Carousel() {
           spaceBetween={30}
           pagination={{
             clickable:true,
-            renderBullet: function (className) {
+            renderBullet: function (index, className) {
               return '<span class="' + className + '">' + '</span>';
             }
           }}
