@@ -29,10 +29,11 @@ export default function index() {
             se potrivește afacerii tale
           </h2>
           <div className={styles.inner}>
+
             <div className={styles.motive}>
               <div className={styles.motive__wrapper}>
                 <div className={styles.motive__image}>
-                  <Image src={motive_5} width={321} height={183} priority />
+                  <Image src={motive_5} width={321} height={170} priority />
                 </div>
                 <div className={styles.motive__title_wrapper}>
                   <h3 className={styles.motive__title}>
@@ -47,7 +48,7 @@ export default function index() {
             <div className={styles.motive}>
               <div className={styles.motive__wrapper}>
                 <div className={styles.motive__image}>
-                  <Image src={motive_4} width={321} height={241} priority />
+                  <Image src={motive_4} width={321} height={201} priority />
                 </div>
                 <div className={styles.motive__title_wrapper}>
                   <h3 className={styles.motive__title}>
@@ -62,7 +63,7 @@ export default function index() {
             <div className={styles.motive}>
               <div className={styles.motive__wrapper}>
                 <div className={styles.motive__image}>
-                  <Image src={motive_3} width={321} height={224} priority />
+                  <Image src={motive_3} width={321} height={204} priority />
                 </div>
                 <div className={styles.motive__title_wrapper}>
                   <h3 className={styles.motive__title}>
@@ -92,7 +93,7 @@ export default function index() {
             <div className={styles.motive}>
               <div className={styles.motive__wrapper}>
                 <div className={styles.motive__image}>
-                  <Image src={motive_1} width={321} height={184} priority />
+                  <Image src={motive_1} width={301} height={164} priority />
                 </div>
                 <div className={styles.motive__title_wrapper}>
                   <h3 className={styles.motive__title}>
@@ -105,7 +106,7 @@ export default function index() {
             <div className={styles.motive}>
               <div className={styles.motive__wrapper}>
                 <div className={styles.motive__image}>
-                  <Image src={motive_2} width={321} height={145} priority />
+                  <Image src={motive_2} width={321} height={205} priority />
                 </div>
                 <div className={styles.motive__title_wrapper}>
                   <h3 className={styles.motive__title}>

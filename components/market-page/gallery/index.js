@@ -8,7 +8,6 @@ import up__image from "../../../public/static/gallery/metri-patrati.png";
 import down__image from "../../../public/static/gallery/inaltimea-tavanelor.png";
 import image_2 from "../../../public/static/gallery/parter-2.png";
 import image_1 from "../../../public/static/gallery/parter-1.png";
-import image_3 from "../../../public/static/gallery/parter-3.png";
 
 // ==============================>
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -83,6 +82,7 @@ export default function Index() {
                       alt={slide[`${"parter scheme"}`]}
                       key={slide.slide__image}
                     />
+                    
                   </SwiperSlide>
                 );
               })}

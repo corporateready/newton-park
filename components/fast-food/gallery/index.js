@@ -8,7 +8,6 @@ import up__image from "../../../public/static/gallery/metri-patrati.png";
 import down__image from "../../../public/static/gallery/inaltimea-tavanelor.png";
 import image_1 from "../../../public/static/gallery/PARTER-fastfood.png";
 import image_2 from "../../../public/static/gallery/fastfood-01.png";
-import image_3 from "../../../public/static/gallery/parter-3.png";
 
 // ==============================>
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -20,17 +19,13 @@ const BackButtonIcon = () =>  <BackButton width={48} height={54} />
 const NextButtonIcon = () => <NextButton width={48} height={54} />
 
 const images = [
-  { slide__image: image_1 },
   { slide__image: image_2 },
-  { slide__image: image_3 },
-  { slide__image: image_1 },
+  { slide__image: image_1 }
 ];
 
 export default function Index() {
   const navigationPrevRef = React.useRef(null);
   const navigationNextRef = React.useRef(null);
-
-  // console.log(navigationPrevRef.current);
 
   return (
     <div className={styles.gallery__section}>

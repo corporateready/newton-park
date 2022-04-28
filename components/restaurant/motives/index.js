@@ -65,7 +65,7 @@ export default function index() {
                   <h3 className={styles.motive__title}>
                     Open space
                     <br />
-                    Flexibilitate în compartimente
+                    Flexibilitate în compartimentare
                   </h3>
                 </div>
               </div>
@@ -88,7 +88,7 @@ export default function index() {
             <div className={styles.motive}>
               <div className={styles.motive__wrapper}>
                 <div className={styles.motive__image}>
-                  <Image src={motive_5} width={321} height={183} priority />
+                  <Image src={motive_5} width={321} height={203} priority />
                 </div>
                 <div className={styles.motive__title_wrapper}>
                   <h3 className={styles.motive__title}>
@@ -102,7 +102,7 @@ export default function index() {
             <div className={styles.motive}>
               <div className={styles.motive__wrapper}>
                 <div className={styles.motive__image}>
-                  <Image src={motive_6} width={321} height={234} priority />
+                  <Image src={motive_6} width={321} height={224} priority />
                 </div>
                 <div className={styles.motive__title_wrapper}>
                   <h3 className={styles.motive__title}>

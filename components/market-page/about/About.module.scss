@@ -149,21 +149,6 @@
         @apply top-[53%];
         width: calc(50px + (85 - 50)*(100vw - 320px)/(576 - 320));
     }
-
-    // @media screen and(max-width: 576px) {
-    //     @apply top-[53%];
-    // }
-
-    // img {
-    //     @apply max-w-fit;
-
-    //     @media screen and(max-width: 1440px) {
-    //         height: calc(55px + (113 - 55)*(100vw - 576px)/(1440 - 576));
-    //     }
-    //     @media screen and(max-width: 576px) {
-    //         height: calc(50px + (85 - 50)*(100vw - 320px)/(576 - 320));
-    //     }
-    // }
 }
 
 .text__sepatator {

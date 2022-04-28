@@ -8,7 +8,6 @@ import up__image from "../../../public/static/gallery/metri-patrati.png";
 import down__image from "../../../public/static/gallery/inaltimea-tavanelor.png";
 import image_1 from "../../../public/static/gallery/BIG-RETAIL_PARTER1.png";
 import image_2 from "../../../public/static/gallery/Big retail-parter.png";
-import image_3 from "../../../public/static/gallery/parter-3.png";
 import { initialTabs as tabs } from "./ingredients";
 
 import { motion, AnimatePresence } from "framer-motion";
@@ -25,8 +24,6 @@ const NextButtonIcon = () => <NextButton width={48} height={54} />
 const parter__images = [
   { id: 1, slide__image: image_2 },
   { id: 2, slide__image: image_1 },
-  { id: 3, slide__image: image_3 },
-  { id: 4, slide__image: image_1 },
 ];
 
 const floor__images = [
@@ -86,9 +83,7 @@ export default function Index() {
                   flipEffect={{
                     slideShadows: false,
                   }}
-                  pagination={{
-                    dynamicBullets: true,
-                  }}
+                  pagination={true}
                   navigation={{
                     prevEl: navigationPrevRef.current,
                     nextEl: navigationNextRef.current,

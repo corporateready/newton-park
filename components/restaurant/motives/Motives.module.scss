@@ -37,7 +37,7 @@
 }
 
 .motive {
-    @apply border-r-[3px] border-[#31414B] flex justify-center;
+    @apply border-r-[3px] border-[#31414B] flex justify-center items-end;
     &:nth-child(3) {
         @apply border-0;
     }
@@ -48,52 +48,48 @@
 
     @media screen and(max-width: 768px) {
         &:nth-last-child(even) {
-            @apply border-r-[3px] border-[#31414B];
+            @apply border-r-[3px] border-[#31414B] justify-start;
         }
 
         &:nth-last-child(odd) {
-            @apply border-r-0 border-white;
+            @apply border-r-0 border-white justify-end;
         }
     }
 
 }
 
 .motive__wrapper {
-    @apply w-[80%] self-stretch;
+    @apply w-[80%] h-full flex flex-col justify-end;
 
     @media screen and(max-width: 576px) {
-        @apply w-[85%];
+        @apply w-[92%] flex flex-col justify-end;
 
     }
 }
 
 .motive__image {
-    // @media screen and(max-width: 576px) {
-        @apply h-[81%] flex items-center;
-//    img &:nth-child(4) {
-//         @apply h-[238px];
-// }
-    // }
+    @apply h-[77%] flex items-end first:h-[70%];
+    img{
+        @apply flex h-full w-full;
+    }
 }
 
 .motive__title_wrapper {
-    @apply bg-[#31414B] rounded-sm h-[20%];
-
-    @media screen and(max-width: 576px) {
-        @apply h-[20%];
-    }
+    @apply bg-[#31414B] rounded-sm h-[20%] mt-[5%];
     
 }
 
 .motive__title {
     @include text(14px, 135%, 400, $white_color);
-    @apply flex justify-center items-center text-center px-[3%] h-full;
+    @apply flex justify-center items-center text-center h-full rounded-md;
     
+    @media screen and(max-width: 576px) {
+        @apply py-[5%];
+    }
+
     &:nth-child(1) {
-        @apply py-[3%];
-        @media screen and(max-width: 576px) {
-            @apply py-[1.5%] px-0;
-        }
+        @apply py-[6%];
+       
     }
 
     @media screen and(max-width: 1440px) {

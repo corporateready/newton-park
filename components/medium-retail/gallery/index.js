@@ -103,9 +103,7 @@ export default function Index() {
                   flipEffect={{
                     slideShadows: false,
                   }}
-                  pagination={{
-                    dynamicBullets: true,
-                  }}
+                  pagination={true}
                   navigation={{
                     prevEl: navigationPrevRef.current,
                     nextEl: navigationNextRef.current,
@@ -182,6 +180,7 @@ export default function Index() {
                 </motion.button>
               ))}
             </div>
+            
           </div>
         </div>
       </div>

@@ -78,9 +78,7 @@ export default function Index() {
               flipEffect={{
                 slideShadows: false,
               }}
-              pagination={{
-                dynamicBullets: true,
-              }}
+              pagination={true}
               navigation={{
                 prevEl: navigationPrevRef.current,
                 nextEl: navigationNextRef.current,

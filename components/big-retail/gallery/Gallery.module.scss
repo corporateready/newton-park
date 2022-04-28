@@ -107,7 +107,7 @@
     @apply flex flex-col pt-[13%];
 
     @media screen and(max-width: 576px) {
-        @apply pt-0 ml-[5%] w-full;
+        @apply pt-0 ml-[2%] w-full;
     }
 }
 
@@ -183,7 +183,7 @@
 }
 // ===== gallery pagging buttons =====>
 .next__btn {
-    @apply absolute top-0 right-[2%] h-full w-[55px] z-10;
+    @apply absolute top-0 right-[2%] h-full w-[55px] z-10 disabled:opacity-30;
 
     @media screen and(max-width: 1440px) {
         width: calc(28px + (55 - 28)*(100vw - 320px)/(1440 - 320));
@@ -191,7 +191,7 @@
 }
 
 .back__btn {
-    @apply absolute top-0 left-[2%] h-full w-[55px] z-10;
+    @apply absolute top-0 left-[2%] h-full w-[55px] z-10 disabled:opacity-30;
 
     @media screen and(max-width: 1440px) {
         width: calc(28px + (55 - 28)*(100vw - 320px)/(1440 - 320));
@@ -203,9 +203,10 @@
     max-width: 100%;
     margin-bottom: 8%;
     padding: 10%;
+    overflow: hidden;
 
     @media screen and(max-width: 576px) {
-        @apply mb-0;
+        @apply mb-0 ;
     }
 }
 .swiper {

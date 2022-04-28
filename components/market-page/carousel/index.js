@@ -53,6 +53,7 @@ function Carousel() {
           }}
           spaceBetween={30}
           pagination={{
+            bulletClass:'swiper-pagination-bullet',
             clickable:true,
             renderBullet: function (index, className) {
               return '<span class="' + className + '">' + '</span>';

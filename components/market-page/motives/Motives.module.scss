@@ -68,31 +68,22 @@
 }
 
 .motive__image {
+    @apply h-[70%] flex items-end;
     img{
-        @apply flex;
+        @apply flex h-full w-full;
     }
 }
 
 .motive__title_wrapper {
-    @apply bg-[#31414B] rounded-sm h-[20%] mt-[5%];
-
-    @media screen and(max-width: 576px) {
-        // @apply px-[5%];
-    }
-    
+    @apply bg-[#31414B] rounded-sm mt-[5%] flex-1;
 }
 
 .motive__title {
     @include text(14px, 135%, 400, $white_color);
-    @apply flex justify-center items-center text-center h-full rounded-md;
+    @apply flex justify-center items-center text-center h-full rounded-md py-[2%];
     
     @media screen and(max-width: 576px) {
-        @apply py-[5%];
-    }
-
-    &:nth-child(1) {
-        @apply py-[3%];
-       
+        @apply py-[2%];
     }
 
     @media screen and(max-width: 1440px) {

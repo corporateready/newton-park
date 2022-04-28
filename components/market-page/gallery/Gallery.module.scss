@@ -21,7 +21,7 @@
 }
 
 .gallery__bg {
-    @apply absolute bg-[#31414B] h-[64%] w-full left-0 top-[46%] translate-x-[0] translate-y-[-50%];
+    @apply absolute bg-[#31414B] h-[54%] w-full left-0 top-[50%] translate-x-[0] translate-y-[-63%];
 
     @media screen and(max-width: 576px) {
         @apply top-[74%] h-[43%];
@@ -195,7 +195,7 @@
 
   .swiper-slide {
     background-position: center;
-    background-size: cover;
+    background-size: contain;
     width: 200px;
     height: 200px;
   }
