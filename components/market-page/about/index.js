@@ -1,11 +1,13 @@
 import React from "react";
 import styles from "./About.module.scss";
+import Image from 'next/image'
 
 import Gallery from "../gallery";
 import Garden from "../../svg/garden";
 import Build from "../../svg/build";
+import build from "../../../public/static/common/real-estate.png";
 
-const BuildIcon = () => <Build width={107} height={113}/>
+// const BuildIcon = () => <Build width={107} height={113}/>
 
 const GardenIcon = () => <Garden width={43} height={39}/>
 
@@ -50,7 +52,8 @@ export default function index() {
             <div></div>
           </div>
           <div className={styles.about__build}>
-            <BuildIcon/>
+            {/* <BuildIcon/> */}
+            <Image src={build}  width={107} height={113}/>
           </div>
         </div>
       </div>
