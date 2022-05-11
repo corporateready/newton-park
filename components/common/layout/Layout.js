@@ -38,8 +38,8 @@ const nav__items = [
   { path: "/market", icon: <MarketIcon />, title: "supermarket", id: 2 },
   { path: "/restaurant", icon: <RestaurantIcon />, title: "restaurant", id: 3 },
   { path: "/fast-food", icon: <FastFoodIcon />, title: "fast-food", id: 4 },
-  { path: "/big-retail", icon: <BigRetailIcon />, title: "big retail", id: 5 },
   { path: "/home-decor", icon: <HomeDecorIcon />, title: "home decor", id: 6 },
+  { path: "/big-retail", icon: <BigRetailIcon />, title: "big retail", id: 5 },
   {
     path: "/medium-retail",
     icon: <MediumRetailIcon />,

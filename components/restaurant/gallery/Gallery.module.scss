@@ -155,7 +155,7 @@
     }
 
     @media screen and(max-width: 576px) {
-        @apply w-full py-[3%];
+        @apply w-full py-[3%] mb-[5%];
         font-size: calc(12px + (30 - 12)*(100vw - 320px)/(576 - 320));
     }
 }

@@ -22,7 +22,7 @@ export default function index() {
       >
         <div className={styles.container}>
           <h2 className={styles.title}>
-            De ce unicul spațiu pretabil pentru supermarket
+            De ce unicul spațiu pretabil pentru fast food
             <br /> la <span className={styles.title__decor}>
               Newton Park
             </span>{" "}

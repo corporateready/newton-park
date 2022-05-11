@@ -7,7 +7,7 @@
     @apply mb-[17%];
 
     @media screen and(max-width: 576px) {
-        @apply h-full z-10 mt-[57%] mb-[28%];
+        @apply h-full z-10 mt-[57%] mb-[26%];
     }
 }
 
@@ -68,7 +68,12 @@
 }
 
 .motive__image {
-    @apply h-[74%] flex items-center;
+    @apply h-[73%] flex items-end;
+
+    &:nth-child(1) {
+        @apply items-center;
+    }
+
     img{
         @apply flex h-full w-full;
     }
@@ -81,10 +86,6 @@
 .motive__title {
     @include text(14px, 135%, 400, $white_color);
     @apply flex justify-center items-center text-center h-full rounded-md py-[2%];
-    
-    @media screen and(max-width: 576px) {
-        @apply py-[5%];
-    }
 
     @media screen and(max-width: 1440px) {
         font-size: calc(8px + (15 - 8)*(100vw - 576px)/(1440 - 576));

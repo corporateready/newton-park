@@ -7,6 +7,7 @@ import { Messenger } from "../components/market-page";
 import arriw__down from "../public/static/home/close-button.png";
 import x__close_btn from "../public/static/common/x-close-button.png";
 import { motion } from "framer-motion";
+import Head from "next/head";
 
 export default function market() {
   const [isVisible, setIsVisible] = React.useState(false);
@@ -39,6 +40,9 @@ export default function market() {
 
   return (
     <>
+    <Head>
+      <title>Newton Park | Big Retail</title>
+    </Head>
       <Layout>
         <motion.div
           className={styles.market}

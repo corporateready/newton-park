@@ -22,11 +22,8 @@ export default function index() {
       >
         <div className={styles.container}>
           <h2 className={styles.title}>
-            De ce unicul spațiu pretabil pentru supermarket
-            <br /> la <span className={styles.title__decor}>
-              Newton Park
-            </span>{" "}
-            se potrivește afacerii tale
+            4  SPAȚII MEDIUM RETAIL <span className={styles.title__decor}>NEWTON PARK</span>
+            <br/>IATĂ DE CE SE POTRIVESC AFACERII TALE
           </h2>
           <div className={styles.inner}>
 

@@ -23,7 +23,11 @@
     }
 }
 .logo__image {
-    @apply mt-[5%] mx-auto px-[3%];
+    @apply mt-[5%] mx-[5%];
+
+    @media screen and(max-width: 1440px) {
+        @apply mx-[10%];
+    }
 }
 .info__description {
     @include text(36px, 135%, 700, $medium_black);

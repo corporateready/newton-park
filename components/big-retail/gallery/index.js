@@ -6,8 +6,14 @@ import NextButton from "../../svg/gallery/next-btn";
 import BackButton from "../../svg/gallery/back-btn";
 import up__image from "../../../public/static/gallery/metri-patrati.png";
 import down__image from "../../../public/static/gallery/inaltimea-tavanelor.png";
-import image_1 from "../../../public/static/gallery/BIG-RETAIL_PARTER1.png";
-import image_2 from "../../../public/static/gallery/Big retail-parter.png";
+import image_1 from "../../../public/static/gallery/big-retail/Big retail-parter.png";
+import image_2 from "../../../public/static/gallery/big-retail/BIG-RETAIL_PARTER1.png";
+import image_1_webp from "../../../public/static/gallery/big-retail/Big-retail-parter.webp";
+import image_2_webp from "../../../public/static/gallery/big-retail/BIG-RETAIL_PARTER1.webp";
+import image_3 from "../../../public/static/gallery/big-retail/Big-Retail-Etajul1-integral.png";
+import image_4 from "../../../public/static/gallery/big-retail/Big-Retail-Etajul1.png";
+import image_3_webp from "../../../public/static/gallery/big-retail/Big-Retail-Etajul1-integral.webp";
+import image_4_webp from "../../../public/static/gallery/big-retail/Big-Retail-Etajul1.webp";
 import { initialTabs as tabs } from "./ingredients";
 
 import { motion, AnimatePresence } from "framer-motion";
@@ -22,13 +28,13 @@ const BackButtonIcon = () =>  <BackButton width={48} height={54} />
 const NextButtonIcon = () => <NextButton width={48} height={54} />
 
 const parter__images = [
-  { id: 1, slide__image: image_2 },
-  { id: 2, slide__image: image_1 },
+  { id: 1, slide__image: image_2, slide__image_webp: image_2_webp },
+  { id: 2, slide__image: image_1, slide__image_webp: image_1_webp },
 ];
 
 const floor__images = [
-  { id: 5, slide__image: image_1 },
-  { id: 6, slide__image: image_2 },
+  { id: 3, slide__image: image_3, slide__image_webp: image_3_webp },
+  { id: 4, slide__image: image_4, slide__image_webp: image_4_webp },
 ];
 
 export default function Index() {
@@ -90,12 +96,14 @@ export default function Index() {
                   }}
                   modules={[EffectFlip, Pagination, Navigation]}
                   className={styles.mySwiper}
+                  key="parter"
                 >
                   {parter__images.map((slide) => {
                     return (
                       <SwiperSlide key={slide.id}>
                         <Image
                           src={slide.slide__image}
+                          srcSet={slide.slide__image_webp}
                           width={582}
                           height={614}
                           alt={slide[`${"parter scheme"}`]}
@@ -121,12 +129,14 @@ export default function Index() {
                 }}
                 modules={[EffectFlip, Pagination, Navigation]}
                 className={styles.mySwiper}
+                key="floor"
               >
                 {floor__images.map((slide) => {
                   return (
                     <SwiperSlide key={slide.id}>
                       <Image
                         src={slide.slide__image}
+                        srcSet={slide.slide__image_webp}
                         width={582}
                         height={614}
                         alt={slide[`${"parter scheme"}`]}

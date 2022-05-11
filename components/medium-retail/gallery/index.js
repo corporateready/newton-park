@@ -6,9 +6,19 @@ import NextButton from "../../svg/gallery/next-btn";
 import BackButton from "../../svg/gallery/back-btn";
 import up__image from "../../../public/static/gallery/metri-patrati.png";
 import down__image from "../../../public/static/gallery/inaltimea-tavanelor.png";
-import image_1 from "../../../public/static/gallery/Medium-retail-parter.png";
-import image_2 from "../../../public/static/gallery/Big retail-parter.png";
-import image_3 from "../../../public/static/gallery/parter-3.png";
+import image_1 from "../../../public/static/gallery/medium-retail/Medium-retail-parter-1.png";
+import image_2 from "../../../public/static/gallery/medium-retail/Medium-retail-parter-2.png";
+import image_3 from "../../../public/static/gallery/medium-retail/Medium-retail-parter.png";
+import image_1_webp from "../../../public/static/gallery/medium-retail/Medium-retail-parter-1.webp";
+import image_2_webp from "../../../public/static/gallery/medium-retail/Medium-retail-parter-2.webp";
+import image_3_webp from "../../../public/static/gallery/medium-retail/Medium-retail-parter.webp";
+
+import image_4 from "../../../public/static/gallery/medium-retail/Medium-retail-parter-1.png";
+import image_5 from "../../../public/static/gallery/medium-retail/Medium-retail-parter-2.png";
+import image_6 from "../../../public/static/gallery/medium-retail/Medium-retail-parter.png";
+import image_4_webp from "../../../public/static/gallery/medium-retail/Medium-retail-parter-1.webp";
+import image_5_webp from "../../../public/static/gallery/medium-retail/Medium-retail-parter-2.webp";
+import image_6_webp from "../../../public/static/gallery/medium-retail/Medium-retail-parter.webp";
 import { initialTabs as tabs } from "./ingredients";
 
 import { motion, AnimatePresence } from "framer-motion";
@@ -22,15 +32,17 @@ const BackButtonIcon = () => <BackButton width={48} height={54} />;
 const NextButtonIcon = () => <NextButton width={48} height={54} />;
 
 const parter__images = [
-  { id: 1, slide__image: image_2 },
-  { id: 2, slide__image: image_1 },
-  { id: 3, slide__image: image_3 },
-  { id: 4, slide__image: image_1 },
+  { id: 3, slide__image: image_3, slide__image_webp: image_3_webp },
+  { id: 1, slide__image: image_2, slide__image_webp: image_1_webp },
+  // { id: 2, slide__image: image_1, slide__image_webp: image_2_webp },
 ];
 
 const floor__images = [
-  { id: 5, slide__image: image_1 },
-  { id: 6, slide__image: image_2 },
+  { id: 4, slide__image: image_4, slide__image_webp: image_4_webp },
+  // { id: 1, slide__image: image_2, slide__image_webp: image_1_webp },
+  { id: 3, slide__image: image_3, slide__image_webp: image_3_webp },
+  // { id: 5, slide__image: image_5, slide__image_webp: image_5_webp },
+  // { id: 6, slide__image: image_6, slide__image_webp: image_6_webp },
 ];
 
 export default function Index() {
@@ -49,14 +61,13 @@ export default function Index() {
               <div className={styles.gallery__description_up_wrap}>
                 <div className={styles.gallery__description_up_wrapper}>
                   <div className={styles.gallery__description_image}>
-                    <Image src={up__image} />
+                    <Image src={up__image} height={90} width={85} alt=""/>
                   </div>
                   <p className={styles.gallery__description_up_text}>
                     Suprafața{" "}
                     <span className={styles.separator}>
-                      <br />
-                    </span>
-                    totală:
+                      {/* <br /> */}
+                    </span>totală:
                   </p>
                   <p className={styles.gallery__description_up_number}>
                     491.10 M<sup>2</sup>
@@ -64,14 +75,13 @@ export default function Index() {
                 </div>
                 <div className={styles.gallery__description_up_wrapper}>
                   <div className={styles.gallery__description_image}>
-                    <Image src={up__image} />
+                    <Image src={up__image} height={90} width={85} alt=""/>
                   </div>
                   <p className={styles.gallery__description_up_text}>
                     Suprafața{" "}
                     <span className={styles.separator}>
-                      <br />
-                    </span>
-                    totală:
+                      {/* <br /> */}
+                    </span>totală:
                   </p>
                   <p className={styles.gallery__description_up_number}>
                     359.65 M<sup>2</sup>
@@ -110,6 +120,7 @@ export default function Index() {
                   }}
                   modules={[EffectFlip, Pagination, Navigation]}
                   className={styles.mySwiper}
+                  key="parter"
                 >
                   {parter__images.map((slide) => {
                     return (
@@ -132,15 +143,14 @@ export default function Index() {
                 flipEffect={{
                   slideShadows: false,
                 }}
-                pagination={{
-                  dynamicBullets: true,
-                }}
+                pagination={true}
                 navigation={{
                   prevEl: navigationPrevRef.current,
                   nextEl: navigationNextRef.current,
                 }}
                 modules={[EffectFlip, Pagination, Navigation]}
                 className={styles.mySwiper}
+                key="floor"
               >
                 {floor__images.map((slide) => {
                   return (

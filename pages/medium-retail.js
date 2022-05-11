@@ -111,7 +111,7 @@ export default function market() {
                 <Image src={x__close_btn} width={21} height={21} />
               </button>
               <h3 className={styles.popup__desktop_title}>
-                Solicită prezentarea Supermaket
+                Solicită prezentarea Medium Retail
                 <br />
                 <span className={styles.popup__title_mark}>
                   NEWTON PARK

@@ -6,7 +6,7 @@ export default function index() {
   return (
     <>
       <Head>
-        <title>Newton Park | Sypermarket</title>
+        <title>Newton Park | Fast Food</title>
       </Head>
 
       <section className={styles.home}>

@@ -6,8 +6,10 @@ import NextButton from "../../svg/gallery/next-btn";
 import BackButton from "../../svg/gallery/back-btn";
 import up__image from "../../../public/static/gallery/metri-patrati.png";
 import down__image from "../../../public/static/gallery/inaltimea-tavanelor.png";
-import image_1 from "../../../public/static/gallery/PARTER-fastfood.png";
-import image_2 from "../../../public/static/gallery/fastfood-01.png";
+import image_1 from "../../../public/static/gallery/fast-food/fastfood.png";
+import image_2 from "../../../public/static/gallery/fast-food/PARTER-fastfood.png";
+import image_1_webp from "../../../public/static/gallery/fast-food/fastfood.webp";
+import image_2_webp from "../../../public/static/gallery/fast-food/PARTER-fastfood.webp";
 
 // ==============================>
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -19,8 +21,8 @@ const BackButtonIcon = () =>  <BackButton width={48} height={54} />
 const NextButtonIcon = () => <NextButton width={48} height={54} />
 
 const images = [
-  { slide__image: image_2 },
-  { slide__image: image_1 }
+  { id: 1,slide__image: image_2, slide__image_webp: image_2_webp },
+  { id: 2,slide__image: image_1, slide__image_webp: image_1_webp }
 ];
 
 export default function Index() {
@@ -76,8 +78,6 @@ export default function Index() {
                 dynamicBullets: true,
               }}
               navigation={{
-                disabledClass:'swiper-button-disabled',
-                // navigation:true,
                 prevEl: navigationPrevRef.current,
                 nextEl: navigationNextRef.current,
               }}
@@ -92,7 +92,7 @@ export default function Index() {
                     width={582}
                     height={614}
                     alt={slide[`${'parter scheme'}`]}
-                    key={slide.slide__image}
+                    key={slide.id}
                     />
                    
                   </SwiperSlide>

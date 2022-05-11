@@ -6,9 +6,12 @@ import NextButton from "../../svg/gallery/next-btn";
 import BackButton from "../../svg/gallery/back-btn";
 import up__image from "../../../public/static/gallery/metri-patrati.png";
 import down__image from "../../../public/static/gallery/inaltimea-tavanelor.png";
-import image_1 from "../../../public/static/gallery/PARTER-fastfood.png";
-import image_2 from "../../../public/static/gallery/fastfood-01.png";
-import image_3 from "../../../public/static/gallery/parter-3.png";
+import image_1 from "../../../public/static/gallery/home-decor/Home decor-plan integral.png";
+import image_2 from "../../../public/static/gallery/home-decor/Home decor planimetrie.png";
+import image_1_webp from "../../../public/static/gallery/home-decor/Home decor-plan integral.webp";
+import image_2_webp from "../../../public/static/gallery/home-decor/Home decor planimetrie.webp";
+
+
 import { initialTabs as tabs } from "./ingredients";
 
 import { motion, AnimatePresence } from "framer-motion";
@@ -22,15 +25,13 @@ const BackButtonIcon = () =>  <BackButton width={48} height={54} />
 const NextButtonIcon = () => <NextButton width={48} height={54} />
 
 const parter__images = [
-  { id: 1, slide__image: image_2 },
-  { id: 2, slide__image: image_1 },
-  { id: 3, slide__image: image_3 },
-  { id: 4, slide__image: image_1 },
+  { id: 2, slide__image: image_1,slide__image_webp: image_1_webp },
+  { id: 1, slide__image: image_2,slide__image_webp: image_2_webp },
 ];
 
 const floor__images = [
-  { id: 5, slide__image: image_1 },
-  { id: 6, slide__image: image_2 },
+  { id: 2, slide__image: image_1,slide__image_webp: image_1_webp },
+  { id: 1, slide__image: image_2,slide__image_webp: image_2_webp },
 ];
 
 export default function Index() {
@@ -46,22 +47,28 @@ export default function Index() {
           <div className={styles.gallery__description}>
             <div className={styles.gallery__content}>
               <div className={styles.gallery__description_up}>
-                <div className={styles.gallery__description_image}>
+                <div className={styles.gallery__description_image_up}>
                   <Image
                   src={up__image}
+                  height={107}
+                  width={103}
+                  alt="structure icon"
                   />
                 </div>
                 <p className={styles.gallery__description_up_text}>
                   Suprafața totală:
                 </p>
                 <p className={styles.gallery__description_up_number}>
-                  728.50 M<sup>2</sup>
+                  2068.20 M<sup>2</sup>
                 </p>
               </div>
               <div className={styles.gallery__description_down}>
-                <div className={styles.gallery__description_image}>
+                <div className={styles.gallery__description_image_down}>
                 <Image
                   src={down__image}
+                  height={106}
+                  width={91}
+                  alt="structure icon"
                   />
                 </div>
                 <p className={styles.gallery__description_up_text}>
@@ -98,6 +105,7 @@ export default function Index() {
                       <SwiperSlide key={slide.id}>
                         <Image
                           src={slide.slide__image}
+                          srcSet={slide.slide__image_webp}
                           width={582}
                           height={614}
                           alt={slide[`${"parter scheme"}`]}
@@ -127,6 +135,7 @@ export default function Index() {
                     <SwiperSlide key={slide.id}>
                       <Image
                         src={slide.slide__image}
+                        srcSet={slide.slide__image_webp}
                         width={582}
                         height={614}
                         alt={slide[`${"parter scheme"}`]}

@@ -21,10 +21,14 @@
 }
 
 .gallery__bg {
-    @apply absolute bg-[#31414B] h-[53%] w-full left-0 top-[46%] translate-x-[0] translate-y-[-50%];
+    @apply absolute bg-[#31414B] h-[700px] w-full left-0 top-[46%] translate-x-[0] translate-y-[-50%];
+
+    @media screen and(max-width: 1440px) {
+        @apply h-[60%];
+    }
 
     @media screen and(max-width: 576px) {
-        @apply top-[74%] h-[43%];
+        @apply top-[74%] h-[47%];
     }
 
 }
@@ -144,7 +148,7 @@
     @apply relative top-[0%] right-0 mx-auto;
 
     @media screen and(max-width: 1440px) {
-        width: calc(54px + (90 - 54)*(100vw - 576px)/(1440 - 576));
+        width: calc(54px + (100 - 54)*(100vw - 576px)/(1440 - 576));
     }
 
     @media screen and(max-width: 576px) {
@@ -208,7 +212,7 @@
 }
 // ===== gallery pagging buttons =====>
 .next__btn {
-    @apply absolute top-0 right-[2%] h-full w-[55px] z-10;
+    @apply absolute top-0 right-[2%] h-full w-[55px] z-10 disabled:opacity-30;
 
     @media screen and(max-width: 1440px) {
         width: calc(28px + (55 - 28)*(100vw - 320px)/(1440 - 320));
@@ -216,7 +220,7 @@
 }
 
 .back__btn {
-    @apply absolute top-0 left-[2%] h-full w-[55px] z-10;
+    @apply absolute top-0 left-[2%] h-full w-[55px] z-10 disabled:opacity-30;
 
     @media screen and(max-width: 1440px) {
         width: calc(28px + (55 - 28)*(100vw - 320px)/(1440 - 320));
@@ -238,6 +242,8 @@
     width: 300px;
     height: 300px;
     padding: 20px;
+    transition-duration: 1s;
+    // transition: all 5s;
     
   }
 

@@ -6,10 +6,11 @@ import NextButton from "../../svg/gallery/next-btn";
 import BackButton from "../../svg/gallery/back-btn";
 import up__image from "../../../public/static/gallery/metri-patrati.png";
 import down__image from "../../../public/static/gallery/inaltimea-tavanelor.png";
-import image_1 from "../../../public/static/gallery/plan-integral-restaurant.png";
-import image_2 from "../../../public/static/gallery/restaurant-01.png";
-import image_3 from "../../../public/static/gallery/parter-3.png";
-// import image_4 from "../../../public/static/gallery/parter-3.png";
+
+import image_1 from "../../../public/static/gallery/restaurant/restaurant-01.png";
+import image_2 from "../../../public/static/gallery/restaurant/Plan-integral-restaurant.png";
+import image_1_webp from "../../../public/static/gallery/restaurant/restaurant-01.webp";
+import image_2_webp from "../../../public/static/gallery/restaurant/Plan-integral-restaurant.webp";
 
 // ==============================>
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -21,10 +22,8 @@ const BackButtonIcon = () =>  <BackButton width={48} height={54} />
 const NextButtonIcon = () => <NextButton width={48} height={54} />
 
 const images = [
-  { slide__image: image_1 },
-  { slide__image: image_2 },
-  { slide__image: image_3 },
-  { slide__image: image_1 },
+  { slide__image: image_2, slide__image_webp: image_2_webp },
+  { slide__image: image_1, slide__image_webp: image_1_webp },
 ];
 
 export default function Index() {
@@ -91,6 +90,7 @@ export default function Index() {
                   <SwiperSlide>
                     <Image
                     src= {slide.slide__image}
+                    srcSet={slide.slide__image_webp}
                     width={582}
                     height={614}
                     alt={slide[`${'parter scheme'}`]}

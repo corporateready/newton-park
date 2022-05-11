@@ -1,0 +1,128 @@
+@import '../../../styles//mixins.scss';
+
+.carousel__section {
+    @apply bg-[#31414B] h-full w-full;
+
+    @media screen and(max-width: 768px) {
+        @apply mt-[7%];
+    }
+
+    @media screen and(max-width: 576px) {
+        @apply px-[2%] pb-[5%];
+    }
+}
+
+.form__wrapper {
+    @apply mt-[3%];
+}
+
+// ===== form =====>
+.carousel__form {
+    @apply flex flex-col w-full;
+}
+
+.form__title {
+    @include text(50px, 135%, 700, $white_color);
+    @apply text-center uppercase;
+
+    @media screen and(max-width: 1440px) {
+        font-size: calc(26px + (50 - 26)*(100vw - 576px)/(1440 - 576));
+    }
+
+    @media screen and(max-width: 576px) {
+        font-size: calc(20px + (39 - 20)*(100vw - 320px)/(576 - 320));
+    }
+
+    .text__decor {
+        @include text(50px, 135%, 700, $sapfir_color);
+    @apply text-center uppercase;
+
+    @media screen and(max-width: 1440px) {
+        font-size: calc(26px + (50 - 26)*(100vw - 576px)/(1440 - 576));
+    }
+
+    @media screen and(max-width: 576px) {
+        font-size: calc(20px + (39 - 20)*(100vw - 320px)/(576 - 320));
+    }
+    }
+}
+
+.form__body {
+    @apply flex flex-col mt-[1%] mb-[7%] w-[30%] mx-auto;
+
+    @media screen and(max-width: 768px) {
+        @apply w-[60%];
+    }
+
+    @media screen and(max-width: 576px) {
+        @apply w-[80%];
+    }
+
+    input {
+        @include text(16px, 135%, 400, #31414B);
+        @apply bg-white border-[1px] border-[#fff] mt-[5%] py-[3%] px-[5%] rounded-lg focus:outline-none focus:placeholder:text-transparent;
+
+        &::placeholder {
+            @include text(16px, 135%, 400, #31414B);
+            @apply focus:text-transparent;
+        }
+
+        @media screen and(max-width: 576px) {
+            @include text(16px, 135%, 400, #fff);
+            @apply bg-transparent;
+
+            &::placeholder {
+                @include text(16px, 135%, 400, #fff);
+                @apply opacity-50;
+            }
+        }
+    }
+}
+
+.form__button {
+    @include text(24px, 135%, 400, $white_color);
+    @apply bg-[#2BB018] mt-[8%] py-[2%] px-[5%] rounded-lg;
+
+    @media screen and(max-width: 576px) {
+        font-size: calc(20px + (28 - 20)*(100vw - 320px)/(576 - 320));
+    }
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.mySwiper {
+    @apply py-[5%] mb-[1%] cursor-grab;
+
+    @media screen and(max-width: 768px) {
+        @apply pt-0 pb-[7%];
+    }
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 30px;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
