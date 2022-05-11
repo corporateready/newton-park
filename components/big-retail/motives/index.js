@@ -107,8 +107,8 @@ export default function index() {
                 </div>
                 <div className={styles.motive__title_wrapper}>
                   <h3 className={styles.motive__title}>
-                  Prezența unui Supermarket în același
-                  <br/>complex comercial
+                  Prezentra unui Supermarket in 
+                  <br/>acelasi complex comercial
                   </h3>
                 </div>
               </div>
