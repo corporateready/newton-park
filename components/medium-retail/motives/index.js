@@ -49,7 +49,7 @@ export default function index() {
                 <div className={styles.motive__title_wrapper}>
                   <h3 className={styles.motive__title}>
                   Open space
-                  <br/>Flexibilitate în compartimente
+                  <br/>Flexibilitate în compartimentare
                   </h3>
                 </div>
               </div>

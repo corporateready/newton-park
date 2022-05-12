@@ -1,0 +1,7 @@
+.preloader__section {
+    @apply absolute top-0 left-0 w-screen h-screen bg-white z-[100];
+}
+
+.inner {
+    @apply absolute top-[30%] left-[50%] translate-x-[-50%] translate-y-[-30%];
+}
