@@ -1,0 +1,26 @@
+@import './mixins.scss';
+
+.policy__wrapper {
+    @apply pt-[10%] pb-[5%];
+    font-family: Roboto;
+}
+
+.container {
+    @apply h-full w-[1210px] mx-auto;
+
+    @media screen and(max-width: 1440px) {
+        width: calc(300px + (1210 - 300)*(100vw - 320px)/(1440 - 320));
+    }
+}
+
+.title {
+    @include text(23px, 135%, 300, #333);
+}
+
+.subTitle {
+    @include text(17px, 135%, 300, #333);
+}
+
+.text {
+    @include text(12px, 135%, 300, #333);
+}

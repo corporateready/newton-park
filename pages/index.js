@@ -131,6 +131,10 @@ export default function Home() {
                     Solicită prezentarea
                   </button>
                 </form>
+                <div className={styles.according}>
+                <input type="checkbox"/>
+                  <label>Sunt de acord cu <Link href="/policy"><a className={styles.according__link}>termenii și condițiile site-ului</a></Link></label>
+                </div>
               </div>
             </div>
 
