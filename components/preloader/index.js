@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import logo from "../../public/static/common/logo-info.png";
+import logo from "../../public/static/preloader/NewtonPark-transparent.png";
 import styles from "./preloader.module.scss";
 
 import { motion } from "framer-motion";
