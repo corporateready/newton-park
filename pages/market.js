@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "../styles/Market.module.scss";
+import Link from "next/link"
 import Image from "next/image";
 import {
   Hero,
@@ -109,7 +110,7 @@ export default function Market() {
                 <Image src={x__close_btn} width={21} height={21} />
               </button>
               <h3 className={styles.popup__desktop_title}>
-                Solicită prezentarea Supermaket
+                Solicită prezentarea Supermarket
                 <br />
                 <span className={styles.popup__title_mark}>
                   NEWTON PARK
@@ -121,6 +122,17 @@ export default function Market() {
                 <input type="tel" placeholder="Numărul de telefon" />
                 <button type="submit">Solicită prezentarea</button>
               </form>
+              <div className={styles.according}>
+                <input type="checkbox" />
+                <label>
+                  Sunt de acord cu{" "}
+                  <Link href="/policy">
+                    <a className={styles.according__link}>
+                      termenii și condițiile site-ului
+                    </a>
+                  </Link>
+                </label>
+              </div>
             </div>
           </div>
         </motion.div>

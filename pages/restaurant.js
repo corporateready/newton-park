@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "../styles/Market.module.scss";
+import Link from "next/link";
 import Image from "next/image";
 import Layout from "../components/common/layout/Layout";
 import { Hero, About, Motives, Carousel, Info } from "../components/restaurant";
@@ -15,26 +16,26 @@ export default function market() {
     setTimeout(() => {
       setIsVisible(true);
       setIsDesktopVisible(true);
-    }, 5000);
+    }, 15000);
   }, []);
 
   React.useEffect(() => {
     if (isDesktopVisible) {
-      document.body.style.overflow = 'hidden'
+      document.body.style.overflow = "hidden";
     }
     if (!isDesktopVisible) {
-      document.body.style.overflow = 'auto'
+      document.body.style.overflow = "auto";
     }
-  }, [isDesktopVisible])
+  }, [isDesktopVisible]);
 
   React.useEffect(() => {
     if (isVisible) {
-      document.body.style.overflow = 'hidden'
+      document.body.style.overflow = "hidden";
     }
     if (!isVisible) {
-      document.body.style.overflow = 'auto'
+      document.body.style.overflow = "auto";
     }
-  }, [isVisible])
+  }, [isVisible]);
 
   return (
     <Layout>
@@ -113,6 +114,17 @@ export default function market() {
                 <input type="tel" placeholder="Numărul de telefon" />
                 <button type="submit">Solicită prezentarea</button>
               </form>
+              <div className={styles.according}>
+                <input type="checkbox" />
+                <label>
+                  Sunt de acord cu{" "}
+                  <Link href="/policy">
+                    <a className={styles.according__link}>
+                      termenii și condițiile site-ului
+                    </a>
+                  </Link>
+                </label>
+              </div>
             </div>
           </div>
         </motion.div>

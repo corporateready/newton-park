@@ -50,3 +50,35 @@
         @apply text-center max-w-full border-2 border-[#31414B] rounded-xl py-[3.5%] px-[5%] mt-[8%] bg-[#31414B];
     }
 }
+
+.according {
+    @apply flex justify-center items-center w-full py-[5%] mt-[3%];
+
+    input {
+        @apply mt-0;
+    }
+
+    @media screen and(max-width: 768px) {   
+        input {
+            @apply w-2;
+        }
+    }
+
+    label {
+        @include text(16px, 135%, 300, #fff);
+        @apply  ml-[3%];
+
+        @media screen and(max-width: 1440px) {
+            font-size: calc(6px + (16 - 6)*(100vw - 576px)/(1440 - 576));
+        }
+
+        .according__link {
+            @include text(16px, 135%, 500, #fff);
+            @apply inline-block underline;
+
+            @media screen and(max-width: 1440px) {
+                font-size: calc(6px + (16 - 6)*(100vw - 576px)/(1440 - 576));
+            }
+        }
+    }
+}

@@ -13,7 +13,7 @@
     @apply hidden;
 
     @media screen and(max-width: 576px) {
-        @apply block w-full h-[63%] bg-white fixed left-0 bottom-0 z-40 rounded-t-3xl shadow-[0_3px_4px_3px_rgba(49,65,75,0.2)];   
+        @apply block w-full h-[63%] bg-white fixed left-0 bottom-0 z-[101] rounded-t-3xl shadow-[0_3px_4px_3px_rgba(49,65,75,0.2)];   
  
     }
     
@@ -68,6 +68,38 @@
 
         @media screen and(max-width: 576px) {
             font-size: calc(16px + (30 - 16)*(100vw - 320px)/(576 - 320));
+        }
+    }
+}
+
+.according {
+    @apply flex justify-center items-center w-full py-[5%] mt-[3%];
+
+    input {
+        @apply mt-0;
+    }
+
+    @media screen and(max-width: 768px) {   
+        input {
+            @apply w-2;
+        }
+    }
+
+    label {
+        @include text(16px, 135%, 300, #fff);
+        @apply  ml-[3%];
+
+        @media screen and(max-width: 1440px) {
+            font-size: calc(6px + (16 - 6)*(100vw - 576px)/(1440 - 576));
+        }
+
+        .according__link {
+            @include text(16px, 135%, 500, #fff);
+            @apply inline-block underline;
+
+            @media screen and(max-width: 1440px) {
+                font-size: calc(6px + (16 - 6)*(100vw - 576px)/(1440 - 576));
+            }
         }
     }
 }

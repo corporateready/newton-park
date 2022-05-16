@@ -2,7 +2,7 @@
 
 .policy__wrapper {
     @apply pt-[10%] pb-[5%];
-    font-family: Roboto;
+    font-family: 'Roboto';
 }
 
 .container {
@@ -14,13 +14,30 @@
 }
 
 .title {
-    @include text(23px, 135%, 300, #333);
+    @include text(23px, 135%, 600, #333);
 }
 
 .subTitle {
-    @include text(17px, 135%, 300, #333);
+    @apply mt-[3%];
+    @include text(17px, 135%, 600, #333);
 }
 
 .text {
-    @include text(12px, 135%, 300, #333);
+    @apply mt-[1%];
+    @include text(16px, 135%, 300, #333);
+}
+
+.link__to {
+    @apply text-blue-500 underline;
+}
+
+.items__disc {
+    @apply list-disc ml-[2%];
+}
+
+.items__minus {
+    @apply ml-[2%];
+}
+.semibold__text {
+    @apply font-semibold
 }

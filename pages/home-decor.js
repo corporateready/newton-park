@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "../styles/Market.module.scss";
 import Image from "next/image";
+import Link from "next/link";
 import Layout from "../components/common/layout/Layout";
 import { Hero, About, Motives, Carousel, Info } from "../components/home-decor";
 import { Messenger } from "../components/market-page";
@@ -16,7 +17,7 @@ export default function market() {
     setTimeout(() => {
       setIsVisible(true);
       setIsDesktopVisible(true);
-    }, 5000);
+    }, 15000);
   }, []);
 
   React.useEffect(() => {
@@ -115,6 +116,17 @@ export default function market() {
                 <input type="tel" placeholder="Numărul de telefon" />
                 <button type="submit">Solicită prezentarea</button>
               </form>
+              <div className={styles.according}>
+                <input type="checkbox" />
+                <label>
+                  Sunt de acord cu{" "}
+                  <Link href="/policy">
+                    <a className={styles.according__link}>
+                      termenii și condițiile site-ului
+                    </a>
+                  </Link>
+                </label>
+              </div>
             </div>
           </div>
         </motion.div>

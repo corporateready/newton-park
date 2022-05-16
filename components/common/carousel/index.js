@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link"
 
 import { motion } from "framer-motion";
 
@@ -24,12 +25,12 @@ import image__carousel_5_webp from "../../../public/static/carousel/Gradina Bota
 import image__carousel_6_webp from "../../../public/static/carousel/Burebista Residence b_View11 2.webp";
 
 const carousel__images = [
-  { image: image__carousel_1,image_webp: image__carousel_1_webp, id: 1 },
-  { image: image__carousel_2,image_webp: image__carousel_2_webp, id: 2 },
-  { image: image__carousel_3,image_webp: image__carousel_3_webp, id: 3 },
-  { image: image__carousel_4,image_webp: image__carousel_4_webp, id: 4 },
-  { image: image__carousel_5,image_webp: image__carousel_5_webp, id: 5 },
-  { image: image__carousel_6,image_webp: image__carousel_6_webp, id: 6 },
+  { image: image__carousel_1, image_webp: image__carousel_1_webp, id: 1 },
+  { image: image__carousel_2, image_webp: image__carousel_2_webp, id: 2 },
+  { image: image__carousel_3, image_webp: image__carousel_3_webp, id: 3 },
+  { image: image__carousel_4, image_webp: image__carousel_4_webp, id: 4 },
+  { image: image__carousel_5, image_webp: image__carousel_5_webp, id: 5 },
+  { image: image__carousel_6, image_webp: image__carousel_6_webp, id: 6 },
 ];
 
 export default function index() {
@@ -46,6 +47,17 @@ export default function index() {
           <input type="email" placeholder="Adresa de email" />
           <input type="tel" placeholder="Numărul de telefon" />
           <button className={styles.form__button}>Solicită oferta</button>
+          <div className={styles.according}>
+            <input type="checkbox" />
+            <label>
+              Sunt de acord cu{" "}
+              <Link href="/policy">
+                <a className={styles.according__link}>
+                  termenii și condițiile site-ului
+                </a>
+              </Link>
+            </label>
+          </div>
         </form>
       </div>
     </div>

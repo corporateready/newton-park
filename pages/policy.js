@@ -1,149 +1,217 @@
 import React from "react";
-import styles from '../styles/policy.module.scss'
-
-import Layout from '../components/common/layout/Layout'
+import styles from "../styles/policy.module.scss";
+import Link from "next/link";
+import Layout from "../components/common/layout/Layout";
 
 export default function policy() {
   return (
-      <>
+    <>
       <Layout>
-    <section className={styles.policy__wrapper}>
-      <div className={styles.container}>
-        <h2 className={styles.title}>Privacy Policy for NEWTON PARK</h2>
-        <p className={styles.text}>
-          At NEWTON PARK, accessible from newtonpark.md, one of our main
-          priorities is the privacy of our visitors. This Privacy Policy
-          document contains types of information that is collected and recorded
-          by NEWTON PARK and how we use it. If you have additional questions or
-          require more information about our Privacy Policy, do not hesitate to
-          contact us. This Privacy Policy applies only to our online activities
-          and is valid for visitors to our website with regards to the
-          information that they shared and/or collect in NEWTON PARK. This
-          policy is not applicable to any information collected offline or via
-          channels other than this website.
-        </p>
-        <h3 className={styles.subTitle}>Consent</h3>
-        <p className={styles.text}>
-          Consent By using our website, you hereby consent to our Privacy Policy
-          and agree to its terms.
-        </p>
-        <h3 className={styles.subTitle}>Information we collect</h3>
-        <p className={styles.text}>
-          The personal information that you are asked to provide, and the
-          reasons why you are asked to provide it, will be made clear to you at
-          the point we ask you to provide your personal information. If you
-          contact us directly, we may receive additional information about you
-          such as your name, email address, phone number, the contents of the
-          message and/or attachments you may send us, and any other information
-          you may choose to provide. When you register for an Account, we may
-          ask for your contact information, including items such as name,
-          company name, address, email address, and telephone number.
-        </p>
-        <h3 className={styles.subTitle}>How we use your information</h3>
-        <p className={styles.text}>
-          We use the information we collect in various ways, including to:
-          Provide, operate, and maintain our website Improve, personalize, and
-          expand our website Understand and analyze how you use our website
-          Develop new products, services, features, and functionality
-          Communicate with you, either directly or through one of our partners,
-          including for customer service, to provide you with updates and other
-          information relating to the website, and for marketing and promotional
-          purposes Send you emails Find and prevent fraud
-        </p>
-        <h3 className={styles.subTitle}>Log Files</h3>
-        <p className={styles.text}>
-          NEWTON PARK follows a standard procedure of using log files. These
-          files log visitors when they visit websites. All hosting companies do
-          this and a part of hosting services' analytics. The information
-          collected by log files include internet protocol (IP) addresses,
-          browser type, Internet Service Provider (ISP), date and time stamp,
-          referring/exit pages, and possibly the number of clicks. These are not
-          linked to any information that is personally identifiable. The purpose
-          of the information is for analyzing trends, administering the site,
-          tracking users' movement on the website, and gathering demographic
-          information.
-        </p>
-        <h3 className={styles.subTitle}>Cookies and Web Beacons</h3>
-        <p className={styles.text}>
-          Like any other website, NEWTON PARK uses 'cookies'. These cookies are
-          used to store information including visitors' preferences, and the
-          pages on the website that the visitor accessed or visited. The
-          information is used to optimize the users' experience by customizing
-          our web page content based on visitors' browser type and/or other
-          information.
-        </p>
-        <h3 className={styles.subTitle}>Advertising Partners Privacy Policies</h3>
-        <p className={styles.text}>
-          You may consult this list to find the Privacy Policy for each of the
-          advertising partners of NEWTON PARK. Third-party ad servers or ad
-          networks uses technologies like cookies, JavaScript, or Web Beacons
-          that are used in their respective advertisements and links that appear
-          on NEWTON PARK, which are sent directly to users' browser. They
-          automatically receive your IP address when this occurs. These
-          technologies are used to measure the effectiveness of their
-          advertising campaigns and/or to personalize the advertising content
-          that you see on websites that you visit. Note that NEWTON PARK has no
-          access to or control over these cookies that are used by third-party
-          advertisers.
-        </p>
-        <h3 className={styles.subTitle}>Third Party Privacy Policies</h3>
-        <p className={styles.text}>
-          NEWTON PARK's Privacy Policy does not apply to other advertisers or
-          websites. Thus, we are advising you to consult the respective Privacy
-          Policies of these third-party ad servers for more detailed
-          information. It may include their practices and instructions about how
-          to opt-out of certain options. You can choose to disable cookies
-          through your individual browser options. To know more detailed
-          information about cookie management with specific web browsers, it can
-          be found at the browsers' respective websites.
-        </p>
-        <h3 className={styles.subTitle}>CCPA Privacy Rights (Do Not Sell My Personal Information)</h3>
-        <p className={styles.text}>
-          Under the CCPA, among other rights, California consumers have the
-          right to: Request that a business that collects a consumer's personal
-          data disclose the categories and specific pieces of personal data that
-          a business has collected about consumers. Request that a business
-          delete any personal data about the consumer that a business has
-          collected. Request that a business that sells a consumer's personal
-          data, not sell the consumer's personal data. If you make a request, we
-          have one month to respond to you. If you would like to exercise any of
-          these rights, please contact us.
-        </p>
-        <h3 className={styles.subTitle}>GDPR Data Protection Rights</h3>
-        <p className={styles.text}>
-          We would like to make sure you are fully aware of all of your data
-          protection rights. Every user is entitled to the following: The right
-          to access – You have the right to request copies of your personal
-          data. We may charge you a small fee for this service. The right to
-          rectification – You have the right to request that we correct any
-          information you believe is inaccurate. You also have the right to
-          request that we complete the information you believe is incomplete.
-          The right to erasure – You have the right to request that we erase
-          your personal data, under certain conditions. The right to restrict
-          processing – You have the right to request that we restrict the
-          processing of your personal data, under certain conditions. The right
-          to object to processing – You have the right to object to our
-          processing of your personal data, under certain conditions. The right
-          to data portability – You have the right to request that we transfer
-          the data that we have collected to another organization, or directly
-          to you, under certain conditions. If you make a request, we have one
-          month to respond to you. If you would like to exercise any of these
-          rights, please contact us.
-        </p>
-        <h3 className={styles.subTitle}>Children's Information</h3>
-        <p className={styles.text}>
-          Another part of our priority is adding protection for children while
-          using the internet. We encourage parents and guardians to observe,
-          participate in, and/or monitor and guide their online activity. NEWTON
-          PARK does not knowingly collect any Personal Identifiable Information
-          from children under the age of 13. If you think that your child
-          provided this kind of information on our website, we strongly
-          encourage you to contact us immediately and we will do our best
-          efforts to promptly remove such information from our records.
-        </p>
-      </div>
-    </section>
-    </Layout>
+        <section className={styles.policy__wrapper}>
+          <div className={styles.container}>
+            <h2 className={styles.title}>Termeni și condiții</h2>
+            <p className={styles.text}>
+              În acest document sunt stabiliți termenii și condițiile de
+              utilizare a site-ului{" "}
+              <Link href="http://newtonpark.md/">
+                <a className={styles.link__to}>www.newtonpark.md</a>
+              </Link>
+              .
+              <br />
+              <br />
+              Acest site este deținut și administrat de{" "}
+              <span className={styles.semibold__text}>NEWTON PARK</span>.
+            </p>
+            <h3 className={styles.subTitle}>POLITICA DE CONFIDENȚIALITATE</h3>
+            <p className={styles.text}>
+              Datele personale sunt informații care sunt asociate cu Dvs. ca
+              persoană și ne permit să Vă identificăm. Acestea sunt utilizate
+              numai în scopul desfășurării activității noastre în relație cu
+              Dvs.
+              <br />
+              <br />
+              Datele cu caracter personal le primim direct de la Dvs. atunci
+              când solicitați prezentarea (informații de contact sub forma unui
+              număr de telefon și a adresei de email).
+              <br />
+              <br />
+              Site-ul
+              <Link href="http://newtonpark.md/">
+                <a className={styles.link__to}> www.newtonpark.md </a>
+              </Link>
+              colectează datele cu caracter personal, obținute cu acordul
+              voluntar al utilizatorilor, având în vedere următoarele scopuri:
+              <br />
+              <br />
+              <ul className={styles.items__disc}>
+                <li>contactarea utilizatorilor, la cererea voluntară</li>
+                <li>
+                  transmiterea periodică a newsletterelor sau altor informații
+                  în format electronic
+                </li>
+                <li>scopuri statistice</li>
+              </ul>
+            </p>
+            <h3 className={styles.subTitle}>LICENȚĂ</h3>
+            <p className={styles.text}>
+              <span className={styles.semibold__text}>NEWTON PARK</span> deține
+              drepturile de proprietate intelectuală pentru tot materialul
+              plasat pe{" "}
+              <Link href="http://newtonpark.md/">
+                <a className={styles.link__to}>www.newtonpark.md</a>
+              </Link>
+              <br />
+              <br />
+              Este interzis:
+              <ul className={styles.items__minus}>
+                <li>- Republicarea informației NEWTON PARK</li>
+                <li>
+                  - Vânzarea, închirierea sau sublicențierea materialului NEWTON
+                  PARK
+                </li>
+                <li>
+                  {" "}
+                  - Reproducerea, dublarea sau copierea materialului NEWTON PARK
+                </li>
+                <li>- Redistribuirea conținutului NEWTON PARK</li>
+              </ul>
+              Toate drepturile de proprietate intelectuală sunt rezervate.
+              Puteți solicita acest lucru de la{" "}
+              <span className={styles.semibold__text}>NEWTON PARK</span> pentru
+              uz personal, sub rezerva restricțiilor stabilite în acești termeni
+              și condiții.
+              <br />
+              <br />
+            </p>
+            <h3 className={styles.subTitle}>COOKIE-URI</h3>
+            <p className={styles.text}>
+              Acest website folosește cookie-uri pentru a furniza vizitatorilor
+              o experiență mult mai bună de navigare și servicii adaptate
+              nevoilor și interesului fiecăruia.
+              <br />
+              <br />
+              În ceea ce numim "web 2.0", "cookie"-urile joacă un rol important
+              în facilitarea accesului și livrării multiplelor servicii de care
+              utilizatorul beneficiază pe internet, precum:Personalizarea
+              anumitor setări - limba în care este vizualizat un site, moneda în
+              care se exprimă anumite prețuri sau tarife, păstrarea opțiunilor
+              pentru diverse produse (măsuri, alte detalii etc) în coșul de
+              cumpărături (și memorarea acestor opțiuni) - generându-se astfel
+              flexibilitatea "coșului de cumpăraturi" (accesarea preferințelor
+              vechi prin accesarea butonului „înainte" și „înapoi");
+              <br />
+              <br />
+              <ul className={styles.items__disc}>
+                <li>
+                  Cookie-urile oferă deținătorilor de site-uri un feedback
+                  valoros asupra modului cum sunt folosite site-urile lor de
+                  către utilizatori, astfel încât să le poată face mai eficiente
+                  și mai accesibile pentru aceștia;
+                </li>
+                <li>
+                  Permit aplicațiilor multimedia sau de un tip diferit de pe
+                  alte site-uri să fie incluse într-un anumit site pentru a crea
+                  o experiență de navigare mai valoroasă, mai utilă și mai
+                  plăcută;
+                </li>
+                <li>Îmbunătățesc eficiența publicității online.</li>
+              </ul>
+            </p>
+            <h3 className={styles.subTitle}>HYPERLINK LA CONȚINUTUL NOSTRU</h3>
+            <p className={styles.text}>
+              Următoarele organizații se pot conecta la site-ul nostru fără
+              aprobare prealabilă în scris:
+              <ul className={styles.items__minus}>
+                <li>- Agenții guvernamentale;</li>
+                <li>- Motoare de căutare;</li>
+                <li>- Organizații de știri;</li>
+                <li>
+                  - Distribuitorii de directoare online pot face link-uri către
+                  site-ul nostru în același mod în care fac hyperlink către
+                  site-urile altor companii listate;
+                </li>
+                <li>
+                  - Afaceri acreditate la nivelul întregului sistem, cu excepția
+                  organizațiilor non-profit, centrelor comerciale de caritate și
+                  a grupurilor de strângere de fonduri de caritate, care nu pot
+                  face linkuri către site-ul nostru Web.
+                </li>
+              </ul>
+              <br />
+              <br />
+              Aceste organizații pot face linkuri către pagina noastră de
+              pornire, către publicații sau către alte informații de pe site-ul
+              web, atâta timp cât linkul: (a) nu este în niciun fel înșelător;
+              (b) nu implică în mod fals sponsorizarea, aprobarea sau aprobarea
+              părții care face legătura și a produselor și/sau serviciilor
+              acesteia; și (c) se încadrează în contextul site-ului părții care
+              face legătura.
+              <br />
+              <br />
+              Putem lua în considerare și aproba alte solicitări de linkuri de
+              la următoarele tipuri de organizații:
+              <ul className={styles.items__minus}>
+                <li>
+                  - surse de informații cunoscute pentru consumatori și/sau
+                  afaceri;
+                </li>
+                <li>- site-urile comunității dot.com;</li>
+                <li>
+                  - asociații sau alte grupuri care reprezintă organizații de
+                  caritate;
+                </li>
+                <li>- distribuitori de directoare online;</li>
+                <li>- portaluri de internet;</li>
+                <li>- firme de contabilitate, avocatură și consultanță;</li>
+                <li>- instituții de învățământ și asociații comerciale.</li>
+              </ul>
+              <br />
+              <br />
+              Vom aproba solicitările de link-uri de la aceste organizații dacă
+              decidem că: (a) linkul nu ne-ar face să ne arătăm nefavorabil
+              pentru noi înșine sau pentru afacerile noastre acreditate; (b)
+              organizația nu are înregistrări negative cu noi; (c) beneficiul
+              pentru noi de vizibilitatea hyperlink-ului compensează absența
+              <span className={styles.semibold__text}>NEWTON PARK</span> și (d)
+              legătura se află în contextul informațiilor generale despre
+              resurse.
+              <br />
+              <br />
+              Dacă sunteți una dintre organizațiile enumerate în paragraful 2 și
+              sunteți interesat să faceți un link către site-ul nostru, trebuie
+              să ne informați trimițând un e-mail către{" "}
+              <span className={styles.semibold__text}>NEWTON PARK</span>. Vă
+              rugăm să includeți numele dvs., numele organizației dvs.,
+              informațiile de contact, precum și adresa URL a site-ului dvs., o
+              listă a oricăror adrese URL de la care intenționați să creați un
+              link către site-ul nostru și o listă a adreselor URL de pe site-ul
+              nostru la care doriți să le trimiteți legătură.
+              <br />
+              <br />
+              Organizațiile aprobate pot face hyperlink către site-ul nostru web
+              după cum urmează:
+              <ul className={styles.items__minus}>
+                <li>- Prin utilizarea numelui nostru corporativ; sau</li>
+                <li>
+                  - Prin utilizarea locatorului uniform de resurse la care este
+                  legat; sau
+                </li>
+                <li>
+                  - Prin folosirea oricărei alte descrieri a site-ului nostru la
+                  care este legată, aceasta are sens în contextul și formatul
+                  conținutului de pe site-ul părții care face legătura.
+                </li>
+              </ul>
+              <br />
+              <br />
+              Nicio utilizare a siglei{" "}
+              <span className={styles.semibold__text}>NEWTON PARK</span> sau a
+              altor lucrări nu va fi permisă pentru conectare în absența unui
+              acord de licență a mărcii comerciale.
+            </p>
+          </div>
+        </section>
+      </Layout>
     </>
   );
 }
