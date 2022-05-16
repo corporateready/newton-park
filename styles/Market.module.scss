@@ -13,7 +13,7 @@
     @apply hidden;
 
     @media screen and(max-width: 576px) {
-        @apply block w-full h-[63%] bg-white fixed left-0 bottom-0 z-[101] rounded-t-3xl shadow-[0_3px_4px_3px_rgba(49,65,75,0.2)];   
+        @apply block w-full h-[75%] bg-white fixed left-0 bottom-0 z-[101] rounded-t-3xl shadow-[0_3px_4px_3px_rgba(49,65,75,0.2)];   
  
     }
     
@@ -101,6 +101,14 @@
                 font-size: calc(6px + (16 - 6)*(100vw - 576px)/(1440 - 576));
             }
         }
+    }
+}
+
+.popup__bottom_subtitle {
+    @apply mt-[8%];
+
+    @media screen and(max-width: 576px) {
+        font-size: calc(20px + (46 - 20)*(100vw - 320px)/(576 - 320));
     }
 }
 

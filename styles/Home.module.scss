@@ -204,6 +204,14 @@
     }
 }
 
+.popup__bottom_subtitle {
+    @apply mt-[6%];
+
+    @media screen and(max-width: 576px) {
+        font-size: calc(20px + (46 - 20)*(100vw - 320px)/(576 - 320));
+    }
+}
+
 // ===== nav items =====>
 .nav__inner {
     @apply relative flex justify-center w-full mt-[4%];

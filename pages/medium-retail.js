@@ -11,6 +11,7 @@ import {
   Info,
 } from "../components/medium-retail";
 import { Messenger } from "../components/market-page";
+import MobilePopUpMessenger from "../components/common/mobile-popup-messenger";
 import arriw__down from "../public/static/home/close-button.png";
 import x__close_btn from "../public/static/common/x-close-button.png";
 import { motion } from "framer-motion";
@@ -28,21 +29,21 @@ export default function market() {
 
   React.useEffect(() => {
     if (isDesktopVisible) {
-      document.body.style.overflow = 'hidden'
+      document.body.style.overflow = "hidden";
     }
     if (!isDesktopVisible) {
-      document.body.style.overflow = 'auto'
+      document.body.style.overflow = "auto";
     }
-  }, [isDesktopVisible])
+  }, [isDesktopVisible]);
 
-    React.useEffect(() => {
+  React.useEffect(() => {
     if (isVisible) {
-      document.body.style.overflow = 'hidden'
+      document.body.style.overflow = "hidden";
     }
     if (!isVisible) {
-      document.body.style.overflow = 'auto'
+      document.body.style.overflow = "auto";
     }
-  }, [isVisible])
+  }, [isVisible]);
 
   return (
     <div>
@@ -79,7 +80,7 @@ export default function market() {
                 <Image src={arriw__down} width={45} height={40} />
               </button>
               <h3 className={styles.popup__title}>
-                Solicită prezentarea Medium-Retail
+                Solicită prezentarea Medium Retail
                 <br />
                 <span className={styles.popup__title_mark}>
                   NEWTON PARK
@@ -91,6 +92,18 @@ export default function market() {
                 <input type="tel" placeholder="Numărul de telefon" />
                 <button type="submit">Solicită prezentarea</button>
               </form>
+              <p className={styles.popup__bottom_subtitle}>
+                Sau contactează-ne:
+              </p>
+              {isDesktopVisible && (
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 2 }}
+                >
+                  <MobilePopUpMessenger />
+                </motion.div>
+              )}
             </div>
           </div>
         </motion.div>

@@ -10,19 +10,19 @@ import styles from "./Carousel.module.scss";
 
 import { FreeMode, Pagination } from "swiper";
 
-import image__carousel_1 from "../../../public/static/carousel/Gradina Botanica transa 2_View01 1.png";
-import image__carousel_2 from "../../../public/static/carousel/Gradina Botanica transa 2_View05 1.png";
-import image__carousel_3 from "../../../public/static/carousel/Gradina Botanica transa 2_View07 3.png";
-import image__carousel_4 from "../../../public/static/carousel/Gradina Botanica transa 2_View09 2.png";
-import image__carousel_5 from "../../../public/static/carousel/Gradina Botanica transa 2_View10 1.png";
-import image__carousel_6 from "../../../public/static/carousel/Burebista Residence b_View11 2.png";
+import image__carousel_1 from "../../../public/static/carousel/Gradina_Botanica_transa_2_View01_1.png";
+import image__carousel_2 from "../../../public/static/carousel/Gradina_Botanica_transa_2_View05_1.png";
+import image__carousel_3 from "../../../public/static/carousel/Gradina_Botanica_transa_2_View07_3.png";
+import image__carousel_4 from "../../../public/static/carousel/Gradina_Botanica_transa_2_View09_2.png";
+import image__carousel_5 from "../../../public/static/carousel/Gradina_Botanica_transa_2_View10_1.png";
+import image__carousel_6 from "../../../public/static/carousel/Burebista_Residence_b_View11_2.png";
 
-import image__carousel_1_webp from "../../../public/static/carousel/Gradina Botanica transa 2_View01 1.webp";
-import image__carousel_2_webp from "../../../public/static/carousel/Gradina Botanica transa 2_View05 1.webp";
-import image__carousel_3_webp from "../../../public/static/carousel/Gradina Botanica transa 2_View07 3.webp";
-import image__carousel_4_webp from "../../../public/static/carousel/Gradina Botanica transa 2_View09 2.webp";
-import image__carousel_5_webp from "../../../public/static/carousel/Gradina Botanica transa 2_View10 1.webp";
-import image__carousel_6_webp from "../../../public/static/carousel/Burebista Residence b_View11 2.webp";
+import image__carousel_1_webp from "../../../public/static/carousel/Gradina_Botanica_transa_2_View01_1.webp";
+import image__carousel_2_webp from "../../../public/static/carousel/Gradina_Botanica_transa_2_View05_1.webp";
+import image__carousel_3_webp from "../../../public/static/carousel/Gradina_Botanica_transa_2_View07_3.webp";
+import image__carousel_4_webp from "../../../public/static/carousel/Gradina_Botanica_transa_2_View09_2.webp";
+import image__carousel_5_webp from "../../../public/static/carousel/Gradina_Botanica_transa_2_View10_1.webp";
+import image__carousel_6_webp from "../../../public/static/carousel/Burebista_Residence_b_View11_2.webp";
 
 const carousel__images = [
   { image: image__carousel_1, image_webp: image__carousel_1_webp, id: 1 },

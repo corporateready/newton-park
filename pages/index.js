@@ -10,6 +10,7 @@ import HomeLogo from "../components/svg/home/logo";
 import BigRetail from "../components/svg/home/big-retail";
 import HomeDecor from "../components/svg/home/home-decor";
 import MediumRetail from "../components/svg/home/medium-retail";
+import MobilePopUpMessenger from "../components/common/mobile-popup-messenger";
 import arriw__down from "../public/static/home/close-button.png";
 import { motion } from "framer-motion";
 import Preloader from "../components/preloader";
@@ -78,7 +79,7 @@ export default function Home() {
   React.useEffect(() => {
     setTimeout(() => {
       setIsVisible(true);
-    }, 5000);
+    }, 15000);
   }, []);
 
   return (
@@ -132,8 +133,15 @@ export default function Home() {
                   </button>
                 </form>
                 <div className={styles.according}>
-                <input type="checkbox"/>
-                  <label>Sunt de acord cu <Link href="/policy"><a className={styles.according__link}>termenii și condițiile site-ului</a></Link></label>
+                  <input type="checkbox" />
+                  <label>
+                    Sunt de acord cu{" "}
+                    <Link href="/policy">
+                      <a className={styles.according__link}>
+                        termenii și condițiile site-ului
+                      </a>
+                    </Link>
+                  </label>
                 </div>
               </div>
             </div>
@@ -185,6 +193,18 @@ export default function Home() {
                 <input type="tel" placeholder="Numărul de telefon" />
                 <button type="submit">Solicită prezentarea</button>
               </form>
+              <p className={styles.popup__bottom_subtitle}>
+                Sau contactează-ne:
+              </p>
+              {isVisible && (
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 2 }}
+                >
+                  <MobilePopUpMessenger />
+                </motion.div>
+              )}
             </div>
           </div>
         </motion.div>

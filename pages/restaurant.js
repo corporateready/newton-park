@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import Layout from "../components/common/layout/Layout";
 import { Hero, About, Motives, Carousel, Info } from "../components/restaurant";
+import MobilePopUpMessenger from "../components/common/mobile-popup-messenger";
 import { motion } from "framer-motion";
 import arriw__down from "../public/static/home/close-button.png";
 import x__close_btn from "../public/static/common/x-close-button.png";
@@ -81,6 +82,18 @@ export default function market() {
                 <input type="tel" placeholder="Numărul de telefon" />
                 <button type="submit">Solicită prezentarea</button>
               </form>
+              <p className={styles.popup__bottom_subtitle}>
+                Sau contactează-ne:
+              </p>
+              {isDesktopVisible && (
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 2 }}
+                >
+                  <MobilePopUpMessenger />
+                </motion.div>
+              )}
             </div>
           </div>
         </motion.div>
