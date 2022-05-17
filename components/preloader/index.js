@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import logo from "../../public/static/preloader/NewtonPark-transparent.png";
+import logo__webp from "../../public/static/preloader/NewtonPark-transparent.webp";
 import styles from "./preloader.module.scss";
 
 import { motion } from "framer-motion";
@@ -16,6 +17,7 @@ export default function index() {
       >
         <Image
           src={logo}
+          srcSet={logo__webp}
           width={710}
           height={355}
           alt="big newton park logo "
