@@ -3,6 +3,10 @@
 .policy__wrapper {
     @apply pt-[10%] pb-[5%];
     font-family: 'Roboto';
+
+    @media screen and(max-width: 576px) {
+        @apply pt-[20%];
+    }
 }
 
 .container {
@@ -23,7 +27,7 @@
 }
 
 .text {
-    @apply mt-[1%];
+    @apply mt-[1%] text-justify;
     @include text(16px, 135%, 300, #333);
 }
 
@@ -33,6 +37,10 @@
 
 .items__disc {
     @apply list-disc ml-[2%];
+
+    @media screen and(max-width: 576px) {
+        @apply ml-[5%];
+    }
 }
 
 .items__minus {
