@@ -10,6 +10,7 @@ import {
   Info,
   Messenger
 } from "../components/market-page";
+import MobilePopUpMessenger from "../components/common/mobile-popup-messenger";
 import arriw__down from "../public/static/home/close-button.png";
 import x__close_btn from "../public/static/common/x-close-button.png";
 import { motion } from "framer-motion";
@@ -89,6 +90,18 @@ export default function Market() {
                 <input type="tel" placeholder="Numărul de telefon" />
                 <button type="submit">Solicită prezentarea</button>
               </form>
+              <p className={styles.popup__bottom_subtitle}>
+                Sau contactează-ne:
+              </p>
+              {isDesktopVisible && (
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 2 }}
+                >
+                  <MobilePopUpMessenger />
+                </motion.div>
+              )}
             </div>
           </div>
         </motion.div>
