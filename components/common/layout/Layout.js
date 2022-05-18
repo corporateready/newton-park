@@ -1,4 +1,4 @@
-import React from "react";
+import React, {lazy} from "react";
 import styles from "./Layout.module.scss";
 import HomeLogo from "../../../components/svg/home/logo";
 import FooterLogo from "../../svg/logo-footer";

@@ -74,7 +74,7 @@ export default function Home() {
     setTimeout(() => {
       setIsPreloader(false);
     }, 2000);
-  });
+  },[]);
 
   React.useEffect(() => {
     setTimeout(() => {

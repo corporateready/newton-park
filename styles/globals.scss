@@ -67,7 +67,6 @@ html {
 }
 
 .swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal {
-  // @apply left-[50%];
   @media screen and(max-width: 576px) {
    bottom: 0;   
   }

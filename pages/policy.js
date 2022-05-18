@@ -4,6 +4,12 @@ import Link from "next/link";
 import Layout from "../components/common/layout/Layout";
 
 export default function policy() {
+  const [isPolicy, setIsPolicy] = React.useState(true);
+
+  React.useEffect(() => {
+    if (isPolicy) document.body.style.overflow = "auto";
+  });
+
   return (
     <>
       <Layout>
@@ -43,15 +49,15 @@ export default function policy() {
               voluntar al utilizatorilor, având în vedere următoarele scopuri:
               <br />
               <br />
-              <ul className={styles.items__disc}>
-                <li>contactarea utilizatorilor, la cererea voluntară</li>
-                <li>
-                  transmiterea periodică a newsletterelor sau altor informații
-                  în format electronic
-                </li>
-                <li>scopuri statistice</li>
-              </ul>
             </p>
+            <ul className={styles.items__disc}>
+              <li>contactarea utilizatorilor, la cererea voluntară</li>
+              <li>
+                transmiterea periodică a newsletterelor sau altor informații în
+                format electronic
+              </li>
+              <li>scopuri statistice</li>
+            </ul>
             <h3 className={styles.subTitle}>LICENȚĂ</h3>
             <p className={styles.text}>
               <span className={styles.semibold__text}>NEWTON PARK</span> deține
@@ -63,25 +69,25 @@ export default function policy() {
               <br />
               <br />
               Este interzis:
-              <ul className={styles.items__minus}>
-                <li>- Republicarea informației NEWTON PARK</li>
-                <li>
-                  - Vânzarea, închirierea sau sublicențierea materialului NEWTON
-                  PARK
-                </li>
-                <li>
-                  {" "}
-                  - Reproducerea, dublarea sau copierea materialului NEWTON PARK
-                </li>
-                <li>- Redistribuirea conținutului NEWTON PARK</li>
-              </ul>
+            </p>
+            <ul className={styles.items__minus}>
+              <li>- Republicarea informației NEWTON PARK</li>
+              <li>
+                - Vânzarea, închirierea sau sublicențierea materialului NEWTON
+                PARK
+              </li>
+              <li>
+                {" "}
+                - Reproducerea, dublarea sau copierea materialului NEWTON PARK
+              </li>
+              <li>- Redistribuirea conținutului NEWTON PARK</li>
+            </ul>
+            <p className={styles.text}>
               Toate drepturile de proprietate intelectuală sunt rezervate.
               Puteți solicita acest lucru de la{" "}
               <span className={styles.semibold__text}>NEWTON PARK</span> pentru
               uz personal, sub rezerva restricțiilor stabilite în acești termeni
               și condiții.
-              <br />
-              <br />
             </p>
             <h3 className={styles.subTitle}>COOKIE-URI</h3>
             <p className={styles.text}>
@@ -99,46 +105,43 @@ export default function policy() {
               cumpărături (și memorarea acestor opțiuni) - generându-se astfel
               flexibilitatea "coșului de cumpăraturi" (accesarea preferințelor
               vechi prin accesarea butonului „înainte" și „înapoi");
-              <br />
-              <br />
-              <ul className={styles.items__disc}>
-                <li>
-                  Cookie-urile oferă deținătorilor de site-uri un feedback
-                  valoros asupra modului cum sunt folosite site-urile lor de
-                  către utilizatori, astfel încât să le poată face mai eficiente
-                  și mai accesibile pentru aceștia;
-                </li>
-                <li>
-                  Permit aplicațiilor multimedia sau de un tip diferit de pe
-                  alte site-uri să fie incluse într-un anumit site pentru a crea
-                  o experiență de navigare mai valoroasă, mai utilă și mai
-                  plăcută;
-                </li>
-                <li>Îmbunătățesc eficiența publicității online.</li>
-              </ul>
             </p>
+            <ul className={styles.items__disc}>
+              <li>
+                Cookie-urile oferă deținătorilor de site-uri un feedback valoros
+                asupra modului cum sunt folosite site-urile lor de către
+                utilizatori, astfel încât să le poată face mai eficiente și mai
+                accesibile pentru aceștia;
+              </li>
+              <li>
+                Permit aplicațiilor multimedia sau de un tip diferit de pe alte
+                site-uri să fie incluse într-un anumit site pentru a crea o
+                experiență de navigare mai valoroasă, mai utilă și mai plăcută;
+              </li>
+              <li>Îmbunătățesc eficiența publicității online.</li>
+            </ul>
             <h3 className={styles.subTitle}>HYPERLINK LA CONȚINUTUL NOSTRU</h3>
             <p className={styles.text}>
               Următoarele organizații se pot conecta la site-ul nostru fără
               aprobare prealabilă în scris:
-              <ul className={styles.items__minus}>
-                <li>- Agenții guvernamentale;</li>
-                <li>- Motoare de căutare;</li>
-                <li>- Organizații de știri;</li>
-                <li>
-                  - Distribuitorii de directoare online pot face link-uri către
-                  site-ul nostru în același mod în care fac hyperlink către
-                  site-urile altor companii listate;
-                </li>
-                <li>
-                  - Afaceri acreditate la nivelul întregului sistem, cu excepția
-                  organizațiilor non-profit, centrelor comerciale de caritate și
-                  a grupurilor de strângere de fonduri de caritate, care nu pot
-                  face linkuri către site-ul nostru Web.
-                </li>
-              </ul>
-              <br />
-              <br />
+            </p>
+            <ul className={styles.items__minus}>
+              <li>- Agenții guvernamentale;</li>
+              <li>- Motoare de căutare;</li>
+              <li>- Organizații de știri;</li>
+              <li>
+                - Distribuitorii de directoare online pot face link-uri către
+                site-ul nostru în același mod în care fac hyperlink către
+                site-urile altor companii listate;
+              </li>
+              <li>
+                - Afaceri acreditate la nivelul întregului sistem, cu excepția
+                organizațiilor non-profit, centrelor comerciale de caritate și a
+                grupurilor de strângere de fonduri de caritate, care nu pot face
+                linkuri către site-ul nostru Web.
+              </li>
+            </ul>
+            <p className={styles.text}>
               Aceste organizații pot face linkuri către pagina noastră de
               pornire, către publicații sau către alte informații de pe site-ul
               web, atâta timp cât linkul: (a) nu este în niciun fel înșelător;
@@ -150,23 +153,23 @@ export default function policy() {
               <br />
               Putem lua în considerare și aproba alte solicitări de linkuri de
               la următoarele tipuri de organizații:
-              <ul className={styles.items__minus}>
-                <li>
-                  - surse de informații cunoscute pentru consumatori și/sau
-                  afaceri;
-                </li>
-                <li>- site-urile comunității dot.com;</li>
-                <li>
-                  - asociații sau alte grupuri care reprezintă organizații de
-                  caritate;
-                </li>
-                <li>- distribuitori de directoare online;</li>
-                <li>- portaluri de internet;</li>
-                <li>- firme de contabilitate, avocatură și consultanță;</li>
-                <li>- instituții de învățământ și asociații comerciale.</li>
-              </ul>
-              <br />
-              <br />
+            </p>
+            <ul className={styles.items__minus}>
+              <li>
+                - surse de informații cunoscute pentru consumatori și/sau
+                afaceri;
+              </li>
+              <li>- site-urile comunității dot.com;</li>
+              <li>
+                - asociații sau alte grupuri care reprezintă organizații de
+                caritate;
+              </li>
+              <li>- distribuitori de directoare online;</li>
+              <li>- portaluri de internet;</li>
+              <li>- firme de contabilitate, avocatură și consultanță;</li>
+              <li>- instituții de învățământ și asociații comerciale.</li>
+            </ul>
+            <p className={styles.text}>
               Vom aproba solicitările de link-uri de la aceste organizații dacă
               decidem că: (a) linkul nu ne-ar face să ne arătăm nefavorabil
               pentru noi înșine sau pentru afacerile noastre acreditate; (b)
@@ -190,20 +193,20 @@ export default function policy() {
               <br />
               Organizațiile aprobate pot face hyperlink către site-ul nostru web
               după cum urmează:
-              <ul className={styles.items__minus}>
-                <li>- Prin utilizarea numelui nostru corporativ; sau</li>
-                <li>
-                  - Prin utilizarea locatorului uniform de resurse la care este
-                  legat; sau
-                </li>
-                <li>
-                  - Prin folosirea oricărei alte descrieri a site-ului nostru la
-                  care este legată, aceasta are sens în contextul și formatul
-                  conținutului de pe site-ul părții care face legătura.
-                </li>
-              </ul>
-              <br />
-              <br />
+            </p>
+            <ul className={styles.items__minus}>
+              <li>- Prin utilizarea numelui nostru corporativ; sau</li>
+              <li>
+                - Prin utilizarea locatorului uniform de resurse la care este
+                legat; sau
+              </li>
+              <li>
+                - Prin folosirea oricărei alte descrieri a site-ului nostru la
+                care este legată, aceasta are sens în contextul și formatul
+                conținutului de pe site-ul părții care face legătura.
+              </li>
+            </ul>
+            <p className={styles.text}>
               Nicio utilizare a siglei{" "}
               <span className={styles.semibold__text}>NEWTON PARK</span> sau a
               altor lucrări nu va fi permisă pentru conectare în absența unui

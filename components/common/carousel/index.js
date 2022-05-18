@@ -76,7 +76,6 @@ function Carousel() {
           }}
           spaceBetween={30}
           pagination={{
-            bulletClass: "swiper-pagination-bullet",
             clickable: true,
             renderBullet: function (index, className) {
               return '<span class="' + className + '">' + "</span>";
@@ -113,6 +112,7 @@ function Carousel() {
                     width={961}
                     height={658}
                     alt={item.image}
+                    key={item.id}
                   />
                 </motion.div>
               </SwiperSlide>

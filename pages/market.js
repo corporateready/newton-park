@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "../styles/Market.module.scss";
-import Link from "next/link"
+import Link from "next/link";
 import Image from "next/image";
 import {
   Hero,
@@ -8,7 +8,7 @@ import {
   Motives,
   Carousel,
   Info,
-  Messenger
+  Messenger,
 } from "../components/market-page";
 import MobilePopUpMessenger from "../components/common/mobile-popup-messenger";
 import arriw__down from "../public/static/home/close-button.png";

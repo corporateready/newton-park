@@ -66,8 +66,8 @@ export default function Index() {
                 <div className={styles.gallery__description_image_down}>
                 <Image
                   src={down__image}
-                  height={106}
-                  width={91}
+                  height={107}
+                  width={103}
                   alt="structure icon"
                   />
                 </div>

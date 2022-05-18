@@ -22,15 +22,13 @@ const BackButtonIcon = () =>  <BackButton width={48} height={54} />
 const NextButtonIcon = () => <NextButton width={48} height={54} />
 
 const images = [
-  { slide__image: image_2, slide__image_webp: image_2_webp },
-  { slide__image: image_1, slide__image_webp: image_1_webp },
+  { slide__image: image_2, slide__image_webp: image_2_webp, id: 1 },
+  { slide__image: image_1, slide__image_webp: image_1_webp, id: 2 },
 ];
 
 export default function Index() {
   const navigationPrevRef = React.useRef(null);
   const navigationNextRef = React.useRef(null);
-
-  console.log(navigationPrevRef.current);
 
   return (
     <div className={styles.gallery__section}>
@@ -93,8 +91,8 @@ export default function Index() {
                     srcSet={slide.slide__image_webp}
                     width={582}
                     height={614}
-                    alt={slide[`${'parter scheme'}`]}
-                    key={slide.slide__image}
+                    alt='floor slide'
+                    key={slide.id}
                     />
                    
                   </SwiperSlide>
