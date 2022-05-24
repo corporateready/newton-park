@@ -181,9 +181,10 @@
     padding: 10%;;
 
     @media screen and(max-width: 576px) {
-        @apply mb-0 overflow-hidden;
+        @apply mb-0 overflow-auto;
     }
 }
+
 .swiper {
     width: 300px;
     height: 300px;

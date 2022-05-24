@@ -18,23 +18,22 @@ import Layout from "../components/common/layout/Layout";
 
 export default function Market() {
   const [isVisible, setIsVisible] = React.useState(false);
-  const [isDesktopVisible, setIsDesktopVisible] = React.useState(false);
+  // const [isDesktopVisible, setIsDesktopVisible] = React.useState(false);
 
   React.useEffect(() => {
     setTimeout(() => {
-      setIsVisible(true);
-      setIsDesktopVisible(true);
+      setIsVisible(!isVisible);
     }, 15000);
   }, []);
 
-  React.useEffect(() => {
-    if (isDesktopVisible) {
-      document.body.style.overflow = "hidden";
-    }
-    if (!isDesktopVisible) {
-      document.body.style.overflow = "auto";
-    }
-  }, [isDesktopVisible]);
+  // React.useEffect(() => {
+  //   if (isDesktopVisible) {
+  //     document.body.style.overflow = "hidden";
+  //   }
+  //   if (!isDesktopVisible) {
+  //     document.body.style.overflow = "auto";
+  //   }
+  // }, [isDesktopVisible]);
 
   React.useEffect(() => {
     if (isVisible) {
@@ -93,7 +92,7 @@ export default function Market() {
               <p className={styles.popup__bottom_subtitle}>
                 Sau contactează-ne:
               </p>
-              {isDesktopVisible && (
+              {isVisible && (
                 <motion.div
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
@@ -106,7 +105,7 @@ export default function Market() {
           </div>
         </motion.div>
       )}
-      {isDesktopVisible && (
+      {isVisible && (
         <motion.div
           className={styles.popup__desk}
           initial={{ opacity: 0 }}
@@ -118,7 +117,7 @@ export default function Market() {
             <div className={styles.popup__desktop_inner}>
               <button
                 className={styles.popup__desktop_close_button}
-                onClick={() => setIsDesktopVisible(!isDesktopVisible)}
+                onClick={() => setIsVisible(!isVisible)}
               >
                 <Image src={x__close_btn} width={21} height={21} />
               </button>

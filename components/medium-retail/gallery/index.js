@@ -34,15 +34,11 @@ const NextButtonIcon = () => <NextButton width={48} height={54} />;
 const parter__images = [
   { id: 3, slide__image: image_3, slide__image_webp: image_3_webp },
   { id: 1, slide__image: image_2, slide__image_webp: image_1_webp },
-  // { id: 2, slide__image: image_1, slide__image_webp: image_2_webp },
 ];
 
 const floor__images = [
   { id: 4, slide__image: image_4, slide__image_webp: image_4_webp },
-  // { id: 1, slide__image: image_2, slide__image_webp: image_1_webp },
   { id: 3, slide__image: image_3, slide__image_webp: image_3_webp },
-  // { id: 5, slide__image: image_5, slide__image_webp: image_5_webp },
-  // { id: 6, slide__image: image_6, slide__image_webp: image_6_webp },
 ];
 
 export default function Index() {
@@ -57,11 +53,11 @@ export default function Index() {
       <div className={styles.gallery__container}>
         <div className={styles.gallery__wrapper}>
           <div className={styles.gallery__description}>
-            <div className={styles.gallery__content}>
+   <div className={styles.gallery__content}>
               <div className={styles.gallery__description_up_wrap}>
                 <div className={styles.gallery__description_up_wrapper}>
                   <div className={styles.gallery__description_image}>
-                    <Image src={up__image} height={90} width={85} alt=""/>
+          <Image src={up__image} height={90} width={85} alt=""/>
                   </div>
                   <p className={styles.gallery__description_up_text}>
                     Suprafața{" "}
