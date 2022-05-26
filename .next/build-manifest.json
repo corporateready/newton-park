@@ -34,6 +34,11 @@
       "static/chunks/webpack.js",
       "static/chunks/main.js",
       "static/chunks/pages/big-retail.js"
+    ],
+    "/medium-retail": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/medium-retail.js"
     ]
   },
   "ampFirstPages": []

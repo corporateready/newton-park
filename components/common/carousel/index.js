@@ -113,6 +113,7 @@ function Carousel() {
                     height={658}
                     alt={item.image}
                     key={item.id}
+                    priority
                   />
                 </motion.div>
               </SwiperSlide>

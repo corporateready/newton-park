@@ -127,6 +127,7 @@ export default function Index() {
                           height={614}
                           alt={slide[`${"parter scheme"}`]}
                           key={slide.id}
+                          priority
                         />
                       </SwiperSlide>
                     );
@@ -157,6 +158,7 @@ export default function Index() {
                         height={614}
                         alt={slide[`${"parter scheme"}`]}
                         key={slide.id}
+                        priority
                       />
                     </SwiperSlide>
                   );
