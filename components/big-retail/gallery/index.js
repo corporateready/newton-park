@@ -6,7 +6,7 @@ import NextButton from '../../svg/gallery/next-btn';
 import BackButton from '../../svg/gallery/back-btn';
 import up__image from '../../../public/static/gallery/metri-patrati.png';
 import down__image from '../../../public/static/gallery/inaltimea-tavanelor.png';
-import image_1 from '../../../public/static/gallery/big-retail/Big retail-parter.png';
+import image_1 from '../../../public/static/gallery/big-retail/Big-retail-parter.png';
 import image_2 from '../../../public/static/gallery/big-retail/BIG-RETAIL_PARTER1.png';
 import image_1_webp from '../../../public/static/gallery/big-retail/Big-retail-parter.webp';
 import image_2_webp from '../../../public/static/gallery/big-retail/BIG-RETAIL_PARTER1.webp';
@@ -112,6 +112,7 @@ export default function Index() {
                           height={614}
                           alt={slide[`${'parter scheme'}`]}
                           key={slide.id}
+                          priority
                         />
                       </SwiperSlide>
                     );
@@ -144,6 +145,7 @@ export default function Index() {
                           height={614}
                           alt={slide[`${'parter scheme'}`]}
                           key={slide.id}
+                          priority
                         />
                       </SwiperSlide>
                     );
