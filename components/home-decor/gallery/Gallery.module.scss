@@ -70,7 +70,7 @@
     @apply w-[85%];
 
     @media screen and(max-width: 576px) {
-        @apply flex flex-row w-full justify-between mt-[7%] mb-[2%];
+        @apply flex flex-row w-full justify-between my-[5%];
     }
 }
 

@@ -15,19 +15,12 @@ export default function market() {
   const [isVisible, setIsVisible] = React.useState(false);
 
   React.useEffect(() => {
+    if (isVisible) document.body.style.overflow = 'hidden';
+    else document.body.style.overflow = 'auto';
     setTimeout(() => {
       setIsVisible(!isVisible);
     }, 15000);
-  }, []);
-
-  React.useEffect(() => {
-    if (isVisible) {
-      document.body.style.overflow = 'hidden'
-    }
-    if (!isVisible) {
-      document.body.style.overflow = 'auto'
-    }
-  }, [])
+  }, [isVisible]);
 
   return (
     <>

@@ -12,32 +12,14 @@ import { motion } from "framer-motion";
 
 export default function market() {
   const [isVisible, setIsVisible] = React.useState(false);
-  const [isDesktopVisible, setIsDesktopVisible] = React.useState(false);
-
+  
   React.useEffect(() => {
+    if (isVisible) document.body.style.overflow = 'hidden';
+    else document.body.style.overflow = 'auto';
     setTimeout(() => {
-      setIsVisible(true);
-      setIsDesktopVisible(true);
+      setIsVisible(!isVisible);
     }, 15000);
-  }, []);
-
-  React.useEffect(() => {
-    if (isDesktopVisible) {
-      document.body.style.overflow = 'hidden'
-    }
-    if (!isDesktopVisible) {
-      document.body.style.overflow = 'auto'
-    }
-  }, [isDesktopVisible])
-
-  React.useEffect(() => {
-    if (isVisible) {
-      document.body.style.overflow = 'hidden'
-    }
-    if (!isVisible) {
-      document.body.style.overflow = 'auto'
-    }
-  }, [isVisible])
+  }, [isVisible]);
 
   return (
     <Layout>
@@ -87,7 +69,7 @@ export default function market() {
               <p className={styles.popup__bottom_subtitle}>
                 Sau contactează-ne:
               </p>
-              {isDesktopVisible && (
+              {isVisible && (
                 <motion.div
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
@@ -100,7 +82,7 @@ export default function market() {
           </div>
         </motion.div>
       )}
-      {isDesktopVisible && (
+      {isVisible && (
         <motion.div
           className={styles.popup__desk}
           initial={{ opacity: 0 }}
@@ -112,7 +94,7 @@ export default function market() {
             <div className={styles.popup__desktop_inner}>
               <button
                 className={styles.popup__desktop_close_button}
-                onClick={() => setIsDesktopVisible(!isDesktopVisible)}
+                onClick={() => setIsVisible(!isVisible)}
               >
                 <Image src={x__close_btn} width={21} height={21} />
               </button>

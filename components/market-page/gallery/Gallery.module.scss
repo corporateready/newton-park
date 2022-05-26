@@ -8,7 +8,7 @@
     }
 
     @media screen and(max-width: 576px) {
-        @apply top-[36%] translate-y-[36%] pt-0;
+        @apply top-[28%] translate-y-[28%] pt-0;
     }
 }
 
@@ -55,7 +55,7 @@
     @apply w-[80%] pb-[5%];
 
     @media screen and(max-width: 576px) {
-        @apply flex flex-row w-full justify-center mt-[10%];
+        @apply flex flex-row w-full justify-center mt-[6%];
     }
 }
 
@@ -120,7 +120,7 @@
     }
 
     @media screen and(max-width: 576px) {
-        width: calc(20px + (70 - 20)*(100vw - 320px)/(576 - 320));
+        width: calc(30px + (60 - 30)*(100vw - 320px)/(576 - 320));
     }
 }
 

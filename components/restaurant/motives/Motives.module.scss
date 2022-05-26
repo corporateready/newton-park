@@ -1,18 +1,13 @@
 @import '../../../styles/mixins.scss';
 
 .motives__section {
-    @apply h-full z-10 mb-[12%];
+    @apply h-full z-10;
 
-    @media screen and(max-width: 1440px) {
-        @apply mb-[13%];
-    }
-
-    @media screen and(max-width: 768px) {
-        @apply mb-[19%];
-    }
+    @media screen and(max-width: 786px) {}
+    @apply mb-[12%];
 
     @media screen and(max-width: 576px) {
-        @apply h-full z-10 mt-[57%] mb-[25%];
+        @apply h-full z-10 mt-[48%] mb-[28%];
     }
 }
 
