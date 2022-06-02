@@ -8,8 +8,9 @@
 }
 
 .home__bg {
-    background-image: image-set(url("../../../public/static/common/supermarket.jpg") 1x, 
-  url("../../../public/static/common/supermarket.webp") 1x);
+//     background-image: image-set(url("../../../public/static/common/supermarket.avif") 1x, 
+//   url("../../../public/static/common/supermarket.webp") 1x);
+background-image: url("../../../public/static/common/supermarket.jpg");
     @apply h-[708px] w-full relative top-0 left-0 bg-no-repeat bg-center bg-cover;
 
     @media screen and(max-width: 1440px) {

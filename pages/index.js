@@ -73,8 +73,8 @@ export default function Home() {
   React.useEffect(() => {
     setTimeout(() => {
       setIsPreloader(false);
-    }, 2000);
-  },[]);
+    }, 1200);
+  },[isPreloader]);
 
   React.useEffect(() => {
     setTimeout(() => {
@@ -178,7 +178,7 @@ export default function Home() {
                 className={styles.popup__close_button}
                 onClick={() => setIsVisible(!isVisible)}
               >
-                <Image src={arriw__down} width={45} height={40} />
+                <Image src={arriw__down} width={45} height={40} quality={75}/>
               </button>
               <h3 className={styles.popup__title}>
                 Solicită prezentarea
@@ -200,7 +200,7 @@ export default function Home() {
                 <motion.div
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
-                  transition={{ duration: 2 }}
+                  transition={{ duration: 1 }}
                 >
                   <MobilePopUpMessenger />
                 </motion.div>

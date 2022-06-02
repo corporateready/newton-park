@@ -48,7 +48,7 @@ export default function index() {
           <input type="tel" placeholder="Numărul de telefon" />
           <button className={styles.form__button}>Solicită oferta</button>
           <div className={styles.according}>
-            <input type="checkbox" />
+            <input type="checkbox" checked/>
             <label>
               Sunt de acord cu{" "}
               <Link href="/policy">
@@ -107,13 +107,14 @@ function Carousel() {
                   }}
                 >
                   <Image
-                    src={item.image}
-                    srcSet={item.image_webp}
+                    src={item.image_webp}
+                    // srcSet={item.image_webp}
                     width={961}
                     height={658}
                     alt={item.image}
                     key={item.id}
-                    priority
+                    // loading="eager"
+                    // priority
                   />
                 </motion.div>
               </SwiperSlide>

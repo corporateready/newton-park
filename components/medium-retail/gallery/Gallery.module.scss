@@ -229,7 +229,14 @@
     overflow: hidden;
 
     @media screen and(max-width: 576px) {
-        @apply mb-0 overflow-hidden;
+        @apply mb-0;
+    }
+}
+.slide__image_wrapper {
+    @apply relative w-[80%] h-auto top-[30%] left-[10%];
+
+    @media screen and(max-width: 576px) {
+        @apply relative h-auto w-[80%] left-[10%] mt-[20%];
     }
 }
 .swiper {
@@ -237,7 +244,6 @@
     height: 300px;
     padding: 20px;
     transition-duration: 1s;
-    // transition: all 5s;
     
   }
 

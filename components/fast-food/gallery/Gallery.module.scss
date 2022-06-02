@@ -186,6 +186,13 @@
         @apply mb-0;
     }
 }
+.slide__image_wrapper {
+    @apply flex justify-center relative w-[70%] top-[20%] left-[15%];
+
+    @media screen and(max-width: 576px) {
+        @apply relative min-h-0 w-[75%] left-[10%] mt-[20%];
+    }
+}
 .swiper {
     width: 300px;
     height: 300px;

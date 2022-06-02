@@ -6,10 +6,10 @@ import NextButton from "../../svg/gallery/next-btn";
 import BackButton from "../../svg/gallery/back-btn";
 import up__image from "../../../public/static/gallery/metri-patrati.png";
 import down__image from "../../../public/static/gallery/inaltimea-tavanelor.png";
-import image_1 from "../../../public/static/gallery/home-decor/Home decor-plan integral.png";
-import image_2 from "../../../public/static/gallery/home-decor/Home decor planimetrie.png";
 import image_1_webp from "../../../public/static/gallery/home-decor/Home decor-plan integral.webp";
 import image_2_webp from "../../../public/static/gallery/home-decor/Home decor planimetrie.webp";
+import image_3_webp from "../../../public/static/gallery/fast-food/PARTER-fastfood.webp";
+import image_4_webp from "../../../public/static/gallery/fast-food/fastfood.webp";
 
 
 import { initialTabs as tabs } from "./ingredients";
@@ -24,16 +24,6 @@ const BackButtonIcon = () =>  <BackButton width={48} height={54} />
 
 const NextButtonIcon = () => <NextButton width={48} height={54} />
 
-const parter__images = [
-  { id: 2, slide__image: image_1,slide__image_webp: image_1_webp },
-  { id: 1, slide__image: image_2,slide__image_webp: image_2_webp },
-];
-
-const floor__images = [
-  { id: 2, slide__image: image_1,slide__image_webp: image_1_webp },
-  { id: 1, slide__image: image_2,slide__image_webp: image_2_webp },
-];
-
 export default function Index() {
   const [selectedTab, setSelectedTab] = React.useState(tabs[0]);
   const navigationPrevRef = React.useRef(null);
@@ -46,7 +36,9 @@ export default function Index() {
         <div className={styles.gallery__wrapper}>
           <div className={styles.gallery__description}>
             <div className={styles.gallery__content}>
-              <div className={styles.gallery__description_up}>
+              {
+                selectedTab === tabs[0] ? (
+                  <div className={styles.gallery__description_up}>
                 <div className={styles.gallery__description_image_up}>
                   <Image
                   src={up__image}
@@ -62,6 +54,26 @@ export default function Index() {
                   2068.20 M<sup>2</sup>
                 </p>
               </div>
+                ) : (
+                  <div className={styles.gallery__description_up}>
+                <div className={styles.gallery__description_image_up}>
+                  <Image
+                  src={up__image}
+                  height={107}
+                  width={103}
+                  alt="structure icon"
+                  />
+                </div>
+                <p className={styles.gallery__description_up_text}>
+                  Suprafața totală:
+                </p>
+                <p className={styles.gallery__description_up_number}>
+                  728.50 M<sup>2</sup>
+                </p>
+              </div>
+                )
+              }
+
               <div className={styles.gallery__description_down}>
                 <div className={styles.gallery__description_image_down}>
                 <Image
@@ -100,20 +112,33 @@ export default function Index() {
                   modules={[EffectFlip, Pagination, Navigation]}
                   className={styles.mySwiper}
                 >
-                  {parter__images.map((slide) => {
-                    return (
-                      <SwiperSlide key={slide.id}>
-                        <Image
-                          src={slide.slide__image}
-                          srcSet={slide.slide__image_webp}
-                          width={582}
-                          height={614}
-                          alt={slide[`${"parter scheme"}`]}
-                          key={slide.id}
-                        />
-                      </SwiperSlide>
-                    );
-                  })}
+                  <SwiperSlide>
+                    <Image
+                      src={image_1_webp}
+                      width={582}
+                      height={614}
+                      alt={"slide parter scheme 1"}
+                      quality="75"
+                      loading="eager"
+                      placeholder="blur"
+                      priority
+                    />
+                    
+                  </SwiperSlide>
+                  <SwiperSlide>
+                  <div className={styles.slide__image_wrapper}>
+                    <Image
+                      src={image_2_webp}
+                      width={312}
+                      height={544}
+                      alt={"slide parter scheme 2"}
+                      quality="75"
+                      loading="eager"
+                      placeholder="blur"
+                      priority
+                    />
+                    </div>
+                  </SwiperSlide>
                 </Swiper>
               ) : (
                 <Swiper
@@ -130,20 +155,33 @@ export default function Index() {
                 modules={[EffectFlip, Pagination, Navigation]}
                 className={styles.mySwiper}
               >
-                {floor__images.map((slide) => {
-                  return (
-                    <SwiperSlide key={slide.id}>
-                      <Image
-                        src={slide.slide__image}
-                        srcSet={slide.slide__image_webp}
-                        width={582}
-                        height={614}
-                        alt={slide[`${"parter scheme"}`]}
-                        key={slide.id}
-                      />
-                    </SwiperSlide>
-                  );
-                })}
+                <SwiperSlide>
+                    <Image
+                      src={image_3_webp}
+                      width={582}
+                      height={614}
+                      alt={"slide parter scheme 1"}
+                      quality="75"
+                      loading="eager"
+                      placeholder="blur"
+                      priority
+                    />
+                    
+                  </SwiperSlide>
+                  <SwiperSlide>
+                  <div className={styles.slide__image_wrapper_2}>
+                    <Image
+                      src={image_4_webp}
+                      width={582}
+                      height={414}
+                      alt={"slide parter scheme 2"}
+                      quality="75"
+                      loading="eager"
+                      placeholder="blur"
+                      priority
+                    />
+                    </div>
+                  </SwiperSlide>
               </Swiper>
               )
               }

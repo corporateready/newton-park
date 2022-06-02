@@ -178,13 +178,20 @@
 .mySwiper {
     max-width: 100%;
     margin-bottom: 8%;
-    padding: 10%;;
+    padding: 10%;
+    overflow: hidden;
 
     @media screen and(max-width: 576px) {
-        @apply mb-0 overflow-auto;
+        @apply mb-0;
     }
 }
+.slide__image_wrapper {
+    @apply flex justify-center relative w-[50%] top-[10%] left-[25%];
 
+    @media screen and(max-width: 576px) {
+        @apply relative min-h-0 w-[55%] left-[25%];
+    }
+}
 .swiper {
     width: 300px;
     height: 300px;

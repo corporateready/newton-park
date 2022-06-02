@@ -6,8 +6,6 @@ import NextButton from "../../svg/gallery/next-btn";
 import BackButton from "../../svg/gallery/back-btn";
 import up__image from "../../../public/static/gallery/metri-patrati.png";
 import down__image from "../../../public/static/gallery/inaltimea-tavanelor.png";
-import image_2 from "../../../public/static/gallery/supermarket/PARTER-supermarket-01.png";
-import image_1 from "../../../public/static/gallery/supermarket/Supermarket.png";
 import image_2_webp from "../../../public/static/gallery/supermarket/PARTER-supermarket-01.webp";
 import image_1_webp from "../../../public/static/gallery/supermarket/Supermarket.webp";
 
@@ -19,11 +17,6 @@ import { EffectFlip, Pagination, Navigation } from "swiper";
 const BackButtonIcon = () => <BackButton width={48} height={54} />;
 
 const NextButtonIcon = () => <NextButton width={48} height={54} />;
-
-const images = [
-  { slide__image: image_1, slide__image_webp: image_1_webp, id: 1 },
-  { slide__image: image_2, slide__image_webp: image_2_webp, id: 2 }
-];
 
 export default function Index() {
   const navigationPrevRef = React.useRef("");
@@ -80,21 +73,33 @@ export default function Index() {
               modules={[EffectFlip, Pagination, Navigation]}
               className={styles.mySwiper}
             >
-              {images.map((slide) => {
-                return (
-                  <SwiperSlide>
+              <SwiperSlide>
                     <Image
-                      src={slide.slide__image}
-                      srcSet={slide.slide__image_webp}
+                      src={image_1_webp}
                       width={582}
                       height={614}
-                      alt={"slide parter scheme"}
-                      key={slide.id}
+                      alt={"slide parter scheme 1"}
+                      quality="75"
+                      loading="eager"
+                      placeholder="blur"
+                      priority
                     />
                     
                   </SwiperSlide>
-                );
-              })}
+                  <SwiperSlide>
+                  <div className={styles.slide__image_wrapper}>
+                    <Image
+                      src={image_2_webp}
+                      width={312}
+                      height={544}
+                      alt={"slide parter scheme 2"}
+                      quality="75"
+                      loading="eager"
+                      placeholder="blur"
+                      priority
+                    />
+                    </div>
+                  </SwiperSlide>
             </Swiper>
             <button className={styles.next__btn} ref={navigationNextRef}>
               <NextButtonIcon />
