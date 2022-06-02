@@ -118,7 +118,7 @@ export default function Index() {
                       width={582}
                       height={614}
                       alt={"slide parter scheme 1"}
-                      loading="eager"
+                      // loading="eager"
                       priority
                     />
                     
@@ -130,7 +130,7 @@ export default function Index() {
                       width={312}
                       height={544}
                       alt={"slide parter scheme 2"}
-                      loading="eager"
+                      // loading="eager"
                       priority
                     />
                     </div>
@@ -157,7 +157,7 @@ export default function Index() {
                       width={582}
                       height={614}
                       alt={"slide parter scheme 1"}
-                      loading="eager"
+                      // loading="eager"
                       priority
                     />
                     
@@ -169,7 +169,7 @@ export default function Index() {
                       width={582}
                       height={414}
                       alt={"slide parter scheme 2"}
-                      loading="eager"
+                      // loading="eager"
                       priority
                     />
                     </div>
