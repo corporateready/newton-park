@@ -59,7 +59,7 @@ export default function Index() {
 
               <div className={styles.gallery__description_down}>
                 <div className={styles.gallery__description_image}>
-                  <Image src={down__image} />
+                <Image src={down__image} height={107} width={103} alt="structure icon" />
                 </div>
                 <p className={styles.gallery__description_up_text}>Înălțimea tavanelor:</p>
                 <p className={styles.gallery__description_up_number}>4 M</p>

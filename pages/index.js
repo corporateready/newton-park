@@ -1,68 +1,45 @@
-import React from "react";
-import Head from "next/head";
-import Link from "next/link";
-import Image from "next/image";
-import styles from "../styles/Home.module.scss";
-import Market from "../components/svg/home/market";
-import Restaurant from "../components/svg/home/restaurant";
-import FastFood from "../components/svg/home/fast-food";
-import HomeLogo from "../components/svg/home/logo";
-import BigRetail from "../components/svg/home/big-retail";
-import HomeDecor from "../components/svg/home/home-decor";
-import MediumRetail from "../components/svg/home/medium-retail";
-import MobilePopUpMessenger from "../components/common/mobile-popup-messenger";
-import arriw__down from "../public/static/home/close-button.png";
-import { motion } from "framer-motion";
-import Preloader from "../components/preloader";
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import styles from '../styles/Home.module.scss';
+import Market from '../components/svg/home/market';
+import Restaurant from '../components/svg/home/restaurant';
+import FastFood from '../components/svg/home/fast-food';
+import HomeLogo from '../components/svg/home/logo';
+import BigRetail from '../components/svg/home/big-retail';
+import HomeDecor from '../components/svg/home/home-decor';
+import MediumRetail from '../components/svg/home/medium-retail';
+import MobilePopUpMessenger from '../components/common/mobile-popup-messenger';
+import ArrowDown from '../public/static/common/mobile-close-button.svg';
+import { motion } from 'framer-motion';
+import Preloader from '../components/preloader';
 
-const HomeLogoIcon = () => (
-  <div>
-    <HomeLogo width={109} height={57} />
-  </div>
-);
+const ArrowDownComponent = () => <ArrowDown width={45} height={45} />;
 
-const MarketIcon = () => (
-  <div>
-    <Market width={94} height={80} />
-  </div>
-);
+const HomeLogoIcon = () => <HomeLogo width={109} height={57} />;
+
+const MarketIcon = () => <Market width={94} height={80} />;
 
 const RestaurantIcon = () => <Restaurant width={94} height={80} />;
 
-const FastFoodIcon = () => (
-  <div>
-    <FastFood width={94} height={80} />
-  </div>
-);
+const FastFoodIcon = () => <FastFood width={94} height={80} />;
 
-const BigRetailIcon = () => (
-  <div>
-    <BigRetail width={94} height={80} />
-  </div>
-);
+const BigRetailIcon = () => <BigRetail width={94} height={80} />;
 
-const HomeDecorIcon = () => (
-  <div>
-    <HomeDecor width={94} height={80} />
-  </div>
-);
+const HomeDecorIcon = () => <HomeDecor width={94} height={80} />;
 
-const MediumRetailIcon = () => (
-  <div>
-    <MediumRetail width={94} height={80} />
-  </div>
-);
+const MediumRetailIcon = () => <MediumRetail width={94} height={80} />;
 
 const nav__items = [
-  { path: "/market", icon: <MarketIcon />, title: "supermarket" },
-  { path: "/restaurant", icon: <RestaurantIcon />, title: "restaurant" },
-  { path: "/fast-food", icon: <FastFoodIcon />, title: "fast-food" },
-  { path: "/home-decor", icon: <HomeDecorIcon />, title: "home decor" },
-  { path: "/big-retail", icon: <BigRetailIcon />, title: "big retail" },
+  { path: '/market', icon: <MarketIcon />, title: 'supermarket' },
+  { path: '/restaurant', icon: <RestaurantIcon />, title: 'restaurant' },
+  { path: '/fast-food', icon: <FastFoodIcon />, title: 'fast-food' },
+  { path: '/home-decor', icon: <HomeDecorIcon />, title: 'home decor' },
+  { path: '/big-retail', icon: <BigRetailIcon />, title: 'big retail' },
   {
-    path: "/medium-retail",
+    path: '/medium-retail',
     icon: <MediumRetailIcon />,
-    title: "medium retail",
+    title: 'medium retail',
   },
 ];
 
@@ -74,7 +51,7 @@ export default function Home() {
     setTimeout(() => {
       setIsPreloader(false);
     }, 1200);
-  },[isPreloader]);
+  }, [isPreloader]);
 
   React.useEffect(() => {
     setTimeout(() => {
@@ -98,15 +75,15 @@ export default function Home() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 0.3 }}
-        >
+          transition={{ duration: 0.3 }}>
           <div className={styles.home__bg}>
             <div className={styles.home__shadow}></div>
-
             <header className={styles.header}>
               <div className={styles.header__wrapper}>
                 <div className={styles.logo}>
+                  {/* <embed type="application" src="https://newtonpark.md/" width="200" height="100"> */}
                   <HomeLogoIcon />
+                  {/* </embed> */}
                 </div>
               </div>
             </header>
@@ -128,18 +105,14 @@ export default function Home() {
                 <form className={styles.form}>
                   <input type="email" placeholder="Adresa de email" />
                   <input type="tel" placeholder="Numărul de telefon" />
-                  <button className={styles.form__button}>
-                    Solicită prezentarea
-                  </button>
+                  <button className={styles.form__button}>Solicită prezentarea</button>
                 </form>
                 <div className={styles.according}>
                   <input type="checkbox" />
                   <label>
-                    Sunt de acord cu{" "}
+                    Sunt de acord cu{' '}
                     <Link href="/policy">
-                      <a className={styles.according__link}>
-                        termenii și condițiile site-ului
-                      </a>
+                      <a className={styles.according__link}>termenii și condițiile site-ului</a>
                     </Link>
                   </label>
                 </div>
@@ -169,42 +142,27 @@ export default function Home() {
           className={styles.popup}
           initial={{ y: 500 }}
           animate={{ y: 0 }}
-          exit={{ y: 500, duration: 1 }}
-          transition={{ duration: 1, ease: "easeInOut" }}
-        >
+          exit={{ y: "-100%" }}
+          transition={{ duration: 0.7, ease: 'easeInOut' }}>
           <div className={styles.popup__container}>
             <div className={styles.popup__inner}>
               <button
                 className={styles.popup__close_button}
-                onClick={() => setIsVisible(!isVisible)}
-              >
-                <Image src={arriw__down} width={45} height={40} quality={75}/>
+                onClick={() => setIsVisible(!isVisible)}>
+                <ArrowDownComponent />
               </button>
               <h3 className={styles.popup__title}>
                 Solicită prezentarea
                 <br />
-                <span className={styles.popup__title_mark}>
-                  NEWTON PARK
-                </span>{" "}
-                PDF
+                <span className={styles.popup__title_mark}>NEWTON PARK</span> PDF
               </h3>
               <form className={styles.popup__form}>
                 <input type="email" placeholder="Adresa de email" />
                 <input type="tel" placeholder="Numărul de telefon" />
                 <button type="submit">Solicită prezentarea</button>
               </form>
-              <p className={styles.popup__bottom_subtitle}>
-                Sau contactează-ne:
-              </p>
-              {isVisible && (
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ duration: 1 }}
-                >
-                  <MobilePopUpMessenger />
-                </motion.div>
-              )}
+              <p className={styles.popup__bottom_subtitle}>Sau contactează-ne:</p>
+              <MobilePopUpMessenger />
             </div>
           </div>
         </motion.div>

@@ -48,7 +48,7 @@ export default function index() {
           <input type="tel" placeholder="Numărul de telefon" />
           <button className={styles.form__button}>Solicită oferta</button>
           <div className={styles.according}>
-            <input type="checkbox" checked/>
+            <input type="checkbox" defaultChecked readOnly/>
             <label>
               Sunt de acord cu{" "}
               <Link href="/policy">

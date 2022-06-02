@@ -75,7 +75,7 @@ export default function Market() {
                     <button type="submit">Solicită prezentarea</button>
                   </form>
                   <div className={styles.according}>
-                    <input type="checkbox" checked />
+                    <input type="checkbox" defaultChecked readOnly />
                     <label>
                       Sunt de acord cu{' '}
                       <Link href="/policy">
