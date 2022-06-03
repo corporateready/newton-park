@@ -6,10 +6,12 @@ import Layout from "../components/common/layout/Layout";
 import { Hero, About, Motives, Carousel, Info } from "../components/big-retail";
 import { Messenger } from "../components/market-page";
 import MobilePopUpMessenger from "../components/common/mobile-popup-messenger";
-import arriw__down from "../public/static/home/close-button.png";
+import ArrowDownIcon from '../public/static/common/mobile-close-button.svg';
 import x__close_btn from "../public/static/common/x-close-button.png";
 import { motion } from "framer-motion";
 import Head from "next/head";
+
+const ArrowDownComponent = () => <ArrowDownIcon width={45} height={45} />;
 
 export default function market() {
   const [isVisible, setIsVisible] = React.useState(false);
@@ -64,6 +66,11 @@ export default function market() {
                   onClick={() => setIsVisible(!isVisible)}>
                   <Image src={x__close_btn} width={21} height={21} />
                 </button>
+                <button
+                    className={styles.popup__mobile_close_button}
+                    onClick={() => setIsVisible(!isVisible)}>
+                    <ArrowDownComponent />
+                  </button>
                 <h3 className={styles.popup__desktop_title}>
                   Solicită prezentarea Big Retail
                   <br />

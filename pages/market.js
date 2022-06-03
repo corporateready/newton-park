@@ -84,12 +84,7 @@ export default function Market() {
                     </label>
                   </div>
                   <p className={styles.popup__bottom_subtitle}>Sau contactează-ne:</p>
-                  <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ duration: 2 }}>
                     <MobilePopUpMessenger />
-                  </motion.div>
                 </div>
               </div>
             </motion.div>

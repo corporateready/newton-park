@@ -37,23 +37,35 @@ export default function Index() {
             <div className={styles.gallery__content}>
               {selectedTab === tabs[0] ? (
                 <div className={styles.gallery__description_up}>
-                  <div className={styles.gallery__description_image_up}>
+                  <div
+                    className={styles.gallery__description_image_up}>
                     <Image src={up__image} height={107} width={103} alt="structure icon" />
                   </div>
-                  <p className={styles.gallery__description_up_text}>Suprafața totală:</p>
-                  <p className={styles.gallery__description_up_number}>
-                    2068.20 M<sup>2</sup>
+                  <p
+                    className={styles.gallery__description_up_text}>
+                    Suprafața totală:
                   </p>
+                  <motion.p
+                    className={styles.gallery__description_up_number}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1, transition: { duration: 1 } }}>
+                    2068.20 M<sup>2</sup>
+                  </motion.p>
                 </div>
               ) : (
                 <div className={styles.gallery__description_up}>
                   <div className={styles.gallery__description_image_up}>
                     <Image src={up__image} height={107} width={103} alt="structure icon" />
                   </div>
-                  <p className={styles.gallery__description_up_text}>Suprafața totală:</p>
-                  <p className={styles.gallery__description_up_number}>
-                    728.50 M<sup>2</sup>
+                  <p className={styles.gallery__description_up_text}>
+                    Suprafața totală:
                   </p>
+                  <motion.p className={styles.gallery__description_up_number}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1, transition: { duration: 0.5 } }}
+                  >
+                    728.50 M<sup>2</sup>
+                  </motion.p>
                 </div>
               )}
 

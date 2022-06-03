@@ -8,7 +8,6 @@ import up__image from "../../../public/static/gallery/metri-patrati.png";
 import down__image from "../../../public/static/gallery/inaltimea-tavanelor.png";
 import image_1_webp from "../../../public/static/gallery/fast-food/fastfood.webp";
 import image_2_webp from "../../../public/static/gallery/fast-food/PARTER-fastfood.webp";
-
 // ==============================>
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -67,9 +66,7 @@ export default function Index() {
               flipEffect={{
                 slideShadows: false,
               }}
-              pagination={{
-                dynamicBullets: true,
-              }}
+              pagination={true}
               navigation={{
                 prevEl: navigationPrevRef.current,
                 nextEl: navigationNextRef.current,
@@ -84,7 +81,6 @@ export default function Index() {
                       height={614}
                       alt={"slide parter scheme 1"}
                       quality="75"
-                      loading="eager"
                       placeholder="blur"
                       priority
                     />
@@ -95,10 +91,9 @@ export default function Index() {
                     <Image
                       src={image_1_webp}
                       width={582}
-                      height={514}
+                      height={424}
                       alt={"slide parter scheme 2"}
                       quality="75"
-                      loading="eager"
                       placeholder="blur"
                       priority
                     />

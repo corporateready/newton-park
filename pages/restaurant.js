@@ -86,7 +86,7 @@ export default function market() {
                   <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
-                    transition={{ duration: 2 }}>
+                  >
                     <MobilePopUpMessenger />
                   </motion.div>
                 </div>
