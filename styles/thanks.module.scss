@@ -1,0 +1,23 @@
+@import '../styles/mixins.scss';
+
+.thanks__section {
+    @apply flex flex-col w-full;
+}
+.thanks__wrapper {
+    @apply relative;
+}
+.thanks__body {
+    @apply flex flex-col gap-y-[5%] ;
+}
+.thanks__icon_wrap {
+    @apply mx-auto;
+}
+.thanks__title {
+    @apply text-[30px] text-[#2BB018] text-center mt-[5%];
+}
+.thanks__subtitle {
+    @apply text-[18px] text-[#31414B] text-center mt-[2%];
+}
+.thanks__back_botton {
+    @apply inline-block w-1/3 self-center bg-[#2BB018] text-[#31414B] uppercase font-semibold mt-[3%] py-[1%] rounded-md text-center;
+}

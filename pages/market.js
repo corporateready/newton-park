@@ -2,6 +2,7 @@ import React from 'react';
 import styles from '../styles/Market.module.scss';
 import Link from 'next/link';
 import Image from 'next/image';
+import { useRouter } from 'next/router'
 import { Hero, About, Motives, Carousel, Info, Messenger } from '../components/market-page';
 import MobilePopUpMessenger from '../components/common/mobile-popup-messenger';
 import ArrowdDownIcon from '../public/static/common/mobile-close-button.svg';
@@ -12,22 +13,34 @@ import Layout from '../components/common/layout/Layout';
 const ArrowdDownComponent = () => <ArrowdDownIcon width={45} height={45} />;
 
 export default function Market() {
+  const [isSend, setIsSend] = React.useState(false)
+  const [isOpen, setIsOpen] = React.useState()
   const [isVisible, setIsVisible] = React.useState(false);
 
-  React.useEffect(() => {
+  const router = useRouter()
+
+  React.useEffect( () => {
     setTimeout(() => {
-      setIsVisible(true);
+      return setIsVisible(true);
     }, 15000);
   }, []);
 
-  React.useEffect(() => {
+  React.useEffect( async () => {
     if (isVisible) {
-      document.body.style.overflow = 'hidden';
+      return document.body.style.overflow = 'hidden';
     }
     if (!isVisible) {
-      document.body.style.overflow = 'auto';
+      return document.body.style.overflow = 'auto';
     }
   }, [isVisible]);
+
+  const handleFormSending = () => {
+    setIsSend(true)
+    if(isSend) {
+    router.push('/thanks')}
+  }
+
+  console.log(isVisible);
 
   return (
     <Layout>
@@ -38,7 +51,7 @@ export default function Market() {
         exit={{ opacity: 0 }}
         transition={{ duration: 0.3 }}>
         <Hero />
-        <About />
+        <About isVisible={isVisible}/>
         <Motives />
         <Carousel />
         <Info />
@@ -69,11 +82,24 @@ export default function Market() {
                     <br />
                     <span className={styles.popup__title_mark}>NEWTON PARK</span> PDF
                   </h3>
-                  <form className={styles.popup__desktop_form}>
-                    <input type="email" placeholder="Adresa de email" />
-                    <input type="tel" placeholder="Numărul de telefon" />
-                    <button type="submit">Solicită prezentarea</button>
+
+                  <form 
+                    className={styles.popup__desktop_form}
+                    action="https://formsubmit.co/nev30inbox@gmail.com/"
+                    method="POST"
+                    // onSubmit={(e)=>e.preventDefault()}
+                    >
+                    <input type="email" placeholder="Adresa de email" required />
+                    <input type="tel" placeholder="Numărul de telefon" required/>
+                    {/* <input type="text" name="_honey" style="display:none"/> */}
+                    <input type="hidden" name="_captcha" value="false"/>
+                    <input type="hidden" name="_next" value="https://yourdomain.co/thanks.js"></input>
+                    <button 
+                      type="submit"
+                      onClick={handleFormSending}
+                      >Solicită prezentarea</button>
                   </form>
+
                   <div className={styles.according}>
                     <input type="checkbox" defaultChecked readOnly />
                     <label>

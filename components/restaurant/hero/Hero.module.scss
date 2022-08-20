@@ -7,25 +7,8 @@
     @apply relative top-0 left-0;
 }
 
-.home__bg {
-    background-image: image-set(url("../../../public/static/common/supermarket.jpg") 1x, 
-  url("../../../public/static/common/supermarket.webp") 1x);
-    @apply h-[708px] w-full relative top-0 left-0 z-[1] bg-no-repeat bg-center bg-cover;
-
-    @media screen and(max-width: 1440px) {
-        height: calc(467px + (708 - 467)*(100vw - 576px)/(1440 - 576));
-    }
-
-    @media screen and(max-width: 576px) {
-        @apply bg-left-top;
-        height: calc(300px + (467 - 300)*(100vw - 320px)/(576 - 320));
-    }
-
-}
-
 .home__restaurant__bg {
-    background-image: image-set(url("../../../public/static/home/restaurant-bg.jpg") 1x, 
-  url("../../../public/static/home/restaurant-bg.webp") 1x);
+    background-image: url("../../../public/static/home/restaurant-bg.webp");
     @apply h-[708px] w-full relative top-0 left-0 z-[1] bg-no-repeat bg-center bg-cover;
 
     @media screen and(max-width: 1440px) {

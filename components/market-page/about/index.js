@@ -7,7 +7,7 @@ import Garden from "../../svg/garden";
 
 const GardenIcon = () => <Garden width={43} height={39}/>
 
-export default function index() {
+export default function index({isVisible}) {
   return (
     <>
       <div className={styles.about}>
@@ -52,7 +52,7 @@ export default function index() {
           </div>
         </div>
       </div>
-      <Gallery />
+      <Gallery isVisible={isVisible}/>
     </>
   );
 }

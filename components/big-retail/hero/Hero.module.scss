@@ -8,8 +8,7 @@
 }
 
 .home__bg {
-    background-image: image-set(url("../../../public/static/home/big-retail-2.jpg") 1x, 
-  url("../../../public/static/home/big-retail-2.webp") 1x);
+    background-image: url("../../../public/static/home/big-retail-2.webp");
     @apply h-[708px] w-full relative top-0 left-0 z-[1] bg-no-repeat bg-center bg-cover;
  
     transform: scaleX(-1) ;

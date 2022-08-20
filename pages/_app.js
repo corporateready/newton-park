@@ -3,10 +3,7 @@ import TweetEmbed from 'react-tweet-embed';<TweetEmbed id="69252786236935782
 
 function MyApp({ Component, pageProps }) {
   return (
-    <>
-    <TweetEmbed id="692527862369357824" placeholder={'loading'} />
     <Component {...pageProps} />
-  </>
   )
 }
 
