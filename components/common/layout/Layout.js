@@ -119,7 +119,7 @@ export default function Layout({ children }) {
           </div>
         )}
       </motion.header>
-      {children}
+        {children}
       <footer className={styles.footer}>
         <div className={styles.header__container}>
           <div className={styles.header__inner}>

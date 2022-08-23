@@ -1,5 +1,8 @@
 @import "../../../styles/mixins.scss";
 
+.layout {
+  // @apply flex;
+}
 // ===== header =====>
 .header {
   @apply fixed top-0 left-0 z-[100] w-full h-auto border-b-2;
@@ -123,8 +126,6 @@
   }
 }
 
-.burger__menu_hide {
-}
 // ===== footer =====>
 .footer {
   @apply border-t-[1px]  border-[#2BB018];

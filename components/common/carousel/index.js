@@ -10,27 +10,20 @@ import styles from "./Carousel.module.scss";
 
 import { FreeMode, Pagination } from "swiper";
 
-import image__carousel_1 from "../../../public/static/carousel/Gradina_Botanica_transa_2_View01_1.png";
-import image__carousel_2 from "../../../public/static/carousel/Gradina_Botanica_transa_2_View05_1.png";
-import image__carousel_3 from "../../../public/static/carousel/Gradina_Botanica_transa_2_View07_3.png";
-import image__carousel_4 from "../../../public/static/carousel/Gradina_Botanica_transa_2_View09_2.png";
-import image__carousel_5 from "../../../public/static/carousel/Gradina_Botanica_transa_2_View10_1.png";
-import image__carousel_6 from "../../../public/static/carousel/Burebista_Residence_b_View11_2.png";
-
-import image__carousel_1_webp from "../../../public/static/carousel/Gradina_Botanica_transa_2_View01_1.webp";
-import image__carousel_2_webp from "../../../public/static/carousel/Gradina_Botanica_transa_2_View05_1.webp";
-import image__carousel_3_webp from "../../../public/static/carousel/Gradina_Botanica_transa_2_View07_3.webp";
-import image__carousel_4_webp from "../../../public/static/carousel/Gradina_Botanica_transa_2_View09_2.webp";
-import image__carousel_5_webp from "../../../public/static/carousel/Gradina_Botanica_transa_2_View10_1.webp";
-import image__carousel_6_webp from "../../../public/static/carousel/Burebista_Residence_b_View11_2.webp";
+import image__carousel_1_webp from "../../../public/static/carousel/Burebista_Residence_s.webp";
+import image__carousel_2_webp from "../../../public/static/carousel/Gradina_Botanica_transa_2_View05_1_s.webp";
+import image__carousel_3_webp from "../../../public/static/carousel/Gradina_Botanica_transa_2_View07_3_s.webp";
+import image__carousel_4_webp from "../../../public/static/carousel/Gradina_Botanica_transa_2_View09_2_s.webp";
+import image__carousel_5_webp from "../../../public/static/carousel/Gradina_Botanica_transa_2_View10_1_s.webp";
+import image__carousel_6_webp from "../../../public/static/carousel/Burebista_Residence_s.webp";
 
 const carousel__images = [
-  { image: image__carousel_1, image_webp: image__carousel_1_webp, id: 1 },
-  { image: image__carousel_2, image_webp: image__carousel_2_webp, id: 2 },
-  { image: image__carousel_3, image_webp: image__carousel_3_webp, id: 3 },
-  { image: image__carousel_4, image_webp: image__carousel_4_webp, id: 4 },
-  { image: image__carousel_5, image_webp: image__carousel_5_webp, id: 5 },
-  { image: image__carousel_6, image_webp: image__carousel_6_webp, id: 6 },
+  { image_webp: image__carousel_1_webp, id: 1 },
+  { image_webp: image__carousel_2_webp, id: 2 },
+  { image_webp: image__carousel_3_webp, id: 3 },
+  { image_webp: image__carousel_4_webp, id: 4 },
+  { image_webp: image__carousel_5_webp, id: 5 },
+  { image_webp: image__carousel_6_webp, id: 6 },
 ];
 
 export default function index() {
@@ -108,13 +101,11 @@ function Carousel() {
                 >
                   <Image
                     src={item.image_webp}
-                    // srcSet={item.image_webp}
                     width={961}
                     height={658}
                     alt={item.image}
                     key={item.id}
-                    // loading="eager"
-                    // priority
+                    priority
                   />
                 </motion.div>
               </SwiperSlide>

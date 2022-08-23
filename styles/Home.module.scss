@@ -8,8 +8,8 @@
 .home__bg {
     @apply absolute top-0 left-0 h-[708px] w-screen bg-cover bg-center bg-no-repeat;
 
-    background-image: image-set(url("../public/static/home/cover-home.jpeg") 1x,
-    url("../public/static/home/cover-home.webp") 1x);
+    background-image: url("../public/static/home/cover-home.webp");
+    
     @media screen and(max-width: 1440px) {
         height: calc(310px + (728 - 310)*(100vw - 576px)/(1440 - 576));
     }

@@ -68,7 +68,7 @@
     
 }
 .popup__desktop_container {
-    @apply w-[43.2%] absolute top-[10%] left-[30%] border-2 rounded-xl;
+    @apply w-[43.2%] absolute top-[80px] left-[30%] border-2 rounded-xl ease-in-out ;
 
     @media screen and(max-width: 576px) {
         @apply px-0 w-full relative top-[0%] left-0 border-0;
