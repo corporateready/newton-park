@@ -208,10 +208,10 @@
     }
 }
 .slide__image_wrapper {
-    @apply flex justify-center relative w-[50%] top-[10%] left-[25%];
+    @apply flex justify-center relative w-full top-[0%] left-[0%];
 
     @media screen and(max-width: 576px) {
-        @apply relative min-h-0 w-[55%] left-[25%];
+        @apply relative min-h-0 w-[50%] left-[25%];
     }
 }
 .swiper {

@@ -25,7 +25,7 @@ export default function Market() {
     }, 15000);
   }, []);
 
-  React.useEffect( async () => {
+  React.useEffect(() => {
     if (isVisible) {
       return document.body.style.overflow = 'hidden';
     }

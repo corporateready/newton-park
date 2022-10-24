@@ -6,8 +6,8 @@ import NextButton from '../../svg/gallery/next-btn';
 import BackButton from '../../svg/gallery/back-btn';
 import up__image from '../../../public/static/gallery/metri-patrati.png';
 import down__image from '../../../public/static/gallery/inaltimea-tavanelor.png';
-import image_1_webp from '../../../public/static/gallery/big-retail/Big-retail-parter.webp';
-import image_2_webp from '../../../public/static/gallery/big-retail/BIG-RETAIL_PARTER1.webp';
+import image_1_webp from '../../../public/static/gallery/big-retail/big-retail-parter-1.jpg';
+import image_2_webp from '../../../public/static/gallery/big-retail/big-retail-parter-2.jpg';
 import image_3_webp from '../../../public/static/gallery/big-retail/Big-Retail-Etajul1-integral.webp';
 import image_4_webp from '../../../public/static/gallery/big-retail/Big-Retail-Etajul1.webp';
 import { initialTabs as tabs } from './ingredients';
@@ -90,23 +90,19 @@ export default function Index() {
                   key="parter">
                   <SwiperSlide>
                     <Image
-                      src={image_2_webp}
-                      width={582}
-                      height={614}
+                      src={image_1_webp}
                       alt="slide parter scheme 1"
                       priority
                     />
                   </SwiperSlide>
                   <SwiperSlide>
-                    <div className={styles.slide__image_wrapper}>
+                    {/* <div className={styles.slide__image_wrapper}> */}
                       <Image
-                        src={image_1_webp}
-                        width={312}
-                        height={544}
+                        src={image_2_webp}
                         alt="slide parter scheme 2"
                         priority
                       />
-                    </div>
+                    {/* </div> */}
                   </SwiperSlide>
                 </Swiper>
               ) : (

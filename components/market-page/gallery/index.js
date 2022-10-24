@@ -6,8 +6,8 @@ import NextButton from '../../svg/gallery/next-btn';
 import BackButton from '../../svg/gallery/back-btn';
 import up__image from '../../../public/static/gallery/metri-patrati.png';
 import down__image from '../../../public/static/gallery/inaltimea-tavanelor.png';
-import image_2_webp from '../../../public/static/gallery/supermarket/PARTER-supermarket-01.webp';
-import image_1_webp from '../../../public/static/gallery/supermarket/Supermarket.webp';
+import image_2_webp from '../../../public/static/gallery/supermarket/market-parter-2.jpg';
+import image_1_webp from '../../../public/static/gallery/supermarket/market-parter-1.jpg';
 
 // ==============================>
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -19,9 +19,11 @@ const BackButtonIcon = () => <BackButton width={48} height={54} />;
 
 const NextButtonIcon = () => <NextButton width={48} height={54} />;
 
-export default function Index({ isVisible }) {
+export default function Index() {
   const navigationPrevRef = React.useRef(null);
   const navigationNextRef = React.useRef(null);
+
+  console.log("navigationPrevRef:" + navigationPrevRef);
 
   return (
     <>
@@ -93,8 +95,8 @@ export default function Index({ isVisible }) {
                 <div className={styles.slide__image_wrapper}>
                   <Image
                     src={image_2_webp}
-                    width={312}
-                    height={544}
+                    // width={512}
+                    // height={544}
                     alt={'slide parter scheme 2'}
                     quality="75"
                     loading="eager"

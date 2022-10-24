@@ -257,17 +257,17 @@
     }
 }
 .slide__image_wrapper {
-    @apply flex justify-center relative w-[50%] top-[10%] left-[25%];
+    @apply flex justify-center relative w-[60%] top-[5%] left-[20%];
 
     @media screen and(max-width: 576px) {
-        @apply relative min-h-0 w-[55%] left-[25%];
+        @apply relative min-h-0;
     }
 }
 .slide__image_wrapper_2 {
-    @apply flex justify-center relative w-[80%] top-[25%] left-[10%];
+    @apply flex justify-center relative w-[60%] top-[5%] left-[20%];
 
     @media screen and(max-width: 576px) {
-        @apply relative h-auto w-[75%] left-[10%] mt-[20%];
+        @apply relative min-h-0;
     }
 }
 .swiper {

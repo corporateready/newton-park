@@ -6,10 +6,10 @@ import NextButton from '../../svg/gallery/next-btn';
 import BackButton from '../../svg/gallery/back-btn';
 import up__image from '../../../public/static/gallery/metri-patrati.png';
 import down__image from '../../../public/static/gallery/inaltimea-tavanelor.png';
-import image_1_webp from '../../../public/static/gallery/home-decor/Home_decor-plan_integral.webp';
-import image_2_webp from '../../../public/static/gallery/home-decor/Home_decor_planimetrie.webp';
-import image_3_webp from '../../../public/static/gallery/fast-food/PARTER-fastfood.webp';
-import image_4_webp from '../../../public/static/gallery/fast-food/fastfood.webp';
+import image_1_webp from '../../../public/static/gallery/home-decor/home-decor-parter-1.png';
+import image_2_webp from '../../../public/static/gallery/home-decor/home-decor-parter-2.png';
+import image_3_webp from '../../../public/static/gallery/home-decor/Home_decor-plan_integral.webp';
+import image_4_webp from '../../../public/static/gallery/home-decor/Home_decor_planimetrie.webp';
 
 import { initialTabs as tabs } from './ingredients';
 
@@ -101,8 +101,6 @@ export default function Index() {
                   <SwiperSlide>
                     <Image
                       src={image_1_webp}
-                      width={582}
-                      height={614}
                       alt={'slide parter scheme 1'}
                       priority
                     />
@@ -111,8 +109,6 @@ export default function Index() {
                     <div className={styles.slide__image_wrapper}>
                       <Image
                         src={image_2_webp}
-                        width={312}
-                        height={544}
                         alt={'slide parter scheme 2'}
                         priority
                       />
@@ -136,8 +132,6 @@ export default function Index() {
                   <SwiperSlide>
                     <Image
                       src={image_3_webp}
-                      width={582}
-                      height={614}
                       alt={'slide parter scheme 1'}
                       priority
                     />
@@ -146,8 +140,6 @@ export default function Index() {
                     <div className={styles.slide__image_wrapper_2}>
                       <Image
                         src={image_4_webp}
-                        width={582}
-                        height={414}
                         alt={'slide parter scheme 2'}
                         priority
                       />

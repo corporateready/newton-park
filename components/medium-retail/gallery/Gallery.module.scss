@@ -233,10 +233,10 @@
     }
 }
 .slide__image_wrapper {
-    @apply relative w-[80%] h-auto top-[30%] left-[10%];
+    @apply relative w-full top-[10%] left-[0%];
 
     @media screen and(max-width: 576px) {
-        @apply relative h-auto w-[80%] left-[10%] mt-[20%];
+        @apply relative min-h-0 mt-[10%];
     }
 }
 .swiper {
