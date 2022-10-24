@@ -7,9 +7,10 @@ import BackButton from '../../svg/gallery/back-btn';
 import up__image from '../../../public/static/gallery/metri-patrati.png';
 import down__image from '../../../public/static/gallery/inaltimea-tavanelor.png';
 
-import image_2_webp from '../../../public/static/gallery/medium-retail/medium-retail-parter-3.webp';
-import image_3_webp from '../../../public/static/gallery/medium-retail/Medium-retail-parter.webp';
-import image_4_webp from '../../../public/static/gallery/medium-retail/medium-retail-parter-2.webp';
+import image_1_webp from '../../../public/static/gallery/medium-retail/medium-retail-parter-main-2.jpg';
+import image_2_webp from '../../../public/static/gallery/medium-retail/medium-retail-parter-2.webp';
+import image_3_webp from '../../../public/static/gallery/medium-retail/medium-retail-parter-main-1.jpg';
+import image_4_webp from '../../../public/static/gallery/medium-retail/medium-retail-parter-1.webp';
 import image_5_webp from '../../../public/static/gallery/medium-retail/Medium-Retail-Etajul1.webp';
 import image_6_webp from '../../../public/static/gallery/medium-retail/Medium-Retail-Etajul1-plan1.webp';
 import image_7_webp from '../../../public/static/gallery/medium-retail/Medium-Retail-Etajul1-plan2.webp';
@@ -119,6 +120,13 @@ export default function Index() {
                   modules={[EffectFlip, Pagination, Navigation]}
                   className={styles.mySwiper}
                   key="parter">
+                  <SwiperSlide>
+                    <Image
+                      src={image_1_webp}
+                      alt="slide parter scheme 1"
+                      priority
+                    />
+                  </SwiperSlide>
                   <SwiperSlide>
                     <Image
                       src={image_3_webp}
