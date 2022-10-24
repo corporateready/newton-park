@@ -7,10 +7,10 @@ import BackButton from '../../svg/gallery/back-btn';
 import up__image from '../../../public/static/gallery/metri-patrati.png';
 import down__image from '../../../public/static/gallery/inaltimea-tavanelor.png';
 
+import image_1 from '../../../public/static/gallery/medium-retail/medium-retail-parter-1.jpg'
+import image_2 from '../../../public/static/gallery/medium-retail/medium-retail-parter-2.jpg'
 import image_1_webp from '../../../public/static/gallery/medium-retail/medium-retail-parter-main-2.jpg';
-import image_2_webp from '../../../public/static/gallery/medium-retail/medium-retail-parter-2.webp';
 import image_3_webp from '../../../public/static/gallery/medium-retail/medium-retail-parter-main-1.jpg';
-import image_4_webp from '../../../public/static/gallery/medium-retail/medium-retail-parter-1.webp';
 import image_5_webp from '../../../public/static/gallery/medium-retail/Medium-Retail-Etajul1.webp';
 import image_6_webp from '../../../public/static/gallery/medium-retail/Medium-Retail-Etajul1-plan1.webp';
 import image_7_webp from '../../../public/static/gallery/medium-retail/Medium-Retail-Etajul1-plan2.webp';
@@ -137,7 +137,7 @@ export default function Index() {
                   <SwiperSlide>
                     <div className={styles.slide__image_wrapper}>
                       <Image
-                        src={image_4_webp}
+                        src={image_1}
                         alt="slide parter scheme 2"
                         priority
                       />
@@ -146,7 +146,7 @@ export default function Index() {
                   <SwiperSlide>
                     <div className={styles.slide__image_wrapper}>
                       <Image
-                        src={image_2_webp}
+                        src={image_2}
                         alt="slide parter scheme 3"
                         priority
                       />
