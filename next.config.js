@@ -15,6 +15,6 @@ module.exports = {
     return config
   },
   images: {
-    formats: ['image/webp', 'image/avif'],
+    formats: ['image/webp'],
   },
 }
