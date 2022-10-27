@@ -16,6 +16,7 @@ export default function index() {
               src={logo}
               width={710}
               height={355}
+              priority
               alt="big newton park logo "
             />
           </div>

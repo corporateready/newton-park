@@ -6,8 +6,8 @@ import NextButton from "../../svg/gallery/next-btn";
 import BackButton from "../../svg/gallery/back-btn";
 import up__image from "../../../public/static/gallery/metri-patrati.png";
 import down__image from "../../../public/static/gallery/inaltimea-tavanelor.png";
-import image_1_webp from "../../../public/static/gallery/fast-food/fastfood-parter-1.jpg";
-import image_2_webp from "../../../public/static/gallery/fast-food/fastfood-parter-2.jpg";
+import image_1_webp from "../../../public/static/gallery/fast-food/fastfood-parter-1.webp";
+import image_2_webp from "../../../public/static/gallery/fast-food/fastfood-parter-2.webp";
 // ==============================>
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -77,11 +77,8 @@ export default function Index() {
               <SwiperSlide>
                     <Image
                       src={image_1_webp}
-                      // width={582}
-                      // height={614}
                       alt={"slide parter scheme 1"}
                       quality="75"
-                      placeholder="blur"
                       priority
                     />
                     
@@ -90,11 +87,8 @@ export default function Index() {
                   <div className={styles.slide__image_wrapper}>
                     <Image
                       src={image_2_webp}
-                      // width={582}
-                      // height={424}
                       alt={"slide parter scheme 2"}
                       quality="75"
-                      placeholder="blur"
                       priority
                     />
                     </div>
