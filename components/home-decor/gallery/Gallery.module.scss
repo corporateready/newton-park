@@ -219,6 +219,19 @@
         font-size: calc(12px + (30 - 12)*(100vw - 320px)/(576 - 320));
     }
 }
+.gallery__inner_btn {
+    @include text(24px, 130%, 600, $white_color);
+    @apply w-[50%] bg-[#31414B] uppercase rounded-md py-[2%];
+
+    @media screen and(max-width: 1440px) {
+        font-size: calc(12px + (24 - 12)*(100vw - 576px)/(1440 - 576));
+    }
+
+    @media screen and(max-width: 576px) {
+        @apply w-full py-[3%] mb-[5%];
+        font-size: calc(12px + (30 - 12)*(100vw - 320px)/(576 - 320));
+    }
+}
 // ===== gallery pagging buttons =====>
 .next__btn {
     @apply absolute top-0 right-[2%] h-full w-[55px] z-10 disabled:opacity-30;

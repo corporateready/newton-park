@@ -6,10 +6,8 @@ import NextButton from '../../svg/gallery/next-btn';
 import BackButton from '../../svg/gallery/back-btn';
 import up__image from '../../../public/static/gallery/metri-patrati.png';
 import down__image from '../../../public/static/gallery/inaltimea-tavanelor.png';
-import image_1_webp from '../../../public/static/gallery/home-decor/home-decor-parter-1.png';
-import image_2_webp from '../../../public/static/gallery/home-decor/home-decor-parter-2.png';
-import image_3_webp from '../../../public/static/gallery/home-decor/Home_decor-plan_integral.webp';
-import image_4_webp from '../../../public/static/gallery/home-decor/Home_decor_planimetrie.webp';
+import image_1_webp from '../../../public/static/gallery/home-decor/home-decor-parter-1.webp';
+import image_2_webp from '../../../public/static/gallery/home-decor/home-decor-parter-2.webp';
 
 import { initialTabs as tabs } from './ingredients';
 
@@ -84,7 +82,6 @@ export default function Index() {
               <BackButtonIcon />
             </button>
             <AnimatePresence exitBeforeEnter>
-              {selectedTab.category === 'parter' ? (
                 <Swiper
                   effect={'flip'}
                   grabCursor={true}
@@ -115,57 +112,11 @@ export default function Index() {
                     </div>
                   </SwiperSlide>
                 </Swiper>
-              ) : (
-                <Swiper
-                  effect={'flip'}
-                  grabCursor={true}
-                  flipEffect={{
-                    slideShadows: false,
-                  }}
-                  pagination={true}
-                  navigation={{
-                    prevEl: navigationPrevRef.current,
-                    nextEl: navigationNextRef.current,
-                  }}
-                  modules={[EffectFlip, Pagination, Navigation]}
-                  className={styles.mySwiper}>
-                  <SwiperSlide>
-                    <Image
-                      src={image_3_webp}
-                      alt={'slide parter scheme 1'}
-                      priority
-                    />
-                  </SwiperSlide>
-                  <SwiperSlide>
-                    <div className={styles.slide__image_wrapper_2}>
-                      <Image
-                        src={image_4_webp}
-                        alt={'slide parter scheme 2'}
-                        priority
-                      />
-                    </div>
-                  </SwiperSlide>
-                </Swiper>
-              )}
             </AnimatePresence>
             <button className={styles.next__btn} ref={navigationNextRef}>
               <NextButtonIcon />
             </button>
-            <div className={styles.gallery__inner_buttons}>
-              {tabs.map((item) => (
-                <motion.button
-                  key={item.category}
-                  transition={{ duration: 2 }}
-                  className={
-                    item === selectedTab
-                      ? styles.gallery__inner_parter_btn
-                      : styles.gallery__inner_floor_btn
-                  }
-                  onClick={() => setSelectedTab(item)}>
-                  {`${item.label}`}
-                </motion.button>
-              ))}
-            </div>
+            <button className={styles.gallery__inner_btn}>parter</button>
           </div>
         </div>
       </div>

@@ -15,7 +15,6 @@ import image__carousel_2_webp from "../../../public/static/carousel/Gradina_Bota
 import image__carousel_3_webp from "../../../public/static/carousel/Gradina_Botanica_transa_2_View07_3_s.webp";
 import image__carousel_4_webp from "../../../public/static/carousel/Gradina_Botanica_transa_2_View09_2_s.webp";
 import image__carousel_5_webp from "../../../public/static/carousel/Gradina_Botanica_transa_2_View10_1_s.webp";
-// import image__carousel_6_webp from "../../../public/static/carousel/Burebista_Residence_s.webp";
 
 const carousel__images = [
   { image_webp: image__carousel_1_webp, id: 1 },
@@ -23,7 +22,6 @@ const carousel__images = [
   { image_webp: image__carousel_3_webp, id: 3 },
   { image_webp: image__carousel_4_webp, id: 4 },
   { image_webp: image__carousel_5_webp, id: 5 },
-  // { image_webp: image__carousel_6_webp, id: 6 },
 ];
 
 export default function Index() {
@@ -101,7 +99,6 @@ function Carousel() {
                     width={961}
                     height={658}
                     alt={item.image}
-                    // key={item.id}
                     priority
                   />
                 </motion.div>
