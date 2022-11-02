@@ -4,12 +4,12 @@ import styles from "./Motives.module.scss";
 
 import { motion, AnimatePresence } from "framer-motion";
 
-import motive_1 from "../../../public/static/motives/terrace-01.png";
-import motive_2 from "../../../public/static/motives/intrare-din-pasarela.png";
-import motive_3 from "../../../public/static/motives/open-space-01.png";
-import motive_4 from "../../../public/static/motives/livrare-01.png";
-import motive_5 from "../../../public/static/motives/motive_4.png";
-import motive_6 from "../../../public/static/motives/sisteme-ingineresti-01.png";
+import motive_1 from "../../../public/static/motives/terrace-01.webp";
+import motive_2 from "../../../public/static/motives/intrare.webp";
+import motive_3 from "../../../public/static/motives/open-space-01.webp";
+import motive_4 from "../../../public/static/motives/livrare-01.webp";
+import motive_5 from "../../../public/static/motives/motive_4.webp";
+import motive_6 from "../../../public/static/motives/sisteme-ingineresti-01.webp";
 
 export default function index() {
   return (
