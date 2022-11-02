@@ -95,12 +95,6 @@
         @apply mt-0;
     }
 
-    @media screen and(max-width: 576px) {   
-        input {
-            // @apply w-2;
-        }
-    }
-
     label {
         @include text(18px, 135%, 300, #fff);
         @apply  ml-[3%];

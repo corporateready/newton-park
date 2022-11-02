@@ -96,8 +96,9 @@ function Carousel() {
                 >
                   <Image
                     src={item.image_webp}
-                    width={961}
-                    height={658}
+                    layout="responsive"
+                    // width={961}
+                    // height={658}
                     alt={item.image}
                     priority
                   />

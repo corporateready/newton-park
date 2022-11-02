@@ -11,7 +11,7 @@ import motive_4 from "../../../public/static/motives/livrare-01.webp";
 import motive_5 from "../../../public/static/motives/motive_4.webp";
 import motive_6 from "../../../public/static/motives/sisteme-ingineresti-01.webp";
 
-export default function index() {
+export default function  index() {
   return (
     <AnimatePresence>
       <motion.div
@@ -32,7 +32,7 @@ export default function index() {
             <div className={styles.motive}>
               <div className={styles.motive__wrapper}>
                 <div className={styles.motive__image}>
-                  <Image src={motive_1} width={321} height={224} priority />
+                  <Image src={motive_1} width={321} height={224} priority alt="motive" />
                 </div>
                 <div className={styles.motive__title_wrapper}>
                   <h3 className={styles.motive__title}>
@@ -45,7 +45,7 @@ export default function index() {
             <div className={styles.motive}>
               <div className={styles.motive__wrapper}>
                 <div className={styles.motive__image}>
-                  <Image src={motive_2} width={321} height={105} priority />
+                  <Image src={motive_2} width={321} height={105} priority alt="motive" />
                 </div>
                 <div className={styles.motive__title_wrapper}>
                   <h3 className={styles.motive__title}>
@@ -59,7 +59,7 @@ export default function index() {
             <div className={styles.motive}>
               <div className={styles.motive__wrapper}>
                 <div className={styles.motive__image}>
-                  <Image src={motive_3} width={321} height={224} priority />
+                  <Image src={motive_3} width={321} height={224} priority alt="motive" />
                 </div>
                 <div className={styles.motive__title_wrapper}>
                   <h3 className={styles.motive__title}>

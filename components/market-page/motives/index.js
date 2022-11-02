@@ -32,7 +32,7 @@ export default function index() {
             <div className={styles.motive}>
               <div className={styles.motive__wrapper}>
                 <div className={styles.motive__image}>
-                  <Image src={motive_1} width={321} height={168} priority />
+                  <Image src={motive_1} width={321} height={168} priority alt="motive" />
                 </div>
                 <div className={styles.motive__title_wrapper}>
                   <h3 className={styles.motive__title}>
@@ -45,7 +45,7 @@ export default function index() {
             <div className={styles.motive}>
               <div className={styles.motive__wrapper}>
                 <div className={styles.motive__image}>
-                  <Image src={motive_2} width={321} height={225} priority />
+                  <Image src={motive_2} width={321} height={225} priority alt="motive" />
                 </div>
                 <div className={styles.motive__title_wrapper}>
                   <h3 className={styles.motive__title}>
