@@ -9,9 +9,9 @@ import motive_2 from "../../../public/static/motives/livrare-01.webp";
 import motive_3 from "../../../public/static/motives/open-space-01.webp";
 import motive_4 from "../../../public/static/motives/motive_4.webp";
 import motive_5 from "../../../public/static/motives/sisteme-ingineresti-01.webp";
-import motive_6 from "../../../public/static/motives/varianta-sura.webp";
+// import motive_6 from "../../../public/static/motives/varianta-sura.webp";
 
-export default function index() {
+export default function Index() {
   return (
     <AnimatePresence>
       <motion.div
