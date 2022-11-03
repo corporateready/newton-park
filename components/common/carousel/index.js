@@ -1,27 +1,27 @@
-import React from "react";
-import Image from "next/image";
-import Link from "next/link"
+import React from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
 
-import { motion } from "framer-motion";
+import { motion } from 'framer-motion';
 
-import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper, SwiperSlide } from 'swiper/react';
 
-import styles from "./Carousel.module.scss";
+import styles from './Carousel.module.scss';
 
-import { FreeMode, Pagination } from "swiper";
+import { FreeMode, Pagination } from 'swiper';
 
-import image__carousel_1_webp from "../../../public/static/carousel/Burebista_Residence_s.webp";
-import image__carousel_2_webp from "../../../public/static/carousel/Gradina_Botanica_transa_2_View05_1_s.webp";
-import image__carousel_3_webp from "../../../public/static/carousel/Gradina_Botanica_transa_2_View07_3_s.webp";
-import image__carousel_4_webp from "../../../public/static/carousel/Gradina_Botanica_transa_2_View09_2_s.webp";
-import image__carousel_5_webp from "../../../public/static/carousel/Gradina_Botanica_transa_2_View10_1_s.webp";
+import image__carousel_1_webp from '../../../public/static/carousel/image-1.webp';
+import image__carousel_2_webp from '../../../public/static/carousel/image-2.webp';
+import image__carousel_3_webp from '../../../public/static/carousel/image-3.webp';
+import image__carousel_4_webp from '../../../public/static/carousel/image-4.webp';
+import image__carousel_5_webp from '../../../public/static/carousel/image-5.webp';
 
 const carousel__images = [
-  { image_webp: image__carousel_1_webp, id: 1 },
-  { image_webp: image__carousel_2_webp, id: 2 },
-  { image_webp: image__carousel_3_webp, id: 3 },
-  { image_webp: image__carousel_4_webp, id: 4 },
-  { image_webp: image__carousel_5_webp, id: 5 },
+  { image_webp: image__carousel_1_webp },
+  { image_webp: image__carousel_2_webp },
+  { image_webp: image__carousel_3_webp },
+  { image_webp: image__carousel_4_webp },
+  { image_webp: image__carousel_5_webp },
 ];
 
 export default function Index() {
@@ -39,13 +39,11 @@ export default function Index() {
           <input type="tel" placeholder="Numărul de telefon" />
           <button className={styles.form__button}>Solicită oferta</button>
           <div className={styles.according}>
-            <input type="checkbox" defaultChecked readOnly/>
+            <input type="checkbox" defaultChecked readOnly />
             <label>
-              Sunt de acord cu{" "}
+              Sunt de acord cu{' '}
               <Link href="/policy">
-                <a className={styles.according__link}>
-                  termenii și condițiile site-ului
-                </a>
+                <a className={styles.according__link}>termenii și condițiile site-ului</a>
               </Link>
             </label>
           </div>
@@ -66,7 +64,7 @@ function Carousel() {
           pagination={{
             clickable: true,
             renderBullet: function (index, className) {
-              return '<span class="' + className + '">' + "</span>";
+              return '<span class="' + className + '">' + '</span>';
             },
           }}
           draggable={true}
@@ -81,24 +79,26 @@ function Carousel() {
             },
           }}
           modules={[FreeMode, Pagination]}
-          className={styles.mySwiper}
-        >
-          {carousel__images.map((item) => {
+          className={styles.mySwiper}>
+          {carousel__images.map((item, idx) => {
             return (
-              <SwiperSlide key={item.id}>
+              <SwiperSlide key={idx}>
                 <motion.div
                   initial={{ scale: 1 }}
                   whileHover={{
                     scale: 1.1,
                     bounce: 1,
-                    transition: { duration: 0.5, ease: "easeInOut" },
-                  }}
-                >
+                    transition: { duration: 0.5, ease: 'easeInOut' },
+                  }}>
                   <Image
                     src={item.image_webp}
+                    width={961}
+                    height={658}
                     layout="responsive"
-                    // width={961}
-                    // height={658}
+                    sizes="(max-width: 768px) 100vw,
+                          (max-width: 1200px) 50vw,
+                          33vw"
+                    quality={100}
                     alt={item.image}
                     priority
                   />

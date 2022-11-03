@@ -20,19 +20,14 @@ const BackButtonIcon = () => <BackButton width={48} height={54} />;
 const NextButtonIcon = () => <NextButton width={48} height={54} />;
 
 export default function Index() {
-
   const navigationPrevRef = React.useRef(null);
   const navigationNextRef = React.useRef(null);
 
-  React.useEffect(()=>{
-    console.log(document.querySelector('.swiper-button-disabled'));
-  })
-
   return (
     <>
-    <Head>
-      <link onLoad="./Gallery.module.scss"/>
-    </Head>
+      <Head>
+        {/* <link load="./Gallery.module.scss" /> */}
+      </Head>
       <div className={styles.gallery__section}>
         <div className={styles.gallery__bg}></div>
         <div className={styles.gallery__container}>
