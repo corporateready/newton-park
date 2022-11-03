@@ -1,4 +1,4 @@
-export default function Index() {
+Rexport default function Index() {
   return (
     <svg
       width="55"
@@ -14,8 +14,8 @@ export default function Index() {
         />
       </g>
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M25.5872 11.2935C17.8361 11.2935 11.5554 17.1463 11.5554 24.3663C11.5554 28.4829 13.594 32.1519 16.7835 34.5471V39.5318L21.5616 36.8931C22.8723 37.2584 24.2267 37.4429 25.5872 37.4415C33.336 37.4415 39.6191 31.5888 39.6191 24.3663C39.6191 17.1438 33.336 11.2935 25.5872 11.2935ZM26.9816 28.8985L23.4085 25.0647L16.4343 28.8985L24.1044 20.7071L27.766 24.5409L34.6516 20.7071L26.9816 28.8985Z"
         fill="#31414B"
       />
@@ -27,7 +27,7 @@ export default function Index() {
           width="55"
           height="55"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
           <feFlood flood-opacity="0" result="BackgroundImageFix" />
           <feColorMatrix

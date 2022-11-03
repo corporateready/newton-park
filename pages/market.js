@@ -14,33 +14,30 @@ const ArrowdDownComponent = () => <ArrowdDownIcon width={45} height={45} />;
 
 export default function Market() {
   const [isSend, setIsSend] = React.useState(false)
-  const [isOpen, setIsOpen] = React.useState()
-  const [isVisible, setIsVisible] = React.useState(false);
+  const [isVisibleMarket, setIsVisibleMarket] = React.useState(false);
 
   const router = useRouter()
 
   React.useEffect( () => {
     setTimeout(() => {
-      return setIsVisible(true);
+      return setIsVisibleMarket(true);
     }, 15000);
   }, []);
 
   React.useEffect(() => {
-    if (isVisible) {
+    if (isVisibleMarket) {
       return document.body.style.overflow = 'hidden';
     }
-    if (!isVisible) {
+    if (!isVisibleMarket) {
       return document.body.style.overflow = 'auto';
     }
-  }, [isVisible]);
+  }, [isVisibleMarket]);
 
   const handleFormSending = () => {
     setIsSend(true)
     if(isSend) {
     router.push('/thanks')}
   }
-
-  console.log(isVisible);
 
   return (
     <Layout>
@@ -51,13 +48,13 @@ export default function Market() {
         exit={{ opacity: 0 }}
         transition={{ duration: 0.3 }}>
         <Hero />
-        <About isVisible={isVisible}/>
+        <About isVisible={isVisibleMarket}/>
         <Motives />
         <Carousel />
         <Info />
         <Messenger />
       </motion.div>
-      {isVisible && (
+      {isVisibleMarket && (
           <div className={styles.popup}>
             <motion.div
               className={styles.popup__mobile}
@@ -69,7 +66,7 @@ export default function Market() {
                 <div className={styles.popup__desktop_inner}>
                   <button
                     className={styles.popup__desktop_close_button}
-                    onClick={() => setIsVisible(!isVisible)}>
+                    onClick={() => setIsVisibleMarket(!isVisibleMarket)}>
                     <Image src={x__close_btn} width={21} height={21} />
                   </button>
                   <button
@@ -87,13 +84,11 @@ export default function Market() {
                     className={styles.popup__desktop_form}
                     action="https://formsubmit.co/nev30inbox@gmail.com/"
                     method="POST"
-                    // onSubmit={(e)=>e.preventDefault()}
                     >
                     <input type="email" placeholder="Adresa de email" required />
                     <input type="tel" placeholder="Numărul de telefon" required/>
-                    {/* <input type="text" name="_honey" style="display:none"/> */}
                     <input type="hidden" name="_captcha" value="false"/>
-                    <input type="hidden" name="_next" value="https://yourdomain.co/thanks.js"></input>
+                    <input type="hidden" name="_next" value="https://newtonpark.md/thanks"></input>
                     <button 
                       type="submit"
                       onClick={handleFormSending}

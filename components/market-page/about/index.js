@@ -7,7 +7,7 @@ import Garden from "../../svg/garden";
 
 const GardenIcon = () => <Garden width={43} height={39}/>
 
-export default function xindex({isVisible}) {
+export default function Index({isVisibleMarket}) {
   return (
     <>
       <div className={styles.about}>
@@ -48,11 +48,11 @@ export default function xindex({isVisible}) {
             <div></div>
           </div>
           <div className={styles.about__build}>
-            <Image src={build}  width={107} height={113}/>
+            <Image src={build}  width={107} height={113} priority alt="newtonpark build icon"/>
           </div>
         </div>
       </div>
-      <Gallery isVisible={isVisible}/>
+      <Gallery isVisibleMarket={isVisibleMarket}/>
     </>
   );
 }

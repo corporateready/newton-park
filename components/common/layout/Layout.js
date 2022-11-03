@@ -59,6 +59,7 @@ export default function Layout({ children }) {
   }, []);
 
   return (
+    <>
     <div className={styles.layout}>
       <motion.header className={scroll ? styles.header__active : styles.header}>
         <div className={styles.header__container}>
@@ -134,5 +135,6 @@ export default function Layout({ children }) {
       </footer>
       <MobileMessenger />
     </div>
+    </>
   );
 }
