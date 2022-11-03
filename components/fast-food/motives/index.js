@@ -5,7 +5,7 @@ import styles from "./Motives.module.scss";
 import { motion, AnimatePresence } from "framer-motion";
 
 import motive_1 from "../../../public/static/motives/motive_1.webp";
-// import motive_2 from "../../../public/static/motives/varianta-sura.webp";
+import motive_2 from "../../../public/static/motives/varianta.webp";
 import motive_3 from "../../../public/static/motives/open-space-fastfood.webp";
 import motive_4 from "../../../public/static/motives/livrare-01.webp";
 import motive_5 from "../../../public/static/motives/motive_4.webp";
@@ -106,7 +106,7 @@ export default function Index() {
             <div className={styles.motive}>
               <div className={styles.motive__wrapper}>
                 <div className={styles.motive__image}>
-                  {/* <Image src={motive_2} width={321} height={205} priority alt="motive" /> */}
+                  <Image src={motive_2} width={321} height={205} priority alt="motive" />
                 </div>
                 <div className={styles.motive__title_wrapper}>
                   <h3 className={styles.motive__title}>

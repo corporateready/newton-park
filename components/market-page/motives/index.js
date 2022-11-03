@@ -9,7 +9,7 @@ import motive_2 from "../../../public/static/motives/livrare-01.webp";
 import motive_3 from "../../../public/static/motives/open-space-01.webp";
 import motive_4 from "../../../public/static/motives/motive_4.webp";
 import motive_5 from "../../../public/static/motives/sisteme-ingineresti-01.webp";
-// import motive_6 from "../../../public/static/motives/varianta-sura.webp";
+import motive_6 from "../../../public/static/motives/varianta.webp";
 
 export default function Index() {
   return (
@@ -105,7 +105,7 @@ export default function Index() {
             <div className={styles.motive}>
               <div className={styles.motive__wrapper}>
                 <div className={styles.motive__image}>
-                  {/* <Image src={motive_6} width={321} height={204} priority /> */}
+                  <Image src={motive_6} width={321} height={204} priority />
                 </div>
                 <div className={styles.motive__title_wrapper}>
                   <h3 className={styles.motive__title}>
